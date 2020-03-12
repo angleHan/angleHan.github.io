@@ -30,42 +30,19 @@
       
         <div class="animated fadeInLeft" style="animation-delay: 0.4s">
           <p class="my-4 text-gray-600 font-light hidden lg:block">
-            山外看众生，山里看自己
+            文章目录
           </p>
-          <div class="animated fadeInLeft social-container hidden lg:block" style="animation-delay: 0.6s">
-            
-              
-                <a href="https://github.com/angleHan" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
-                  <i class="ri-github-line"></i>
-                </a>
-              
-            
-              
-            
-              
-            
-              
-                <a href="https://www.zhihu.com/people/meng-xiang-75-23-61" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
-                  <i class="ri-zhihu-line"></i>
-                </a>
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-                <a href="844417048" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
-                  <i class="ri-qq-line"></i>
-                </a>
-              
-            
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#huffman%E7%BC%96%E7%A0%81%E7%AE%80%E4%BB%8B">Huffman编码简介</a></li>
+<li><a href="#python%E5%AE%9E%E7%8E%B0">Python实现</a></li>
+<li><a href="#%E7%BB%93%E6%9E%9C">结果</a></li>
+</ul>
+</li>
+</ul>
+
           </div>
         </div>
       
@@ -109,80 +86,131 @@
 </div>
 <div class="mask" onclick="closeMenu()">
 </div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
-        <h2 class="text-lg text-gray-700 mb-8">
-          <i class="ri-archive-line"></i> 文章归档
-        </h2>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">Huffman编码——Python实现</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2020-03-12 / 3 min read
+        </div>
+        
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://angleHan.github.io/post-images/huffman-bian-ma-python-shi-xian.jpg" alt="">
+        
+        <div class="post-content yue">
+          <h2 id="huffman编码简介">Huffman编码简介</h2>
+<p>1952年，哈夫曼提出了一种构造最佳码的方法称为哈夫曼码（也有说霍夫曼码，看你怎么翻译了）。它充分利用了信源概率分布的特性进行编码，是无失真信源编码方法的一种。</p>
+<p>具体编码方法，看下面的演示即可。<br>
+<img src="https://angleHan.github.io/post-images/1583992747066.gif" alt="" loading="lazy"></p>
+<!-- more -->
+<h2 id="python实现">Python实现</h2>
+<p>根据Python面向对象编程的特点，我们可以先构思出2个大类，一个为节点类，另一个为哈夫曼树类，利用节点来完成哈夫曼树的建立。<br>
+😬节点类代码如下：</p>
+<pre><code class="language-python">#节点类
+class Node(object):
+    def __init__(self,name=None,value=None):
+        self._name=name
+        self._value=value
+        self._left=None
+        self._right=None
+</code></pre>
+<p>🤒接着，我们用哈夫曼树的编码思想，利用节点反向建立哈夫曼树。</p>
+<pre><code class="language-python">#哈夫曼树类
+class HuffmanTree(object):
+
+    #根据Huffman树的思想：以节点为基础，反向建立Huffman树
+    def __init__(self,char_weights):
+        self.Leav=[Node(part[0],part[1]) for part in char_weights]  #根据输入的字符及其频数生成节点
+        while len(self.Leav)!=1:    
+            self.Leav.sort(key=lambda node:node._value,reverse=True)
+            c=Node(value=(self.Leav[-1]._value+self.Leav[-2]._value))
+            c._left=self.Leav.pop(-1)
+            c._right=self.Leav.pop(-1)
+            self.Leav.append(c)
+        self.root=self.Leav[0]
+        self.Buffer=list(range(10))
+</code></pre>
+<p>🤐建立完哈夫曼树后，我们遍历整个树，将左边的节点给0，右边的节点给1，这里采用递归的思想。</p>
+<pre><code class="language-python"> #用递归的思想生成编码
+    def pre(self,tree,length):
+        node=tree
+        if (not node):
+            return
+        elif node._name:
+            print (node._name + '    encoding:',end=''),
+            for i in range(length):
+                print (self.Buffer[i],end='')
+            print ('\n')
+            return
+        self.Buffer[length]=0
+        self.pre(node._left,length+1)
+        self.Buffer[length]=1
+        self.pre(node._right,length+1)
+     #生成哈夫曼编码   
+    def get_code(self):
+        self.pre(self.root,0)
+</code></pre>
+<h2 id="结果">结果</h2>
+<p>😷测试代码如下：</p>
+<pre><code class="language-python">if __name__=='__main__':
+    #输入的是字符及其频数
+    char_weights=[('a',6),('b',4),('c',10),('d',8),('f',12),('g',2)]
+    tree=HuffmanTree(char_weights)
+    tree.get_code(）
+</code></pre>
+<p>结果图:<br>
+<img src="https://angleHan.github.io/post-images/1583993116870.png" alt="" loading="lazy"></p>
+<p>🤡本文结束，感谢阅读！</p>
+
+        </div>
+
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://angleHan.github.io/tag/BwTsdCykT/">
+            <span class="flex-auto">Python，编码</span>
+          </a>
         
 
-        <div class="archives-container">
+
+        <div class="flex justify-between py-8">
           
-            <h2 class="text-gray-600 py-4 animated fadeIn">
-              <i class="ri-map-pin-time-line"></i>
-              2020
-            </h2>
-            
-              
-                <a href="https://angleHan.github.io/post/huffman-bian-ma-python-shi-xian/" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    Huffman编码——Python实现
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2020-03-12</div>
-              
-            
-              
-            
-              
-            
+
           
-            <h2 class="text-gray-600 py-4 animated fadeIn">
-              <i class="ri-map-pin-time-line"></i>
-              2019
-            </h2>
-            
-              
-            
-              
-                <a href="https://angleHan.github.io/post/about/" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    关于
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-01-25</div>
-              
-            
-              
-            
-          
-            <h2 class="text-gray-600 py-4 animated fadeIn">
-              <i class="ri-map-pin-time-line"></i>
-              2018
-            </h2>
-            
-              
-            
-              
-            
-              
-                <a href="https://angleHan.github.io/post/hello-gridea/" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    Hello Gridea
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2018-12-12</div>
-              
-            
+            <div class="next-post">
+              <a href="https://angleHan.github.io/post/about/">
+                <h3 class="post-title">
+                  关于
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
           
         </div>
 
-        <div>
-          <div class="pagination-container animated fadeIn">
-  
-  
-</div>
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
-        </div>
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'fb8bb70a340bfed859c8',
+    clientSecret: '40d810f2e1af0a384e51d811a1961e134971b74a',
+    repo: 'angleHan.github.io',
+    owner: 'angleHan',
+    admin: ['angleHan'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
       </div>
     </div>
 
