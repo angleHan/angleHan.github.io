@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://dreamfixer.top</id>
+    <id>http://dreamfixer.top/angleHan</id>
     <title>Sheldon~思与得</title>
-    <updated>2020-03-12T04:24:47.093Z</updated>
+    <updated>2020-03-12T04:26:08.033Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://dreamfixer.top"/>
-    <link rel="self" href="http://dreamfixer.top/atom.xml"/>
+    <link rel="alternate" href="http://dreamfixer.top/angleHan"/>
+    <link rel="self" href="http://dreamfixer.top/angleHan/atom.xml"/>
     <subtitle>山外看众生，山里看自己</subtitle>
-    <logo>http://dreamfixer.top/images/avatar.png</logo>
-    <icon>http://dreamfixer.top/favicon.ico</icon>
+    <logo>http://dreamfixer.top/angleHan/images/avatar.png</logo>
+    <icon>http://dreamfixer.top/angleHan/favicon.ico</icon>
     <rights>All rights reserved 2020, Sheldon~思与得</rights>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>http://dreamfixer.top/post/hello-gridea/</id>
-        <link href="http://dreamfixer.top/post/hello-gridea/">
+        <id>http://dreamfixer.top/angleHan/post/hello-gridea/</id>
+        <link href="http://dreamfixer.top/angleHan/post/hello-gridea/">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
