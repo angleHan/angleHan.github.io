@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://angleHan.github.io</id>
     <title>Sheldon~思与得</title>
-    <updated>2020-03-13T03:54:50.391Z</updated>
+    <updated>2020-03-13T10:48:35.932Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://angleHan.github.io"/>
     <link rel="self" href="https://angleHan.github.io/atom.xml"/>
@@ -16,6 +16,10 @@
         <link href="https://angleHan.github.io/post/shu-mei-pai-shang-csi-she-xiang-tou-de-shi-yong-geng-xin-zhong/">
         </link>
         <updated>2020-03-13T03:29:31.000Z</updated>
+        <summary type="html"><![CDATA[<p>由于工程设计要用到树莓派的摄像头进行识别操作，本文将使用Python+OpenCV+Raspi 3B+ 来完成树莓派CSI摄像头的配置使用，以及后续的扩展操作（树莓派照相机）。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>由于工程设计要用到树莓派的摄像头进行识别操作，本文将使用Python+OpenCV+Raspi 3B+ 来完成树莓派CSI摄像头的配置使用，以及后续的扩展操作（树莓派照相机）。</p>
+]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[2019全国大学生电赛总结（附视觉代码）]]></title>
