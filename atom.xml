@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://angleHan.github.io</id>
     <title>Sheldon~思与得</title>
-    <updated>2020-03-12T08:17:47.779Z</updated>
+    <updated>2020-03-13T00:48:15.861Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://angleHan.github.io"/>
     <link rel="self" href="https://angleHan.github.io/atom.xml"/>
@@ -16,9 +16,9 @@
         <link href="https://angleHan.github.io/post/bhuman-kuang-jia-de-ji-ben-pei-zhi-ji-jian-dan-shi-yong/">
         </link>
         <updated>2020-03-12T06:13:03.000Z</updated>
-        <summary type="html"><![CDATA[<p><strong>BHuman框架是当今Robocup标准平台组比赛的主流框架，本文介绍了BHuman框架的一些最基本的操作</strong>。</p>
+        <summary type="html"><![CDATA[<p>BHuman框架是当今Robocup标准平台组比赛的主流框架，本文介绍了BHuman框架的一些最基本的操作。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p><strong>BHuman框架是当今Robocup标准平台组比赛的主流框架，本文介绍了BHuman框架的一些最基本的操作</strong>。</p>
+        <content type="html"><![CDATA[<p>BHuman框架是当今Robocup标准平台组比赛的主流框架，本文介绍了BHuman框架的一些最基本的操作。</p>
 ]]></content>
     </entry>
     <entry>
