@@ -7,7 +7,7 @@
 <meta name="keywords" content="靳路晗；通信工程；IT">
 <meta name="description" content="山外看众生，山里看自己">
 <meta name="theme-color" content="#000">
-<title>关于 | 靳路晗~中国</title>
+<title>解决pip安装Python库时：ReadTimeoutError | 靳路晗~中国</title>
 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/angleHan/angleHan.github.io@1.0//favicon.ico?v=1584611278672">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/angleHan/angleHan.github.io@1.0//styles/main.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/angleHan/angleHan.github.io@1.0//media/css/pisces.css">
@@ -37,7 +37,7 @@
 </script>
 
 
-    <meta name="description" content="关于" />
+    <meta name="description" content="解决pip安装Python库时：ReadTimeoutError" />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -240,10 +240,7 @@
     <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99">🏠 关于本站</a></li>
-<li><a href="#%E5%8D%9A%E4%B8%BB%E6%98%AF%E8%B0%81">👨‍💻 博主是谁</a></li>
-<li><a href="#%E5%85%B4%E8%B6%A3%E7%88%B1%E5%A5%BD">⛹ 兴趣爱好</a></li>
-<li><a href="#%E8%81%94%E7%B3%BB%E6%88%91%E5%91%80">📬 联系我呀</a></li>
+<li><a href="#%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95">解决办法</a></li>
 </ul>
 </li>
 </ul>
@@ -507,22 +504,16 @@ window.addEventListener('load', function() {
             <div class="section bg-color post post-page">
               <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://angleHan.github.io/post/about/">
-      关于
+    <a class="post-title-link" href="https://angleHan.github.io/post/jie-jue-pip-an-zhuang-python-ku-shi-readtimeouterror/">
+      解决pip安装Python库时：ReadTimeoutError
     </a>
   </h1>
   <div class="post-meta">
     
-      <span class="meta-item">
-        <i class="fa fa-thumb-tack"></i>
-        <span>置顶</span>
-        <span class="post-meta-divider">|</span>
-      </span>
-    
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2019-01-25</span>
+      <span>2020-03-19</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -533,14 +524,14 @@ window.addEventListener('load', function() {
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>156<span class="pc-show">字数</span></span>
+      <span>129<span class="pc-show">字数</span></span>
     </span>
     
       
       
         
       
-      <span id="/post/about/" data-flag-title="关于" class="meta-item pc-show leancloud_visitors">
+      <span id="/post/jie-jue-pip-an-zhuang-python-ku-shi-readtimeouterror/" data-flag-title="解决pip安装Python库时：ReadTimeoutError" class="meta-item pc-show leancloud_visitors">
         <span class="post-meta-divider">|</span>
         <i class="fa fa-eye"></i>
         <span>浏览量：<span class="leancloud-visitors-count" ></span></span>
@@ -549,21 +540,14 @@ window.addEventListener('load', function() {
   </div>
 </header>
               <div class="post-body next-md-body" id="post_body">
-                <blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
-</blockquote>
-<h2 id="关于本站">🏠 关于本站</h2>
-<p>😁本站主要创作一些博主学习过程中的一些心得和比赛的总结，会定期更新，欢迎大家收藏！</p>
-<!-- more -->
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<p>😎大家好，我是郑州大学通信工程专业的一名在读本科生，是郑州大学双足实验室NAO组的队员，也是ZZU-DROID 2019年参赛队员，负责视觉与定位方向。<br>
-<img src="https://angleHan.github.io/post-images/1583991413301.jpg" alt="" loading="lazy"></p>
-<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
-<p>😀喜欢打篮球，喜欢数学</p>
-<h2 id="联系我呀">📬 联系我呀</h2>
-<p>🤓  Email：LuHanJin.Study@outlook.com<br>
-Github: https://github.com/angleHan<br>
-知乎：https://www.zhihu.com/people/meng-xiang-75-23-61</p>
+                <p>近来Python不知怎的就被墙了，据说是有一个非法网站跟Python的网站很像，本来想禁那个非法网站的，结果~~😢😢😢</p>
+<p>所以我们如果再用pip安装Python的某些库时，就会出现连接不上的问题。</p>
+<h2 id="解决办法">解决办法</h2>
+<p>指定国内的下载源来进行下载，把原来的安装命令替换为：</p>
+<pre><code class="language-python"> pip install -i https://pypi.douban.com/simple 需要安装的Python库
+</code></pre>
+<p>试了试，速度还挺快的。😁</p>
+<p>本文已结束，感谢阅读~~</p>
 
               </div>
               <div class="post-footer">
@@ -574,7 +558,7 @@ Github: https://github.com/angleHan<br>
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://angleHan.github.io/post/about/" title="关于">关于</a>
+      <a href="https://angleHan.github.io/post/jie-jue-pip-an-zhuang-python-ku-shi-readtimeouterror/" title="解决pip安装Python库时：ReadTimeoutError">解决pip安装Python库时：ReadTimeoutError</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -587,15 +571,11 @@ Github: https://github.com/angleHan<br>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="Huffman编码——Python实现" href="https://angleHan.github.io/post/huffman-bian-ma-python-shi-xian/">Huffman编码——Python实现</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="Huffman编码——Python实现" href="https://angleHan.github.io/post/huffman-bian-ma-python-shi-xian/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="Hello Gridea" href="https://angleHan.github.io/post/hello-gridea/">Hello Gridea</a>
-        <a class="nav-mobile-next" title="Hello Gridea" href="https://angleHan.github.io/post/hello-gridea/">下一篇</a>
+        <a class="nav-pc-next" title="树莓派上CSI摄像头的使用" href="https://angleHan.github.io/post/shu-mei-pai-shang-csi-she-xiang-tou-de-shi-yong-geng-xin-zhong/">树莓派上CSI摄像头的使用</a>
+        <a class="nav-mobile-next" title="树莓派上CSI摄像头的使用" href="https://angleHan.github.io/post/shu-mei-pai-shang-csi-she-xiang-tou-de-shi-yong-geng-xin-zhong/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
