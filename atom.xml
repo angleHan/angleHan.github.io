@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://angleHan.github.io</id>
     <title>靳路晗~中国</title>
-    <updated>2020-03-28T01:12:44.539Z</updated>
+    <updated>2020-03-28T01:15:53.370Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://angleHan.github.io"/>
     <link rel="self" href="https://angleHan.github.io/atom.xml"/>
@@ -17,6 +17,10 @@
         <link href="https://angleHan.github.io/post/dspf2812-de-li-lun-xue-xi/">
         </link>
         <updated>2020-03-20T00:06:50.000Z</updated>
+        <summary type="html"><![CDATA[<p>随着大规模集成电路、数字计算机等技术的飞速发展，DSP系统逐渐流行起来，而我由于课程原因也接触到了DSP系统，因此在这里记录了DSPF2812的理论知识，为后续的编程打下基础。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>随着大规模集成电路、数字计算机等技术的飞速发展，DSP系统逐渐流行起来，而我由于课程原因也接触到了DSP系统，因此在这里记录了DSPF2812的理论知识，为后续的编程打下基础。</p>
+]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[解决pip安装Python库时：ReadTimeoutError]]></title>
@@ -24,6 +28,10 @@
         <link href="https://angleHan.github.io/post/jie-jue-pip-an-zhuang-python-ku-shi-readtimeouterror/">
         </link>
         <updated>2020-03-19T09:42:39.000Z</updated>
+        <summary type="html"><![CDATA[<p>近来Python不知怎的就被墙了，据说是有一个非法网站跟Python的网站很像，本来想禁那个非法网站的，结果~~😢😢😢</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>近来Python不知怎的就被墙了，据说是有一个非法网站跟Python的网站很像，本来想禁那个非法网站的，结果~~😢😢😢</p>
+]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[树莓派上CSI摄像头的使用]]></title>
