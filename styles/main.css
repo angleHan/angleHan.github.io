@@ -2092,6 +2092,11 @@ blockquote:before {
     }
     .mist .site-title i {
       background: #FFFFFF4c;
-    }.box-shadow-wrapper {
+    }body {
+cursor: url(https://imgchr.com/i/G3JMY6), default;
+}
+/** 链接指针样式**/
+a:hover{cursor:url(https://imgchr.com/i/G3J1SO), pointer;}
+/** 鼠标样式 结束**/.box-shadow-wrapper {
       box-shadow: none !important;
     }
