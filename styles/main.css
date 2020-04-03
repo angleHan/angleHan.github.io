@@ -128,16 +128,9 @@ sup {
 }
 blockquote {
   color: #9a9a9a;
-  position: relative;
-  padding: 0.4em 0 0 2.2em;
-  font-size: 0.96em;
-}
-blockquote:before {
-  position: absolute;
-  left: 4px;
-  content: "\201c";
-  font: 700 40px/1 serif;
-  color: rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: 0 15px;
+  border-left: 4px solid #c5c5c5;
 }
 #canvas {
   left: 0px;
@@ -164,6 +157,26 @@ blockquote:before {
 .aplayer-title,
 .aplayer-list-title {
   color: #000;
+}
+.light-box {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 0;
+  opacity: 0;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  transition: opacity 300ms ease-in-out 0s;
+  z-index: 99999;
+}
+.light-box img {
+  width: 0;
+  transition: width 1000ms ease-in-out 0s;
+}
+.post-body img {
+  cursor: zoom-in;
 }
 .head-top-line {
   height: 3px;
@@ -1988,7 +2001,7 @@ blockquote:before {
       border-bottom-color: #555;
     }
     .archive-timeline-box::after, .tag-timeline-wrapper::after {
-      background: #eeeeee4c;
+      background: #eeeeeecc;
     }h1, h2, h3, h4, h5, h6 {
       color: #555;
     }
@@ -2032,11 +2045,11 @@ blockquote:before {
       }.nav-item a:hover {
         color: #222;
       }.nav-item-active {
-      background: #f9f9f94c;
+      background: #f9f9f9cc;
     }
 
     .nav-item:hover {
-      background: #f9f9f94c;
+      background: #f9f9f9cc;
       color: rgba(0, 0, 0, 0.98);
     }.site-author-image {
       border-radius: 50%;
@@ -2072,7 +2085,7 @@ blockquote:before {
       color: #ff8787;
       border-bottom-color: #ff8787;
     }.bg-color {
-      background-color: #74c0fc4c;
+      background-color: #74c0fccc;
     }
       .site-meta {
         background: #000 !important;
@@ -2081,7 +2094,7 @@ blockquote:before {
         background: #000 !important;
       }
     .brand {
-      background: #0000004c;
+      background: #000000cc;
     }
     
       .brand {
@@ -2091,7 +2104,7 @@ blockquote:before {
       color: #FFF;
     }
     .mist .site-title i {
-      background: #FFFFFF4c;
+      background: #FFFFFFcc;
     }.box-shadow-wrapper {
       box-shadow: none !important;
     }
