@@ -2061,8 +2061,8 @@ blockquote {
       transition-duration: 59s;
       transition-timing-function: cubic-bezier(.34,0,.84,1);
     }.markdownIt-TOC a {
-      color: #adb5bd;
-      border-bottom-color: #adb5bd;
+      color: #15aabf;
+      border-bottom-color: #15aabf;
     }.markdownIt-TOC a:hover {
       color: #9775fa;
       border-bottom-color: #9775fa;
