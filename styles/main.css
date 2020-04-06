@@ -1980,10 +1980,10 @@ blockquote {
 .bg-color .bg-color {
       background: transparent !important;
     }body {
-      background-color: #e9ecef;
+      background-color: #f8f9fa;
     }
     .nav-toggle .line {
-      background-color: #e9ecef !important;
+      background-color: #f8f9fa !important;
     }.header {
         width: 960px;
         margin: 0 auto;
@@ -2063,8 +2063,8 @@ blockquote {
       transition-duration: 59s;
       transition-timing-function: cubic-bezier(.34,0,.84,1);
     }.markdownIt-TOC a {
-      color: #15aabf;
-      border-bottom-color: #15aabf;
+      color: #f8f9fa;
+      border-bottom-color: #f8f9fa;
     }.markdownIt-TOC a:hover {
       color: #9775fa;
       border-bottom-color: #9775fa;
@@ -2087,7 +2087,7 @@ blockquote {
       color: #ff8787;
       border-bottom-color: #ff8787;
     }.bg-color {
-      background-color: #74c0fc99;
+      background-color: #f8f9fa99;
     }
       .site-meta {
         background: #000 !important;
