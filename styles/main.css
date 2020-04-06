@@ -1980,10 +1980,10 @@ blockquote {
 .bg-color .bg-color {
       background: transparent !important;
     }body {
-      background-color: #339af0;
+      background-color: #f8f9fa;
     }
     .nav-toggle .line {
-      background-color: #339af0 !important;
+      background-color: #f8f9fa !important;
     }.header {
         width: 960px;
         margin: 0 auto;
@@ -2087,7 +2087,7 @@ blockquote {
       color: #ff8787;
       border-bottom-color: #ff8787;
     }.bg-color {
-      background-color: #c5f6fa66;
+      background-color: #339af066;
     }
       .site-meta {
         background: #000 !important;
