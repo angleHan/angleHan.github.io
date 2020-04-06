@@ -1080,6 +1080,8 @@ blockquote {
   text-align: left;
   list-style: none;
   font-size: 14px;
+  overflow: scroll;
+  max-height: 500px;
 }
 .markdownIt-TOC .active-show > ul {
   display: block;
@@ -2001,7 +2003,7 @@ blockquote {
       border-bottom-color: #555;
     }
     .archive-timeline-box::after, .tag-timeline-wrapper::after {
-      background: #eeeeeecc;
+      background: #eeeeee99;
     }h1, h2, h3, h4, h5, h6 {
       color: #555;
     }
@@ -2045,11 +2047,11 @@ blockquote {
       }.nav-item a:hover {
         color: #222;
       }.nav-item-active {
-      background: #f9f9f9cc;
+      background: #f9f9f999;
     }
 
     .nav-item:hover {
-      background: #f9f9f9cc;
+      background: #f9f9f999;
       color: rgba(0, 0, 0, 0.98);
     }.site-author-image {
       border-radius: 50%;
@@ -2085,7 +2087,7 @@ blockquote {
       color: #ff8787;
       border-bottom-color: #ff8787;
     }.bg-color {
-      background-color: #74c0fccc;
+      background-color: #74c0fc99;
     }
       .site-meta {
         background: #000 !important;
@@ -2094,7 +2096,7 @@ blockquote {
         background: #000 !important;
       }
     .brand {
-      background: #000000cc;
+      background: #00000099;
     }
     
       .brand {
@@ -2104,7 +2106,7 @@ blockquote {
       color: #FFF;
     }
     .mist .site-title i {
-      background: #FFFFFFcc;
+      background: #FFFFFF99;
     }.box-shadow-wrapper {
       box-shadow: none !important;
     }
