@@ -9,7 +9,7 @@
 ">
 <meta name="theme-color" content="#000">
 <title>靳路晗~中国</title>
-<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/angleHan/angleHan.github.io@16.0//favicon.ico?v=1586565656208">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/angleHan/angleHan.github.io@16.0//favicon.ico?v=1586594038983">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/angleHan/angleHan.github.io@16.0//styles/main.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/angleHan/angleHan.github.io@16.0//media/css/pisces.css">
 
@@ -309,7 +309,7 @@
       <div class="footer-box">
   <footer class="footer">
     <div class="copyright">
-      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | © 2019-2020 Theme By HsxyHao
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | © 2019-2020 Theme By <a href="https://github.com/hsxyhao/gridea-theme-next" target="_blank">HsxyHao</a>
     </div>
     <div class="poweredby">
       2020 Jixon  <a href="https://info.flagcounter.com/3anO"><img src="https://s01.flagcounter.com/count/3anO/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_12/viewers_0/labels_0/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
@@ -466,6 +466,16 @@
     }
   }
 
+  // 链接跳转
+  let newWindow = ''
+  if (newWindow === 'true') {
+    let links = document.querySelectorAll('.post-body a')
+    links.forEach(item => {
+      if (!item.classList.contains('btn')) {
+        item.setAttribute("target","_blank");
+      }
+    })
+  }
   // 代码高亮
   hljs.initHighlightingOnLoad();
 
