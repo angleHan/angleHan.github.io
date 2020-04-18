@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://angleHan.github.io</id>
     <title>靳路晗~中国</title>
-    <updated>2020-04-11T09:18:14.620Z</updated>
+    <updated>2020-04-18T06:51:11.659Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://angleHan.github.io"/>
     <link rel="self" href="https://angleHan.github.io/atom.xml"/>
@@ -11,6 +11,19 @@
     <logo>https://angleHan.github.io/images/avatar.png</logo>
     <icon>https://angleHan.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 靳路晗~中国</rights>
+    <entry>
+        <title type="html"><![CDATA[随机信号处理学习笔记（AR模型的Burg算法）]]></title>
+        <id>https://angleHan.github.io/post/sui-ji-xin-hao-chu-li-xue-xi-bi-ji-burg-suan-fa/</id>
+        <link href="https://angleHan.github.io/post/sui-ji-xin-hao-chu-li-xue-xi-bi-ji-burg-suan-fa/">
+        </link>
+        <updated>2020-04-18T06:25:54.000Z</updated>
+        <summary type="html"><![CDATA[<h2 id="前言">前言</h2>
+<p>虽然Levinson-Durbin递推算法解决了矩阵计算比较复杂的问题，但仍需要对信号的自相关函数进行估计，造成了一定的误差。由此引出了Burg算法，它不需要对自相关函数进行估计，可以直接由观测数据求解反射系数。</p>
+]]></summary>
+        <content type="html"><![CDATA[<h2 id="前言">前言</h2>
+<p>虽然Levinson-Durbin递推算法解决了矩阵计算比较复杂的问题，但仍需要对信号的自相关函数进行估计，造成了一定的误差。由此引出了Burg算法，它不需要对自相关函数进行估计，可以直接由观测数据求解反射系数。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[随机信号处理学习笔记（AR模型的Levinson-Durbin递推解法）]]></title>
         <id>https://angleHan.github.io/post/sui-ji-xin-hao-chu-li-xue-xi-bi-ji/</id>
@@ -31,17 +44,6 @@
         <summary type="html"><![CDATA[<p>在随机信号处理中，我们不可避免地要估计信号的功率谱。但使用DFT的经典谱估计法有时误差较大，而且有旁瓣的干扰等现象，因此前人们研究出来了现代谱估计方法。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>在随机信号处理中，我们不可避免地要估计信号的功率谱。但使用DFT的经典谱估计法有时误差较大，而且有旁瓣的干扰等现象，因此前人们研究出来了现代谱估计方法。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[DSPF2812的理论学习（事件管理器EV、ADC和CMD命令文件）]]></title>
-        <id>https://angleHan.github.io/post/dspf2812-de-li-lun-xue-xi-shi-jian-guan-li-qi-ev/</id>
-        <link href="https://angleHan.github.io/post/dspf2812-de-li-lun-xue-xi-shi-jian-guan-li-qi-ev/">
-        </link>
-        <updated>2020-03-29T01:20:44.000Z</updated>
-        <summary type="html"><![CDATA[<p>接上篇文章 <a href="https://dreamfixer.top/post/dspf2812-de-li-lun-xue-xi/">DSPF2812的理论学习(CPU、时钟与中断) | 靳路晗~中国</a></p>
-]]></summary>
-        <content type="html"><![CDATA[<p>接上篇文章 <a href="https://dreamfixer.top/post/dspf2812-de-li-lun-xue-xi/">DSPF2812的理论学习(CPU、时钟与中断) | 靳路晗~中国</a></p>
 ]]></content>
     </entry>
 </feed>
