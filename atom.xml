@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://angleHan.github.io</id>
     <title>靳路晗~中国</title>
-    <updated>2020-04-18T06:51:11.659Z</updated>
+    <updated>2020-04-18T06:51:59.087Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://angleHan.github.io"/>
     <link rel="self" href="https://angleHan.github.io/atom.xml"/>
@@ -17,11 +17,9 @@
         <link href="https://angleHan.github.io/post/sui-ji-xin-hao-chu-li-xue-xi-bi-ji-burg-suan-fa/">
         </link>
         <updated>2020-04-18T06:25:54.000Z</updated>
-        <summary type="html"><![CDATA[<h2 id="前言">前言</h2>
-<p>虽然Levinson-Durbin递推算法解决了矩阵计算比较复杂的问题，但仍需要对信号的自相关函数进行估计，造成了一定的误差。由此引出了Burg算法，它不需要对自相关函数进行估计，可以直接由观测数据求解反射系数。</p>
+        <summary type="html"><![CDATA[<p>虽然Levinson-Durbin递推算法解决了矩阵计算比较复杂的问题，但仍需要对信号的自相关函数进行估计，造成了一定的误差。由此引出了Burg算法，它不需要对自相关函数进行估计，可以直接由观测数据求解反射系数。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<h2 id="前言">前言</h2>
-<p>虽然Levinson-Durbin递推算法解决了矩阵计算比较复杂的问题，但仍需要对信号的自相关函数进行估计，造成了一定的误差。由此引出了Burg算法，它不需要对自相关函数进行估计，可以直接由观测数据求解反射系数。</p>
+        <content type="html"><![CDATA[<p>虽然Levinson-Durbin递推算法解决了矩阵计算比较复杂的问题，但仍需要对信号的自相关函数进行估计，造成了一定的误差。由此引出了Burg算法，它不需要对自相关函数进行估计，可以直接由观测数据求解反射系数。</p>
 ]]></content>
     </entry>
     <entry>

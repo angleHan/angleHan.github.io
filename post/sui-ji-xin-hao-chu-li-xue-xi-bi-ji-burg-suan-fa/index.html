@@ -9,7 +9,7 @@
 ">
 <meta name="theme-color" content="#000">
 <title>随机信号处理学习笔记（AR模型的Burg算法） | 靳路晗~中国</title>
-<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/angleHan/angleHan.github.io@16.0//favicon.ico?v=1587192668612">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/angleHan/angleHan.github.io@16.0//favicon.ico?v=1587192716810">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/angleHan/angleHan.github.io@16.0//styles/main.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/angleHan/angleHan.github.io@16.0//media/css/pisces.css">
 
@@ -233,7 +233,6 @@
     <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E5%89%8D%E8%A8%80">前言</a></li>
 <li><a href="#burg%E7%AE%97%E6%B3%95">Burg算法</a></li>
 <li><a href="#burg%E7%AE%97%E6%B3%95%E7%9A%84matlab%E5%AE%9E%E7%8E%B0">Burg算法的Matlab实现</a></li>
 </ul>
@@ -522,7 +521,7 @@ window.addEventListener('load', function() {
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>391<span class="pc-show">字数</span></span>
+      <span>389<span class="pc-show">字数</span></span>
     </span>
     
       
@@ -538,8 +537,7 @@ window.addEventListener('load', function() {
   </div>
 </header>
               <div class="post-body next-md-body" id="post_body">
-                <h2 id="前言">前言</h2>
-<p>虽然Levinson-Durbin递推算法解决了矩阵计算比较复杂的问题，但仍需要对信号的自相关函数进行估计，造成了一定的误差。由此引出了Burg算法，它不需要对自相关函数进行估计，可以直接由观测数据求解反射系数。</p>
+                <p>虽然Levinson-Durbin递推算法解决了矩阵计算比较复杂的问题，但仍需要对信号的自相关函数进行估计，造成了一定的误差。由此引出了Burg算法，它不需要对自相关函数进行估计，可以直接由观测数据求解反射系数。</p>
 <!-- more -->
 <h2 id="burg算法">Burg算法</h2>
 <p>Burg算法是一种与预测误差格型滤波器密切相关的算法，它需要求解信号的前向预测误差和后向预测误差，其递推公式如下：<br>
