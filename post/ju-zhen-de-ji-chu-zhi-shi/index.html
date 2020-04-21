@@ -8,7 +8,7 @@
 <meta name="description" content="山外看众生，山里看自己 
 ">
 <meta name="theme-color" content="#000">
-<title>DSPF2812的理论学习（事件管理器EV、ADC和CMD命令文件） | 靳路晗~中国</title>
+<title>矩阵的基础知识 | 靳路晗~中国</title>
 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/angleHan/angleHan.github.io@16.0//favicon.ico?v=1587428707375">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/angleHan/angleHan.github.io@16.0//styles/main.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/angleHan/angleHan.github.io@16.0//media/css/pisces.css">
@@ -38,8 +38,8 @@
 </script>
 
 
-    <meta name="description" content="DSPF2812的理论学习（事件管理器EV、ADC和CMD命令文件）" />
-    <meta name="keywords" content="" />
+    <meta name="description" content="矩阵的基础知识" />
+    <meta name="keywords" content="矩阵；线性代数" />
   </head>
   <body>
     <div class="head-top-line"></div>
@@ -233,15 +233,11 @@
     <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E4%BA%8B%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8ev">事件管理器EV</a>
-<ul>
-<li><a href="#%E9%80%9A%E7%94%A8%E5%AE%9A%E6%97%B6%E5%99%A8">通用定时器</a></li>
-<li><a href="#%E6%AF%94%E8%BE%83%E5%8D%95%E5%85%83%E4%B8%8Epwm%E7%94%B5%E8%B7%AF">比较单元与PWM电路</a></li>
-<li><a href="#%E6%8D%95%E8%8E%B7%E5%8D%95%E5%85%83%E4%B8%8E%E6%AD%A3%E4%BA%A4%E8%84%89%E5%86%B2%E7%BC%96%E7%A0%81%E7%94%B5%E8%B7%AF">捕获单元与正交脉冲编码电路</a></li>
-</ul>
-</li>
-<li><a href="#%E6%A8%A1%E6%95%B0%E8%BD%AC%E6%8D%A2%E5%99%A8adc">模/数转换器ADC</a></li>
-<li><a href="#cmd%E5%91%BD%E4%BB%A4%E6%96%87%E4%BB%B6">CMD命令文件</a></li>
+<li><a href="#hermitian%E7%9F%A9%E9%98%B5%E4%B8%8E%E7%9F%A9%E9%98%B5%E7%9A%84%E4%BA%8C%E6%AC%A1%E5%9E%8B">Hermitian矩阵与矩阵的二次型</a></li>
+<li><a href="#%E8%A1%8C%E5%88%97%E5%BC%8F">行列式</a></li>
+<li><a href="#%E7%9F%A9%E9%98%B5%E7%9A%84%E7%89%B9%E5%BE%81%E5%80%BC">矩阵的特征值</a></li>
+<li><a href="#%E7%9F%A9%E9%98%B5%E7%9A%84%E8%BF%B9">矩阵的迹</a></li>
+<li><a href="#%E7%9F%A9%E9%98%B5%E7%9A%84%E7%A7%A9">矩阵的秩</a></li>
 </ul>
 </li>
 </ul>
@@ -508,8 +504,8 @@ window.addEventListener('load', function() {
             <div class="section bg-color post post-page">
               <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://angleHan.github.io/post/dspf2812-de-li-lun-xue-xi-shi-jian-guan-li-qi-ev/">
-      DSPF2812的理论学习（事件管理器EV、ADC和CMD命令文件）
+    <a class="post-title-link" href="https://angleHan.github.io/post/ju-zhen-de-ji-chu-zhi-shi/">
+      矩阵的基础知识
     </a>
   </h1>
   <div class="post-meta">
@@ -517,25 +513,38 @@ window.addEventListener('load', function() {
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2020-03-29</span>
+      <span>2020-04-20</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
+      <span class="meta-item">
+        <i class="fa fa-folder-o"></i>
+        <span class="pc-show">分类于</span>
+        
+          
+            <a href="https://angleHan.github.io/tag/8j1yTREC8/">
+              <span>矩阵；线性代数</span>
+            </a>
+          
+        
+      </span>
+      <span class="post-meta-divider">|</span>
+    
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>9分钟</span>
+      <span>4分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>2558<span class="pc-show">字数</span></span>
+      <span>840<span class="pc-show">字数</span></span>
     </span>
     
       
       
         
       
-      <span id="/post/dspf2812-de-li-lun-xue-xi-shi-jian-guan-li-qi-ev/" data-flag-title="DSPF2812的理论学习（事件管理器EV、ADC和CMD命令文件）" class="meta-item pc-show leancloud_visitors">
+      <span id="/post/ju-zhen-de-ji-chu-zhi-shi/" data-flag-title="矩阵的基础知识" class="meta-item pc-show leancloud_visitors">
         <span class="post-meta-divider">|</span>
         <i class="fa fa-eye"></i>
         <span>浏览量：<span class="leancloud-visitors-count" ></span></span>
@@ -544,86 +553,49 @@ window.addEventListener('load', function() {
   </div>
 </header>
               <div class="post-body next-md-body" id="post_body">
-                <p>接上篇文章 <a href="https://dreamfixer.top/post/dspf2812-de-li-lun-xue-xi/">DSPF2812的理论学习(CPU、时钟与中断) | 靳路晗~中国</a></p>
+                <p>由于大一学习的线性代数现在已经忘记得差不多了😥，因此在这yh里记录一下矩阵的常用知识，为以后更复杂的数学运算打下基础。</p>
 <!-- more -->
-<h2 id="事件管理器ev">事件管理器EV</h2>
-<p>使用DSP进行开发，事件管理器通常是要用到的，DSPF2812共有2个事件管理器EVA和EVB，它为用户提供了众多的功能，使其在电机控制、变频器、逆变器等应用场合中显得特别有用。EV模块包含通用定时器、比较单元、捕获单元、正交编码电路，下面将一 一介绍。</p>
-<h3 id="通用定时器">通用定时器</h3>
-<p>事件管理器EVA有通用定时器T1和T2，EVB有通用定时器T3和T4。通用定时器的作用主要有三：</p>
-<ol>
-<li>计时。</li>
-<li>使用定时器的比较功能产生PWM波。</li>
-<li>也可以给事件管理器的其它模块提供基准时钟。</li>
-</ol>
-<p>下面以T1为例，详细介绍通用定时器的工作原理。<br>
-首先来看通用定时器的结构：<br>
-<img src="https://angleHan.github.io/post-images/1585445904556.png" alt="" loading="lazy"><br>
-从这张图中我们能得出以下信息：</p>
-<ul>
-<li>和定时器T1相关的常用寄存器有：16位的T1周期寄存器T1PR；16位的T1比较寄存器T1CMPR；16位的T1计数寄存器T1CNT；16位的T1控制寄存器T1CON；16位的通用定时器控制寄存器GPTCONA。</li>
-<li>定时器T1的输入信号：来自于CPU的内部时钟HSPCLK；外部时钟输入TCLKINA，最大频率不能超过37.5MHz；定时器计数方向输入TDIRA，用于定时器工作于定向增/减计数模式；复位信号。</li>
-<li>定时器T1的输出信号：定时器的比较输出T1PWM_T1CMP，可输出PWM波；送给ADC模块的AD转换启动信号；下溢、上溢、比较和周期匹配信号，用于提供自身比较逻辑。</li>
-</ul>
-<p>了解了这些，我们可以开始学习定时器的计数模式了。<br>
-T1共支持4种模式，由T1控制寄存器的第12位TMODE1和第11位TMODE0来选择。</p>
-<ul>
-<li>当TMODE的值为0时，定时器T1工作于停止/保持模式。在这种模式下，T1停止计数并保持当前的状态。</li>
-<li>当TMODE的值为1时，定时器T1工作于连续增/减计数模式。在这种模式下，T1计数器寄存器T1CNT先从初始值开始递增至周期寄存器的值，再递减至0，再递增，再递减，这样不断循环下去。</li>
-<li>当TMODE的值为2时，定时器T1工作于连续递增计数模式。在这种模式下，T1计数器寄存器先从初始值开始递增至周期寄存器的值，然后突变为0，再从0开始递增至周期寄存器的值，不断重复循环下去。</li>
-<li>当TMODE的值为3时，T1工作于定向增/减计数模式，这时候T1计数器寄存器进行递增或者递减计数取决于引脚TDIRA的电平（高电平递增，低电平递减）。如果在T1定时器计数寄存器计数过程中，引脚TDIRA的电平发生了变化，那么必须在完成当前计数周期后的下一个定时器时钟周期时，T1CNT的计数方向发生变化。</li>
-</ul>
-<p>在以上四种模式中，我们用得最多的是连续增/减计数模式和连续递增计数模式，大家可以重点关注这两种。接下来我们将讨论PWM波的产生。<br>
-当T1计数器寄存器T1CNT和比较寄存器T1CMPR的值相等时，如果定时器的比较功能和比较输出使能，则T1PWM_T1CMP引脚就会输出PWM波形。定时器T1能够产生两种类型的PWM，不对称的和对称的。</p>
-<ul>
-<li><strong>当T1CNT工作于连续递增计数模式时，输出不对称的PWM波形</strong>。此时PWM波中各参数计算如下：<br>
-<img src="https://angleHan.github.io/post-images/1585454589751.png" alt="" loading="lazy"></li>
-<li><strong>当T1CNT工作于连续增/减计数模式时，输出对称的PWM波形</strong>。 此时PWM中各参数计算如下：<br>
-<img src="https://angleHan.github.io/post-images/1585454605652.png" alt="" loading="lazy"></li>
-</ul>
-<p>大家可以根据上述公式快速计算PWM的参数。</p>
-<h3 id="比较单元与pwm电路">比较单元与PWM电路</h3>
-<p>事件管理器EVA模块具有3个全比较单元，比较单元1、比较单元2、比较单元3。EVA的比较单元时钟信号由通用定时器T1来提供，每个比较单元都能够输出2路互补的PWM波形（在这里PWM波形的原理和定时器产生PWM的原理基本相同），也可以通过相应的寄存器来设置死区时间，因此它有能力去驱动一个三相全桥电路。<br>
-注意这里引入了一个死区概念，我通过下面的图来解释。<br>
-<img src="https://angleHan.github.io/post-images/1585467072814.png" alt="" loading="lazy"><br>
-由图可以看出，输入开关管的PWM信号必须都是互补的。在理想情况下，PHa1是高电平时，PHa2是低电平。但是二者从高电平转换到低电平或从低电平转换为高电平时都需要一段时间，在这段时间内，二者会同时导通，否则将会被击穿。因此，我们要保证上下两管的上升沿和下降沿互相要隔开一段时间，这段时间就称为死区。</p>
-<h3 id="捕获单元与正交脉冲编码电路">捕获单元与正交脉冲编码电路</h3>
-<p>捕获单元用于捕获输入引脚上的信号跳变。EV有6个捕获单元，其中EVA对应CAP1、CAP2、CAP3，EVB对应CAP4、CAP5、CAP6。每个捕获单元都有相应的捕获输入引脚，此外，正交脉冲编码电路与捕获输入单元共用芯片外部引脚。<br>
-F2812事件管理器的每个捕获单元都有一个专用的2级深度的FIFO堆栈，捕获单元被使能后，当输入引脚CAPx上有1一个跳变（由CAPCONA/B指定是检测上升沿还是下降沿），就将所选通用定时器的当前计数值载入到相应的FIFO栈中。同时相应的中断标志被置位，如果该中断未被屏蔽，就产生了一个外部中断请求，即发生了捕获事件。</p>
-<p>每个事件管理器有一个正交脉冲编码电路QEP，EVA的QEP电路有输入引脚CAP1_QEP1、CAP2_QEP2，EVB的QEP电路有输入引脚CAP4_QEP3、CAP5_QEP4，光电码盘输出的两路正交编码信号正好从上述的两个输入引脚输入到DSP的QEP电路，然后再通过QEP的译码器对正交编码信号进行译码，最后就可以得到电机转子的转速、旋转方向、旋转位置等信息了。<br>
-QEP电路工作时，引脚CAP1_QEP1和引脚CAP2_QEP2输入两路正交编码脉冲，QEP电路对这两路正交编码脉冲的上升沿和下降沿都进行计数，因此QEP电路为定时器T2所提供的时钟频率是每个输入序列的4倍。</p>
-<h2 id="模数转换器adc">模/数转换器ADC</h2>
-<p>F2812的ADC模块一共具有16个采样通道，分成两组：一组为ADCINA0-ADCINA7，另一组为ADCINB0-ADCINB7。具体结构见下图：<br>
-<img src="https://angleHan.github.io/post-images/1585562677675.png" alt="" loading="lazy"><br>
-可以看出，虽然ADC模块具有多个输入通道，但内部只有一个转换器，因此同一时刻只能对一路输入信号进行转换。若某一时刻输入了多个信号，则ADC内部具有自动序列发生器，用户可以通过编程为序列发生器指定需要转换的通道顺序。<br>
-ADC的转换特性一般通过下面公式求得：<br>
-<img src="https://angleHan.github.io/post-images/1585637947039.png" alt="" loading="lazy"><br>
-ADC模块的时钟通过下式计算：<br>
-<img src="https://angleHan.github.io/post-images/1585638227914.png" alt="" loading="lazy"><br>
-ADC模块的通道采样时间如下：<br>
-<img src="https://angleHan.github.io/post-images/1585638380426.png" alt="" loading="lazy"><br>
-（其中ACQ_PS是ADC控制寄存器中的位）</p>
-<p>下面开始说ADC的工作模式。</p>
-<ul>
-<li>双序列发生器模式下顺序采样，假设对ADCINA0-ADCINA7、ADCINB0-ADCINB7这16路通道进行采样，此时将会用到序列发生器SEQ1和SEQ2。由于是顺序采样，必须对16个通道每一个通道进行排序。因此SEQ1将用到通道选择控制寄存器ADCCHSELSEQ1、ADCCHSELSEQ2，SEQ2将用到通道选择控制寄存器ADCCHSELSEQ3、ADCCHSELSEQ4。</li>
-<li>双序列发生器模式下并发采样，仍然遵循上述假设，以下同。（并发采样是一对通道一对通道地采样）因此同样用到两个序列发生器，但此时只需要对一对通道中的任何一个通道进行排序即可，因此通道选择控制器使用的数量是顺序采样的一半。</li>
-<li>级联模式下的顺序采样，由于ADC工作于级联模式，此时序列发生器SEQ1和SEQ2级联成了一个16状态的序列发生器SEQ。其它与双序列发生器模式下顺序采样类似。</li>
-<li>级联模式下的并发采样，即级联模式与并发采样的组合。</li>
-</ul>
-<p>以上就是DSPF2812中ADC的基础知识，实际想编程的话光看上边是做不了的，你还需要结合相应的寄存器去搞清楚每一位是干什么的，根据你的要求进行配置。</p>
-<h2 id="cmd命令文件">CMD命令文件</h2>
-<p>这里首先要介绍通用目标文件格式COFF，详细的COFF文件格式包括断头、可执行代码、初始化数据、可重定位信息、行号入口、符号表等等，但从应用的角度来看，我们只需要掌握两点：一是通过伪指令定义段，二是给段分配空间。</p>
+<h2 id="hermitian矩阵与矩阵的二次型">Hermitian矩阵与矩阵的二次型</h2>
+<p>Hermitian矩阵就是我们常说的复共轭对称矩阵，它是满足<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>A</mi><mi>H</mi></msup><mo>=</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">A^H=A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.08125em;">H</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span>的正方复矩阵。</p>
+<p>任意一个正方对称矩阵A的二次型定义为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>x</mi><mi>H</mi></msup><mi>A</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">x^HAx</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.08125em;">H</span></span></span></span></span></span></span></span><span class="mord mathdefault">A</span><span class="mord mathdefault">x</span></span></span></span>，其中x可以是任意的非零复向量。（<strong>需注意，这里A必须为实对称矩阵或复共轭对称矩阵，，为了保证定义的唯一性</strong>）<br>
+从这里又延申出了以下定义：<br>
+<img src="https://angleHan.github.io/post-images/1587376562191.png" alt="" loading="lazy"></p>
 <blockquote>
-<p>编译器处理段的过程：1. 把每个源文件都编译成独立的目标文件。<br>
-2. 链接器把目标文件中相同段名的部分链接在一起，生成最终的可执行文件。</p>
+<p>一句话小结，矩阵的二次型刻画矩阵的正定性</p>
 </blockquote>
-<p>首先来看下面一个CMD文件：<br>
-<img src="https://angleHan.github.io/post-images/1586504027836.png" alt="" loading="lazy"><br>
-MEMORY伪指令可以让用户选择目标存储器的起始地址和长度，其中PAGE0为程序空间，PAGE1为数据空间。<br>
-再来看下面的CMD文件：<br>
-<img src="https://angleHan.github.io/post-images/1586504261261.png" alt="" loading="lazy"><br>
-其中，SECTIONS伪指令具体规定了在存储器内何处放置输出段，如果用户没有指定SECTIONS伪指令，链接器则用默认的算法组合并定位段。</p>
-<p>对于CMD文件，我们主要是理解其对代码的分配，起到更好的管理存储空间的作用。如果代码量小且没有特殊要求的话，你也可以用默认的段分配方法。</p>
-<p>本文结束，感谢阅读😘</p>
+<h2 id="行列式">行列式</h2>
+<p>一个n*n正方矩阵A的行列式记作<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><mi>e</mi><mi>t</mi><mo>(</mo><mi>A</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">det(A)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">d</span><span class="mord mathdefault">e</span><span class="mord mathdefault">t</span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mclose">)</span></span></span></span>，A去掉第i行和第j列的剩余行列式记作<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">A_{ij}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span>，称为元素<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>a</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">a_{ij}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span>的余子式，从这里我们引出了行列式的计算公式：<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><mi>e</mi><mi>t</mi><mo>(</mo><mi>A</mi><mo>)</mo><mo>=</mo><msub><mi>a</mi><mrow><mi>i</mi><mn>1</mn></mrow></msub><msub><mi>A</mi><mrow><mi>i</mi><mn>1</mn></mrow></msub><mo>+</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo>+</mo><msub><mi>a</mi><mrow><mi>i</mi><mi>n</mi></mrow></msub><msub><mi>A</mi><mrow><mi>i</mi><mi>n</mi></mrow></msub><mo>=</mo><msubsup><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msub><mi>a</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>(</mo><mo>−</mo><mn>1</mn><msup><mo>)</mo><mrow><mi>i</mi><mo>+</mo><mi>j</mi></mrow></msup><mi>d</mi><mi>e</mi><mi>t</mi><mo>(</mo><msub><mi>A</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>)</mo></mrow><annotation encoding="application/x-tex">det(A) = a_{i1}A_{i1}+......+a_{in}A_{in} = \sum_{i=1}^{n}a_{ij}(-1)^{i+j}det(A_{ij})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">d</span><span class="mord mathdefault">e</span><span class="mord mathdefault">t</span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mord mathdefault mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mord mathdefault mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.124374em;vertical-align:-0.29971000000000003em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.804292em;"><span style="top:-2.40029em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.29971000000000003em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord">−</span><span class="mord">1</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.824664em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mbin mtight">+</span><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span></span></span></span></span></span><span class="mord mathdefault">d</span><span class="mord mathdefault">e</span><span class="mord mathdefault">t</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>(即通过递推的方法计算)<br>
+关于行列式有以下几点说明：</p>
+<ol>
+<li>行列式不等于0的矩阵称为非奇异矩阵。</li>
+<li>单位矩阵的行列式等于1.</li>
+<li>任何一个正方矩阵A和它的转置矩阵具有相同的行列式。</li>
+<li>两个矩阵乘积的行列式等于它们的行列式的乘积。</li>
+</ol>
+<blockquote>
+<p>一句话小结，矩阵的行列式主要刻画矩阵的奇异性。</p>
+</blockquote>
+<h2 id="矩阵的特征值">矩阵的特征值</h2>
+<p>A为n*n的方阵，若线性代数方程： Au = <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>λ</mi><mo>∗</mo><mi>u</mi></mrow><annotation encoding="application/x-tex">\lambda*u</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">λ</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">u</span></span></span></span>具有n*1非零向量解u，则标量<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">λ</span></span></span></span>称为矩阵A的一个特征值，u称为A对应于<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">λ</span></span></span></span>的特征向量。</p>
+<p>这里特征值可以这样理解，英文叫做eigenvalue，词头Eigen有本征、固有的意思，因此eigenvalue表示矩阵A在不改变某些向量固有方向的基础上，对向量只进行长度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">λ</span></span></span></span>倍的变换，因此<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">λ</span></span></span></span>就是矩阵A能将这些向量进行保留“本征”变换的倍数值。</p>
+<p>通过特征值的定义，我们也可以将它和矩阵的奇异性、正定性和对角线元素结构联系起来，反映了矩阵的一些重要特征。</p>
+<blockquote>
+<p>一句话小结，矩阵的特征值既刻画原矩阵的奇异性，又反映原矩阵所有对角元素的结构，还刻画矩阵的正定性。</p>
+</blockquote>
+<h2 id="矩阵的迹">矩阵的迹</h2>
+<p>n*n矩阵A的对角元素之和称为A的迹，记作<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi><mi>r</mi><mo>(</mo><mi>A</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">tr(A)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mclose">)</span></span></span></span>。（非正方矩阵无迹的定义）</p>
+<p>这里有如下重要结论：<br>
+<strong>矩阵的迹等于该矩阵所有特征值之和。</strong></p>
+<blockquote>
+<p>一句话小结，矩阵的迹反映矩阵所有特征值之和。</p>
+</blockquote>
+<h2 id="矩阵的秩">矩阵的秩</h2>
+<p>矩阵<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mrow><mi>m</mi><mo>∗</mo><mi>n</mi></mrow></msub></mrow><annotation encoding="application/x-tex">A_{m*n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.175696em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">m</span><span class="mbin mtight">∗</span><span class="mord mathdefault mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>的秩定义为该矩阵中线性无关的行或列的数目，记作<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi><mi>a</mi><mi>n</mi><mi>k</mi><mo>(</mo><mi>A</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">rank(A)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">a</span><span class="mord mathdefault">n</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mclose">)</span></span></span></span>。</p>
+<blockquote>
+<p>一句话小结，矩阵的秩刻画矩阵行与行之间或者列与列之间的线性无关性，从而反映矩阵的满秩性或秩亏缺性。</p>
+</blockquote>
+<p>本文结束，感谢阅读~~</p>
 
               </div>
               <div class="post-footer">
@@ -634,7 +606,7 @@ MEMORY伪指令可以让用户选择目标存储器的起始地址和长度，�
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://angleHan.github.io/post/dspf2812-de-li-lun-xue-xi-shi-jian-guan-li-qi-ev/" title="DSPF2812的理论学习（事件管理器EV、ADC和CMD命令文件）">DSPF2812的理论学习（事件管理器EV、ADC和CMD命令文件）</a>
+      <a href="https://angleHan.github.io/post/ju-zhen-de-ji-chu-zhi-shi/" title="矩阵的基础知识">矩阵的基础知识</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -643,19 +615,17 @@ MEMORY伪指令可以让用户选择目标存储器的起始地址和长度，�
   </ul>
   <div class="tags">
     
+      <a href="https://angleHan.github.io/tag/8j1yTREC8/"># 矩阵；线性代数</a>
+    
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="随机信号处理学习笔记（AR模型的Yule_Walker方程）" href="https://angleHan.github.io/post/sui-ji-xin-hao-chu-li-xue-xi-bi-ji-yule_walker-fang-cheng/">随机信号处理学习笔记（AR模型的Yule_Walker方程）</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="随机信号处理学习笔记（AR模型的Yule_Walker方程）" href="https://angleHan.github.io/post/sui-ji-xin-hao-chu-li-xue-xi-bi-ji-yule_walker-fang-cheng/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="DSPF2812的理论学习(CPU、时钟与中断)" href="https://angleHan.github.io/post/dspf2812-de-li-lun-xue-xi/">DSPF2812的理论学习(CPU、时钟与中断)</a>
-        <a class="nav-mobile-next" title="DSPF2812的理论学习(CPU、时钟与中断)" href="https://angleHan.github.io/post/dspf2812-de-li-lun-xue-xi/">下一篇</a>
+        <a class="nav-pc-next" title="随机信号处理学习笔记（AR模型的Burg算法）" href="https://angleHan.github.io/post/sui-ji-xin-hao-chu-li-xue-xi-bi-ji-burg-suan-fa/">随机信号处理学习笔记（AR模型的Burg算法）</a>
+        <a class="nav-mobile-next" title="随机信号处理学习笔记（AR模型的Burg算法）" href="https://angleHan.github.io/post/sui-ji-xin-hao-chu-li-xue-xi-bi-ji-burg-suan-fa/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
