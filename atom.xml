@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://angleHan.github.io</id>
     <title>靳路晗~中国</title>
-    <updated>2020-04-23T01:04:45.242Z</updated>
+    <updated>2020-04-25T06:29:53.309Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://angleHan.github.io"/>
     <link rel="self" href="https://angleHan.github.io/atom.xml"/>
@@ -11,6 +11,13 @@
     <logo>https://angleHan.github.io/images/avatar.png</logo>
     <icon>https://angleHan.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 靳路晗~中国</rights>
+    <entry>
+        <title type="html"><![CDATA[奇异值分解与特征值分解的理解]]></title>
+        <id>https://angleHan.github.io/post/qi-yi-zhi-fen-jie-yu-te-zheng-zhi-fen-jie-de-li-jie/</id>
+        <link href="https://angleHan.github.io/post/qi-yi-zhi-fen-jie-yu-te-zheng-zhi-fen-jie-de-li-jie/">
+        </link>
+        <updated>2020-04-21T00:53:07.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[矩阵的基础知识]]></title>
         <id>https://angleHan.github.io/post/ju-zhen-de-ji-chu-zhi-shi/</id>
@@ -31,17 +38,6 @@
         <summary type="html"><![CDATA[<p>虽然Levinson-Durbin递推算法解决了矩阵计算比较复杂的问题，但仍需要对信号的自相关函数进行估计，造成了一定的误差。由此引出了Burg算法，它不需要对自相关函数进行估计，可以直接由观测数据求解反射系数。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>虽然Levinson-Durbin递推算法解决了矩阵计算比较复杂的问题，但仍需要对信号的自相关函数进行估计，造成了一定的误差。由此引出了Burg算法，它不需要对自相关函数进行估计，可以直接由观测数据求解反射系数。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[随机信号处理学习笔记（AR模型的Levinson-Durbin递推解法）]]></title>
-        <id>https://angleHan.github.io/post/sui-ji-xin-hao-chu-li-xue-xi-bi-ji/</id>
-        <link href="https://angleHan.github.io/post/sui-ji-xin-hao-chu-li-xue-xi-bi-ji/">
-        </link>
-        <updated>2020-04-05T09:03:25.000Z</updated>
-        <summary type="html"><![CDATA[<p>从Yule_Work直接解AR模型虽然直观，但存在不少问题。一是随着AR模型阶数的提高，矩阵运算量较大的问题；还有一个是信号的自相关函数估计不准确仍然导致结果误差较大的问题。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>从Yule_Work直接解AR模型虽然直观，但存在不少问题。一是随着AR模型阶数的提高，矩阵运算量较大的问题；还有一个是信号的自相关函数估计不准确仍然导致结果误差较大的问题。</p>
 ]]></content>
     </entry>
 </feed>

@@ -8,7 +8,7 @@
 <meta name="description" content="山外看众生，山里看自己 
 ">
 <meta name="theme-color" content="#000">
-<title>Hello Gridea | 靳路晗~中国</title>
+<title>奇异值分解与特征值分解的理解 | 靳路晗~中国</title>
 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/angleHan/angleHan.github.io@16.0//favicon.ico?v=1587796189224">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/angleHan/angleHan.github.io@16.0//styles/main.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/angleHan/angleHan.github.io@16.0//media/css/pisces.css">
@@ -38,8 +38,8 @@
 </script>
 
 
-    <meta name="description" content="Hello Gridea" />
-    <meta name="keywords" content="Gridea" />
+    <meta name="description" content="奇异值分解与特征值分解的理解" />
+    <meta name="keywords" content="矩阵；线性代数" />
   </head>
   <body>
     <div class="head-top-line"></div>
@@ -242,11 +242,16 @@
               <div class="toc-box right-motion">
   <div class="toc-wrapper auto-number auto" id="toc_wrapper">
     <ul class="markdownIt-TOC">
-<li>
+<li><a href="#%E5%A5%87%E5%BC%82%E5%80%BC">奇异值</a>
 <ul>
-<li><a href="#%E7%89%B9%E6%80%A7">特性👇</a></li>
+<li><a href="#%E5%A5%87%E5%BC%82%E5%80%BC%E5%88%86%E8%A7%A3%E7%9A%84%E7%B1%BB%E6%AF%94">奇异值分解的类比</a></li>
+<li><a href="#%E5%A5%87%E5%BC%82%E5%80%BC%E5%88%86%E8%A7%A3%E7%9A%84%E6%95%B0%E5%AD%A6%E8%A1%A8%E8%BE%BE">奇异值分解的数学表达</a></li>
+<li><a href="#%E5%A5%87%E5%BC%82%E5%80%BC%E5%88%86%E8%A7%A3%E7%9A%84%E5%87%A0%E4%BD%95%E8%A7%A3%E9%87%8A">奇异值分解的几何解释</a></li>
+<li><a href="#%E5%A5%87%E5%BC%82%E5%80%BC%E5%88%86%E8%A7%A3%E7%9A%84%E7%89%A9%E7%90%86%E8%A7%A3%E9%87%8A">奇异值分解的物理解释</a></li>
+<li><a href="#%E5%A5%87%E5%BC%82%E5%80%BC%E7%9A%84%E4%B8%80%E7%A7%8D%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95">奇异值的一种计算方法</a></li>
 </ul>
 </li>
+<li><a href="#%E5%A5%87%E5%BC%82%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%80%BC%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%8E%E8%81%94%E7%B3%BB">奇异值与特征值的区别与联系</a></li>
 </ul>
 
   </div>
@@ -511,8 +516,8 @@ window.addEventListener('load', function() {
             <div class="section bg-color post post-page">
               <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://angleHan.github.io/post/hello-gridea/">
-      Hello Gridea
+    <a class="post-title-link" href="https://angleHan.github.io/post/qi-yi-zhi-fen-jie-yu-te-zheng-zhi-fen-jie-de-li-jie/">
+      奇异值分解与特征值分解的理解
     </a>
   </h1>
   <div class="post-meta">
@@ -520,7 +525,7 @@ window.addEventListener('load', function() {
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2018-12-12</span>
+      <span>2020-04-21</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -529,8 +534,8 @@ window.addEventListener('load', function() {
         <span class="pc-show">分类于</span>
         
           
-            <a href="https://angleHan.github.io/tag/641ZZFIQU/">
-              <span>Gridea</span>
+            <a href="https://angleHan.github.io/tag/8j1yTREC8/">
+              <span>矩阵；线性代数</span>
             </a>
           
         
@@ -539,19 +544,19 @@ window.addEventListener('load', function() {
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>2分钟</span>
+      <span>4分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>298<span class="pc-show">字数</span></span>
+      <span>902<span class="pc-show">字数</span></span>
     </span>
     
       
       
         
       
-      <span id="/post/hello-gridea/" data-flag-title="Hello Gridea" class="meta-item pc-show leancloud_visitors">
+      <span id="/post/qi-yi-zhi-fen-jie-yu-te-zheng-zhi-fen-jie-de-li-jie/" data-flag-title="奇异值分解与特征值分解的理解" class="meta-item pc-show leancloud_visitors">
         <span class="post-meta-divider">|</span>
         <i class="fa fa-eye"></i>
         <span>浏览量：<span class="leancloud-visitors-count" ></span></span>
@@ -560,27 +565,47 @@ window.addEventListener('load', function() {
   </div>
 </header>
               <div class="post-body next-md-body" id="post_body">
-                <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+                <h1 id="奇异值">奇异值</h1>
+<h2 id="奇异值分解的类比">奇异值分解的类比</h2>
+<p>奇异值分解，就是把矩阵分成多个“分力”。</p>
+<p>让我们通过翻绳来形象地理解。<br>
+<img src="https://angleHan.github.io/post-images/1587430571233.jpg" alt="" loading="lazy"><br>
+我们可认为，这个造型是由两个方向的力合成的。<br>
+<img src="https://angleHan.github.io/post-images/1587430618176.png" alt="" loading="lazy"><br>
+容易想象，如果其中一个力比较小的话，那么绳子的形状基本由另一个力来决定。</p>
+<h2 id="奇异值分解的数学表达">奇异值分解的数学表达</h2>
+<p>对于一个矩阵A，我们总能找到一个正交矩阵U和一个正交矩阵V<br>
+，以及一个对角矩阵Σ，使得<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>X</mi><mo>=</mo><mi>U</mi><mi mathvariant="normal">Σ</mi><msup><mi>V</mi><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">X = UΣV^T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mord">Σ</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span></span></span></span>。（其中U被称为X的左奇异向量，V被称为X的右奇异向量，而对角矩阵Σ的主对角线上的值称为矩阵X的奇异值，并按照从大到小降序排列。）</p>
+<h2 id="奇异值分解的几何解释">奇异值分解的几何解释</h2>
+<p>考虑矩阵A=<img src="https://angleHan.github.io/post-images/1587431045621.jpg" alt="" loading="lazy"><br>
+我们将通过单位圆这个载体来观察矩阵A对应的变换。<br>
+<img src="https://angleHan.github.io/post-images/1587431116770.png" alt="" loading="lazy"><br>
+把单位圆上的每一点都通过A进行变换，得到一个椭圆。<br>
+<img src="https://angleHan.github.io/post-images/1587431160892.png" alt="" loading="lazy"><br>
+对A进行奇异值分解：<br>
+<img src="https://angleHan.github.io/post-images/1587431313418.svg" alt="" loading="lazy"><br>
+将A表示成2个分力相加的形式：<br>
+<img src="https://angleHan.github.io/post-images/1587431355412.svg" alt="" loading="lazy"><br>
+第一个分力<img src="https://angleHan.github.io/post-images/1587431436533.svg" alt="" loading="lazy">作用在单位圆上的效果：<br>
+<img src="https://angleHan.github.io/post-images/1587431483021.png" alt="" loading="lazy"><br>
+同理，第二个分力<img src="https://angleHan.github.io/post-images/1587431496207.svg" alt="" loading="lazy">作用在单位圆上的效果：<br>
+<img src="https://angleHan.github.io/post-images/1587431516125.png" alt="" loading="lazy"><br>
+因此，当这两个分力一起作用的时候，单位圆就转换成了上边所展示的椭圆。（可以想象，如果两个分力相差很大，单位圆将被映射成一条直线）</p>
+<p>细心的小伙伴应该发现，上面的例子好像并没有体现奇异值分解里的正交性。<br>
+其实奇异值分解就是将矩阵行空间的一个标准正交基转换为该矩阵列空间的标准正交基，它包括了旋转、缩放等变换。</p>
+<h2 id="奇异值分解的物理解释">奇异值分解的物理解释</h2>
+<p>观察下面两幅图片，<br>
+<img src="https://angleHan.github.io/post-images/1587795522120.png" alt="" loading="lazy"><br>
+第一幅图为随机生成的一幅256x256的图像，值都是在0-255之间。第二幅图为SVD分解之后的奇异值矩阵，颜色越亮，代表了值越大，也就是能量越大。因此SVD的过程就是通过变换，将原空间的能量重新聚集分配，在新的空间集中的过程，这就是SVD的物理意义。通过这个物理意义，我们可以做许多的应用，例如数据的压缩，图像的滤波，以及推荐算法等。</p>
+<h2 id="奇异值的一种计算方法">奇异值的一种计算方法</h2>
+<p>对于奇异值的定义式<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>X</mi><mo>=</mo><mi>U</mi><mi mathvariant="normal">Σ</mi><msup><mi>V</mi><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">X = UΣV^T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mord">Σ</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span></span></span></span>，我们分别左乘和右乘X矩阵的转置，发现得到了两个对角矩阵，其特征值即为原式对角矩阵中对角线上各值的平方，两个对角矩阵的特征向量即为所求的U和V，具体可以自己推导，比较简单。</p>
+<blockquote>
+<p><strong>我是从MIT的OpenCourse的一节课学的，在网易公开课可以找到相应视频。</strong></p>
+</blockquote>
+<h1 id="奇异值与特征值的区别与联系">奇异值与特征值的区别与联系</h1>
+<p>特征值分解和奇异值分解都是给定一个线性变换，找一组特殊的基，特征值分解所对应的基即为特征向量，它只适用于对称正定矩阵，而奇异值对矩阵没有限制。（目前觉得自己的理解还停留在表面，没有更深层次的挖掘）</p>
+<p>奇异值分解和特征值分解的应用先不说了，因为我还在本科，只是先对这一部分的知识有一个大体了解，以后具体用到哪部分再看。</p>
+<p>本文结束，感谢阅读~~</p>
 
               </div>
               <div class="post-footer">
@@ -591,7 +616,7 @@ window.addEventListener('load', function() {
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://angleHan.github.io/post/hello-gridea/" title="Hello Gridea">Hello Gridea</a>
+      <a href="https://angleHan.github.io/post/qi-yi-zhi-fen-jie-yu-te-zheng-zhi-fen-jie-de-li-jie/" title="奇异值分解与特征值分解的理解">奇异值分解与特征值分解的理解</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -600,18 +625,18 @@ window.addEventListener('load', function() {
   </ul>
   <div class="tags">
     
-      <a href="https://angleHan.github.io/tag/641ZZFIQU/"># Gridea</a>
+      <a href="https://angleHan.github.io/tag/8j1yTREC8/"># 矩阵；线性代数</a>
     
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="关于" href="https://angleHan.github.io/post/about/">关于</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="关于" href="https://angleHan.github.io/post/about/">上一篇</a>
-      
     </div>
     <div class="nav-next">
+      
+        <a class="nav-pc-next" title="矩阵的基础知识" href="https://angleHan.github.io/post/ju-zhen-de-ji-chu-zhi-shi/">矩阵的基础知识</a>
+        <a class="nav-mobile-next" title="矩阵的基础知识" href="https://angleHan.github.io/post/ju-zhen-de-ji-chu-zhi-shi/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
       
     </div>
   </div>
