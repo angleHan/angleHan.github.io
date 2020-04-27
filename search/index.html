@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 
 <head>
-	<meta charset="UTF-8" />
+    <meta charset="UTF-8" />
 <title>靳路晗~中国</title>
 <meta name="description" content="山外看众生，山里看自己 
 ">
@@ -18,11 +18,15 @@
 <script>
     hljs.initHighlightingOnLoad();
 </script>
+    <script src="/media/search/fuse.js"></script>
+    <script src="/media/search/ejs.min.js"></script>
+    <script src="/media/search/gridea-search.js"></script>
+    <script src="/media/search/result.ejs" type="text/ejs"></script>
 </head>
 
 <body>
-	<div class="layout theme-dark">
-		<div class="layout-header">
+    <div class="layout theme-dark">
+        <div class="layout-header">
 
 	<div class="layout-header-main">
 		<div class="container">
@@ -106,7 +110,7 @@
 	</div>
 
 </div>
-		<div class="layout-collapse d-md-none">
+        <div class="layout-collapse d-md-none">
 	<div class="layout-collapse-main">
 		<ul class="layout-collapse-list">
 			
@@ -125,177 +129,39 @@
 	</div>
 </div>
 
-		<div class="layout-content">
-			<div class="layout-content-main">
-				<div class="container">
-					<div class="row justify-content-lg-center">
-						<div class="col-12 col-lg-9">
-							<div class="layout-tags row">
-								
-								<div class="col-6 mb-3">
-									<div class="card">
-										<div class="card-header">
-											<div class="header-content">
-												<div class="title">矩阵；线性代数</div>
-											</div>
-										</div>
-										<div class="card-body">
-											<div class="card-item">
-												<div class="list-content">
-													<div class="list-body">
-														<div class="title" href=""><span> 2 </span> 篇文章</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								
-								<div class="col-6 mb-3">
-									<div class="card">
-										<div class="card-header">
-											<div class="header-content">
-												<div class="title">随机信号分析</div>
-											</div>
-										</div>
-										<div class="card-body">
-											<div class="card-item">
-												<div class="list-content">
-													<div class="list-body">
-														<div class="title" href=""><span> 3 </span> 篇文章</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								
-								<div class="col-6 mb-3">
-									<div class="card">
-										<div class="card-header">
-											<div class="header-content">
-												<div class="title">DSP</div>
-											</div>
-										</div>
-										<div class="card-body">
-											<div class="card-item">
-												<div class="list-content">
-													<div class="list-body">
-														<div class="title" href=""><span> 1 </span> 篇文章</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								
-								<div class="col-6 mb-3">
-									<div class="card">
-										<div class="card-header">
-											<div class="header-content">
-												<div class="title">Python，树莓派</div>
-											</div>
-										</div>
-										<div class="card-body">
-											<div class="card-item">
-												<div class="list-content">
-													<div class="list-body">
-														<div class="title" href=""><span> 1 </span> 篇文章</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								
-								<div class="col-6 mb-3">
-									<div class="card">
-										<div class="card-header">
-											<div class="header-content">
-												<div class="title">电赛</div>
-											</div>
-										</div>
-										<div class="card-body">
-											<div class="card-item">
-												<div class="list-content">
-													<div class="list-body">
-														<div class="title" href=""><span> 1 </span> 篇文章</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								
-								<div class="col-6 mb-3">
-									<div class="card">
-										<div class="card-header">
-											<div class="header-content">
-												<div class="title">BHuman</div>
-											</div>
-										</div>
-										<div class="card-body">
-											<div class="card-item">
-												<div class="list-content">
-													<div class="list-body">
-														<div class="title" href=""><span> 1 </span> 篇文章</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								
-								<div class="col-6 mb-3">
-									<div class="card">
-										<div class="card-header">
-											<div class="header-content">
-												<div class="title">Python，编码</div>
-											</div>
-										</div>
-										<div class="card-body">
-											<div class="card-item">
-												<div class="list-content">
-													<div class="list-body">
-														<div class="title" href=""><span> 1 </span> 篇文章</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								
-								<div class="col-6 mb-3">
-									<div class="card">
-										<div class="card-header">
-											<div class="header-content">
-												<div class="title">Gridea</div>
-											</div>
-										</div>
-										<div class="card-body">
-											<div class="card-item">
-												<div class="list-content">
-													<div class="list-body">
-														<div class="title" href=""><span> 1 </span> 篇文章</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								
+        <div class="layout-content">
+            <div class="layout-content-main">
+                <div class="container">
+                    <div class="row justify-content-lg-center">
+                        <div class="col-12 col-lg-9">
+                            <div id="gridea-search-result" class="layout-archive">
 
-							</div>
+                                <div class="card searching">
+                                    <div class="card-header">
+                                        <div class="header-content">
+                                            <div class="title">搜索中......</div>
+                                        </div>
+                                    </div>
+                                </div>
 
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+                                <div class="card no-result" style="display:none">
+                                    <div class="card-header">
+                                        <div class="header-content">
+                                            <div class="title">未搜索到相关文章</div>
+                                        </div>
+                                    </div>
+                                </div>
 
+                            </div>
 
+                        </div>
+                    </div>
 
-			<div class="layout-footer">
+                </div>
+            </div>
+        </div>
+
+        	<div class="layout-footer">
 
 		<div class="container">
 			<div class="row justify-content-lg-center">
@@ -359,7 +225,7 @@
 
 	<script type="text/javascript" src='https://angleHan.github.io/media/scripts/main.js'></script>
 	
-	</div>
+    </div>
 </body>
 
 </html>
