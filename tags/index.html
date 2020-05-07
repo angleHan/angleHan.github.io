@@ -1,1870 +1,414 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 
 <head>
-  <meta charset="UTF-8" />
+    <link rel="apple-touch-icon"
+  href="https://cdn.jsdelivr.net/gh/chiperman/Blog-photos/./img/iocn/aojep-i6dt9.49j3g5o9xbg.png">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+<meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+<meta HTTP-EQUIV="expires" CONTENT="0">
+<meta name="apple-mobile-web-app-title" content="XiaoX 博客">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<meta name="keywords" content="靳路晗；通信工程；IT">
-<meta name="description" content="芝兰生于深林，不以无人而不芳。">
-<meta name="theme-color" content="#000">
 <title>靳路晗~中国</title>
-<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/angleHan/angleHan.github.io@16.0//favicon.ico?v=1588809857501">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/angleHan/angleHan.github.io@16.0//styles/main.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/angleHan/angleHan.github.io@16.0//media/css/pisces.css">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/angleHan/angleHan.github.io@16.0//media/fonts/font-awesome.css">
-<link
-  href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
-  rel="stylesheet" type="text/css">
-
-<link href="https://cdn.jsdelivr.net/gh/angleHan/angleHan.github.io@16.0//media/hljs/styles/androidstudio.css"
+<link rel="stylesheet" href="https://angleHan.github.io/styles/main.css">
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Noto+Sans+SC:300|Montserrat&display=swap"
   rel="stylesheet">
+<link href="https://at.alicdn.com/t/font_1306644_jwtuc2zzbrd.css" rel="stylesheet" />
+<!-- 下面是我自己的iconfont -->
+<link href="https://at.alicdn.com/t/font_1651848_9ur7s2zwgll.css" rel="stylesheet" />
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<script type='text/javascript' src='https://angleHan.github.io/media/scripts/script.js'></script>
+<link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet" />
+<script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.8/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+<script>
+  wow = new WOW({
+    boxClass: 'wow',
+    animateClass: 'animated',
+    offset: 0,
+    mobile: true,
+    live: true
+  });
+  wow.init();
+</script>
 
-<script src="https://cdn.jsdelivr.net/gh/angleHan/angleHan.github.io@16.0//media/hljs/highlight.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
-  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
-
-
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
-  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
-  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
-  onload="renderMathInElement(document.body);"></script>
-
-
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160433894-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
 
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
   gtag('config', 'UA-160433894-1');
 </script>
 
-
 </head>
 
-<body>
-  <div class="head-top-line"></div>
-  <div class="header-box">
-    
-<div class="pisces">
-  <header class="header  ">
-    <div class="blog-header box-shadow-wrapper bg-color " id="header">
-      <div class="nav-toggle" id="nav_toggle">
-        <div class="toggle-box">
-          <div class="line line-top"></div>
-          <div class="line line-center"></div>
-          <div class="line line-bottom"></div>
+<body class="post-template-default single single-post postid-70 single-format-standard">
+    <div id="wrapper">
+        		<header id="header" class="site-header">
+			<div class="site-branding">
+				<h1 class="site-title"><a href="https://angleHan.github.io" rel="home">靳路晗~中国</a></h1>
+				<h2 class="site-description">芝兰生于深林，不以无人而不芳。</h2>
+
+			</div>
+			<nav id="nav-wrapper">
+				<div class="container">
+					<div class="nav-toggle">
+						<div class="bars">
+							<div class="bar"></div>
+							<div class="bar"></div>
+							<div class="bar"></div>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<ul class="dove">
+						
+
+						<li>
+
+							<a href="/"> 首页</a></li>
+
+						
+
+						<li>
+
+							<a href="/archives"> 归档</a></li>
+
+						
+
+						<li>
+
+							<a href="/post/about"> 关于</a></li>
+
+						
+
+						<li>
+
+							<a href="https://angleHan.github.io/post/kai-yuan-xiang-mu-zhi-neng-shou-na-xi-tong"> 致敬开源</a></li>
+
+						
+
+					</ul>
+					</li>
+
+					</ul>
+				</div>
+			</nav>
+
+			<div class="jingge">
+				
+				
+				
+				
+				
+				
+				<a href="https://github.com/angleHan" target="_blank"><i class="iconfont icon-github"></i></a>
+				
+				
+				
+				<a href="https://www.zhihu.com/people/meng-xiang-75-23-61" target="_blank"><i class="iconfont icon-zhihu"></i></a>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				<a href="844417048" target="_blank"><i class="iconfont icon-qq"></i></a>
+				
+				
+				
+				
+				
+				
+			</div>
+			<form id="gridea-search-form" data-update="1588810401435" action="/search/index.html">
+				<div class="search-box">
+					<input class="search-txt" name="q" placeholder="Type to search" />
+					<a class="search-btn">
+						<i class="iconfont icon-search1" action="/search/index.html"></i>
+					</a>
+				</div>
+			</form>
+		</header>
+        <div id="content" class="container">
+            <div class="row">
+                <div class="col-md-8 site-main">
+                    <script type="text/javascript">
+                        $(document).ready(function () {
+                            var tags_a = $("#tags a");
+                            tags_a.each(function () {
+                                var x = 2;
+                                var y = 0;
+                                var rand = parseInt(Math.random() * (x - y + 1) + y);
+                                $(this).addClass("tags" + rand);
+                            });
+                        })
+                    </script>
+
+                    <div class="w95" id="tags">
+                        
+                        <a href='https://angleHan.github.io/tag/8j1yTREC8/'>矩阵；线性代数</a>
+                        
+                        <a href='https://angleHan.github.io/tag/Q0PqHzObJ/'>随机信号分析</a>
+                        
+                        <a href='https://angleHan.github.io/tag/xPIZqL5cM/'>DSP</a>
+                        
+                        <a href='https://angleHan.github.io/tag/uzbVDXJtZ/'>Python，树莓派</a>
+                        
+                        <a href='https://angleHan.github.io/tag/HTFhofNjM/'>电赛</a>
+                        
+                        <a href='https://angleHan.github.io/tag/apAbCtns4/'>BHuman</a>
+                        
+                        <a href='https://angleHan.github.io/tag/BwTsdCykT/'>Python，编码</a>
+                        
+                        <a href='https://angleHan.github.io/tag/641ZZFIQU/'>Gridea</a>
+                        
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="site-meta">       
-        <div class="site-title">
-          
-            <a href="/" class="brand">
-              <span>靳路晗~中国</span>
-            </a>  
-          
-        </div>
-        
-          <p class="subtitle">山外看众生，山里看自己</p>
-        
-      </div>
-      <nav class="site-nav" id="site_nav">
-        <ul id="nav_ul">
-          
-            
-            
-            <li class="nav-item ">
-              
-              
-                <a href="/" target="_self">
-                  <i class="fa fa-home"></i> 首页
-                </a>
-              
-            </li>
-          
-            
-            
-            <li class="nav-item ">
-              
-              
-                <a href="/archives/" target="_self">
-                  <i class="fa fa-archive"></i> 归档
-                </a>
-              
-            </li>
-          
-            
-            
-            <li class="nav-item ">
-              
-              
-                <a href="/post/about/" target="_self">
-                  <i class="fa fa-user"></i> 关于
-                </a>
-              
-            </li>
-          
-            
-            
-            <li class="nav-item ">
-              
-              
-                <a href="https://angleHan.github.io/post/kai-yuan-xiang-mu-zhi-neng-shou-na-xi-tong/" target="_self">
-                  <i class="fa fa-globe"></i> 致敬开源
-                </a>
-              
-            </li>
-          
-          
-          <li id="fa_search" class="nav-item">
-            <a href="javascript:void(0);">
-              <i class="fa fa-search"></i> 搜索
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-</div>
-
-<script type="text/javascript"> 
- 
-  let showNav = true;
-
-  let navToggle = document.querySelector('#nav_toggle'),
-  siteNav = document.querySelector('#site_nav');
-  
-  function navClick() {
-    let sideBar = document.querySelector('.sidebar');
-    let navUl = document.querySelector('#nav_ul');
-    navToggle.classList.toggle('nav-toggle-active');
-    siteNav.classList.toggle('nav-menu-active');
-    if (siteNav.classList.contains('nav-menu-active')) {
-      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
-    } else {
-      siteNav.style = "";
-    }
-  }
-
-  navToggle.addEventListener('click',navClick);  
-</script>
-  </div>
-  <div class="main-continer">
-    
-    <div
-      class="section-layout  pisces">
-      <div class="section-layout-wrapper">
-        <div id="sidebarMeta" class="sidebar">
-    
-<div class="sidebar-wrapper box-shadow-wrapper bg-color">
-  <div class="sidebar-item">
-    <img class="site-author-image right-motion" src="https://cdn.jsdelivr.net/gh/angleHan/angleHan.github.io@16.0//images/avatar.png"/>
-    <p class="site-author-name"></p>
-    
-  </div>
-  <div class="sidebar-item side-item-stat right-motion">
-    <div class="sidebar-item-box">
-      <a href="/archives/">
-        
-        <span class="site-item-stat-count">14</span>
-        <span class="site-item-stat-name">文章</span>
-      </a>
-    </div>
-    <div class="sidebar-item-box">
-      <a href="">
-        <span class="site-item-stat-count">8</span>
-        <span class="site-item-stat-name">分类</span>
-      </a>
-    </div>
-    <div class="sidebar-item-box">
-      <a href="/tags/">
-        <span class="site-item-stat-count">8</span>
-        <span class="site-item-stat-name">标签</span>
-      </a>
-    </div>
-  </div>
-  
-    
-      <div class="sidebar-item">
-        <span class="site-item-rss">
-            <i class="fa fa-rss"></i>
-            <a href="https://angleHan.github.io/atom.xml" target="_blank">RSS</a>
-        </span>
-      </div>
-    
-  
-  
-
-  
-    <div class="sidebar-item right-motion sidebar-item-friends">
-      
-        <p class="friends-title"><i class="fa fa-ship"></i> 友情链接</p>
-      
-      <div class="friends-box">
-        
-          <p>
-            <a href="https://dreamfixer.top">靳路晗</a>
-          </p>
-        
-      </div>
-    </div>
-  
-
-
-  <div class="sidebar-item">
-    
-  </div>
-
-</div>
-</div>
-<script>
-  let sidebarMeta = document.querySelector('#sidebarMeta');
-  let scheme = 'pisces';
-  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
-  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
-    document.addEventListener('scroll', function(e) {
-      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
-        sidebarWrapper.classList.add('home-sidebar-fixed')
-      } else {
-        sidebarWrapper.classList.remove('home-sidebar-fixed')
-      }
-    });
-  }
-  </script>
-        <div class="section-box box-shadow-wrapper">
-          <section class="section tags-section bg-color posts-expand">
-            <div class="tags-box">
-  <div class="tag-cloud-title">
-    目前共计 8 个标签
-  </div>
-  <div class="tag-cloud-list" id="tags">
-    
-      
-      
-        
-          
-            
-      
-        
-          
-            
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-      
-        
-          
-        
-      
-      <a class="cloud-tag" href="https://angleHan.github.io/tag/8j1yTREC8/" rel="2">矩阵；线性代数</a>
-    
-      
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-            
-      
-        
-          
-            
-      
-        
-          
-            
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-      
-        
-          
-        
-      
-      <a class="cloud-tag" href="https://angleHan.github.io/tag/Q0PqHzObJ/" rel="3">随机信号分析</a>
-    
-      
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-            
-      
-        
-          
-            
-      
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-      
-        
-          
-        
-      
-      <a class="cloud-tag" href="https://angleHan.github.io/tag/xPIZqL5cM/" rel="2">DSP</a>
-    
-      
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-      
-        
-          
-            
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-      
-        
-          
-        
-      
-      <a class="cloud-tag" href="https://angleHan.github.io/tag/uzbVDXJtZ/" rel="1">Python，树莓派</a>
-    
-      
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-      
-        
-          
-        
-      
-        
-          
-            
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-      
-        
-          
-        
-      
-      <a class="cloud-tag" href="https://angleHan.github.io/tag/HTFhofNjM/" rel="1">电赛</a>
-    
-      
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-            
-      
-        
-          
-        
-      
-        
-      
-        
-          
-        
-      
-      <a class="cloud-tag" href="https://angleHan.github.io/tag/apAbCtns4/" rel="1">BHuman</a>
-    
-      
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-            
-      
-        
-      
-        
-          
-        
-      
-      <a class="cloud-tag" href="https://angleHan.github.io/tag/BwTsdCykT/" rel="1">Python，编码</a>
-    
-      
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-      
-        
-          
-            
-      
-      <a class="cloud-tag" href="https://angleHan.github.io/tag/641ZZFIQU/" rel="1">Gridea</a>
-    
-  </div>
-</div>
-<script>
-
-  let fontStart = 12, fontEnd = 30, colorStart = '#666', colorEnd = '#000';
-  let tags = document.querySelector('#tags').children;
-  let counts = [];
-  for(let i = 0; i < tags.length; i++) {
-    counts.push(tags[i].rel);
-  }
-  let lowest = Math.min.apply(null,counts), highest = Math.max.apply(null,counts);;
-  let range = highest - lowest;
-  if (range === 0) {
-    range = 1;
-  }
-  let fontIncr, colorIncr;
-  fontIncr = (fontEnd - fontStart) / range;
-  
-  let sColorArr = toRGB(colorStart), eColorArr = toRGB(colorEnd);
-
-  for(let i = 0; i < tags.length; i++) {
-    let disCount = tags[i].rel - lowest;
-    let fontSize = fontStart + disCount * fontIncr;
-    let style = 'font-size: ' + fontSize + 'px;';
-    let arr = [];
-    for(let c = 0; c < sColorArr.length; c++) {
-      if (disCount === 0) {
-        disCount = 1;
-      }
-      let val = (sColorArr[c] - eColorArr[c]) / range * disCount;
-      if (val >= 100) {
-        val = eColorArr[c];
-      } else if (val <= 0) {
-        val = sColorArr[c];
-      }
-      arr[c] = Math.floor(val);
-    }
-    style += 'color: ' + toHex(arr);
-    tags[i].style = style;
-  }
-
-  function toRGB(code) {
-    if (code.length === 4) {
-      code = code.replace(/(\w)(\w)(\w)/gi, "\$1\$1\$2\$2\$3\$3");
-    }
-    var hex = /(\w{2})(\w{2})(\w{2})/.exec(code);
-    return [parseInt(hex[1], 16), parseInt(hex[2], 16), parseInt(hex[3], 16)];
-  }
-
-  function toHex(ary) {
-    return "#" + ((1 << 24) + (ary[0] << 16) + (ary[1] << 8) + ary[2]).toString(16).slice(1);
-  }
-
-</script>
-          </section>
-        </div>
-      </div>
-    </div>
-    <div class="footer-box">
-  <footer class="footer">
-    <div class="copyright">
-      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | © 2019-2020 Theme By <a href="https://github.com/hsxyhao/gridea-theme-next" target="_blank">HsxyHao</a>
-    </div>
-    <div class="poweredby">
-      2020 Jixon  Powered by Github 豫ICP备19008809号-1
+        <footer id="colophon" class="site-footer">
+	<div class="container">
+		<div class="copyright">
+			2020 Jixon  Powered by Github 豫ICP备19008809号-1
 
 <a href='https://clustrmaps.com/site/1b7wt'  title='Visit tracker'><img src='//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=tt&d=v9Ufrzl1sq1pCBVdAe6tQ0mYus7YV2nqQDEZp5LD9gM'/></a>
 
 
 
+			<b>Crafted with 💔 by <a href="https://chiperman.github.io/about/" target="_blank">chiperman</a></b>
+			<br>
+			<b>Eleven forever.</b>
+			<br>
+			<span class="runtime">
+				「我」已经运行了<script type="text/javascript">
+					var urodz = new Date("01/25/2020");
+					var now = new Date();
+					var ile = now.getTime() - urodz.getTime();
+					var dni = Math.floor(ile / (1000 * 60 * 60 * 24));
+					document.write(+dni)
+				</script>天
+				<br>
+			</span>
+			<b>Theme: </b>
+			<a href="https://github.com/chiperman/gridea-theme-xiaox" target="_blank" title="Pan">
+				<span><b>Pan - XiaoX</b></span>
+			</a>
+			<b>. Powered by </b>
+			<a href="https://gridea.dev/" target="_blank" title="Gridea">
+				<span><b>Gridea</b></span>
+			</a>
+		</div>
+	</div><!-- .container -->
+</footer><!-- #colophon -->
     </div>
-  </footer>
-  
-  
-  <div class="pisces back-to-top" id="back_to_top">
-    <i class="fa fa-arrow-up"></i>
-    
-    <span class="scrollpercent">
-      <span id="back_to_top_text">0</span>%
-    </span>
-    
-  </div>
-  
-    
-    <div class="bg-img">
-      <img src="https://cdn.jsdelivr.net/gh/angleHan/angleHan.github.io@16.0/\media\images\custom-bgImg.png" />
-    </div>
-  
-  
-  
-    
+    <script src="https://cdn.bootcss.com/fitvids/1.2.0/jquery.fitvids.min.js"></script>
 
-  
-</div>
-<script>
-
-  let sideBarOpen = 'sidebar-open';
-  let body = document.body;
-  let back2Top = document.querySelector('#back_to_top'),
-  back2TopText = document.querySelector('#back_to_top_text'),
-  drawerBox = document.querySelector('#drawer_box'),
-  rightSideBar = document.querySelector('.sidebar'),
-  viewport = document.querySelector('body');
-
-  function scrollAnimation(currentY, targetY) {
-   
-    let needScrollTop = targetY - currentY
-    let _currentY = currentY
-    setTimeout(() => {
-      const dist = Math.ceil(needScrollTop / 10)
-      _currentY += dist
-      window.scrollTo(_currentY, currentY)
-      if (needScrollTop > 10 || needScrollTop < -10) {
-        scrollAnimation(_currentY, targetY)
-      } else {
-        window.scrollTo(_currentY, targetY)
-      }
-    }, 1)
-  }
-
-  back2Top.addEventListener("click", function(e) {
-    scrollAnimation(document.scrollingElement.scrollTop, 0);
-    e.stopPropagation();
-    return false;
-  });
-  
-  window.addEventListener('scroll', function(e) {
-    let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
-    if (percent > 1 && !back2Top.classList.contains('back-top-active')) {
-      back2Top.classList.add('back-top-active');
-    }
-    if (percent == 0) {
-      back2Top.classList.remove('back-top-active');
-    }
-    if (back2TopText) {
-      back2TopText.textContent = Math.floor(percent);
-    }
-  });
-
-  
-  let hasCacu = false;
-  window.onresize = function() {
-    if (window.width > 991) {
-      calcuHeight();
-    } else {
-      hasCacu = false;
-    }
-  }
-
-  function calcuHeight() {
-    // 动态调整站点概览高度
-    if (!hasCacu && back2Top.classList.contains('pisces') || back2Top.classList.contains('gemini')) {
-      let sideBar = document.querySelector('.sidebar');
-      let navUl = document.querySelector('#site_nav');
-      sideBar.style = 'margin-top:' + (navUl.offsetHeight + navUl.offsetTop + 15) + 'px;';
-      hasCacu = true;
-    }
-  }
-  calcuHeight();
-  
-  let open = false, MOTION_TIME = 300, RIGHT_MOVE_DIS = '320px';
-
-  if (drawerBox) {
-    let rightMotions = document.querySelectorAll('.right-motion');
-    let right = drawerBox.classList.contains('right');
-
-    let transitionDir = right ? "transition.slideRightIn" : "transition.slideLeftIn";
-
-    let openProp, closeProp;
-    if (right) {
-      openProp = {
-        paddingRight: RIGHT_MOVE_DIS 
-      };
-      closeProp = {
-        paddingRight: '0px'
-      };
-    } else {
-      openProp = {
-        paddingLeft: RIGHT_MOVE_DIS 
-      };
-      closeProp = {
-        paddingLeft: '0px'
-      };
-    }
-
-    drawerBox.onclick = function() {
-      open = !open;
-      window.Velocity(rightSideBar, 'stop');
-      window.Velocity(viewport, 'stop');
-      window.Velocity(rightMotions, 'stop');
-      if (open) {
-        window.Velocity(rightSideBar, {
-          width: RIGHT_MOVE_DIS
-        }, {
-          duration: MOTION_TIME,
-          begin: function() {
-            window.Velocity(rightMotions, transitionDir,{ });
-          }
-        })
-        window.Velocity(viewport, openProp,{
-          duration: MOTION_TIME
-        });
-      } else {
-        window.Velocity(rightSideBar, {
-          width: '0px'
-        }, {
-          duration: MOTION_TIME,
-          begin: function() {
-            window.Velocity(rightMotions, {
-              opacity: 0
-            });
-          }
-        })
-        window.Velocity(viewport, closeProp ,{
-          duration: MOTION_TIME
-        });
-      }
-      for (let i = 0; i < drawerBox.children.length; i++) {
-        drawerBox.children[i].classList.toggle('muse-line');
-      }
-      drawerBox.classList.toggle(sideBarOpen);
-    }
-  }
-
-  // 链接跳转
-  let newWindow = ''
-  if (newWindow === 'true') {
-    let links = document.querySelectorAll('.post-body a')
-    links.forEach(item => {
-      if (!item.classList.contains('btn')) {
-        item.setAttribute("target","_blank");
-      }
-    })
-  }
-
-  let faSearch = document.querySelector('#fa_search');
-  faSearch.addEventListener('click', function() {
-    document.querySelector('#search_mask').style = ''
-  })
-
-  // 代码高亮
-  hljs.initHighlightingOnLoad();
-
+<script
+  src="https://cdn.jsdelivr.net/gh/angleHan/angleHan.github.io/media/scripts/marlin-scripts.js">
 </script>
-  </div>
+
+<script src="//tokinx.github.io/lately/lately.min.js"></script>
+<script>
+  jQuery(document).ready(function () {
+    $.lately({
+      'target': '.lately-a,.lately-b,.lately-c'
+    })
+  });
+</script>
+<style type="text/css">
+  /* 一键到顶部 */
+  a.back_to_top {
+    text-decoration: none;
+    position: fixed;
+    bottom: 65px;
+    right: 30px;
+    background: #f0f0f0;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    line-height: 36px;
+    font-size: 18px;
+    text-align: center;
+    transition-duration: .5s;
+    transition-propety: background-color;
+    display: none;
+  }
+
+  a.back_to_top span {
+    color: #888;
+  }
+
+  a.back_to_top:hover {
+    cursor: pointer;
+    background: #dfdfdf;
+  }
+
+  a.back_to_top:hover span {
+    color: #555;
+  }
+
+  @media print,
+  screen and (max-width: 580px) {
+    .back_to_top {
+      display: none !important;
+    }
+  }
+
+  /* 一键到底部 */
+
+  a.down_to_bottom {
+    text-decoration: none;
+    position: fixed;
+    bottom: 15px;
+    right: 30px;
+    background: #f0f0f0;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    line-height: 36px;
+    font-size: 18px;
+    text-align: center;
+    transition-duration: .5s;
+    transition-propety: background-color;
+    display: none;
+  }
+
+  a.down_to_bottom span {
+    color: #888;
+  }
+
+  a.down_to_bottom:hover {
+    cursor: pointer;
+    background: #dfdfdf;
+  }
+
+  a.down_to_bottom:hover span {
+    color: #555;
+  }
+
+  @media print,
+  screen and (max-width: 580px) {
+    .down_to_bottom {
+      display: none !important;
+    }
+  }
+</style>
+
+
+<a id="back_to_top" href="#" class="back_to_top"><span><i class="iconfont icon-xiangshang"></i></span>
+</a>
+
+<a id="down_to_bottom" href="#" class="down_to_bottom"><span><i class="iconfont icon-xiangxia"></i></span>
+</a>
+
+<script src="//instant.page/3.0.0" type="module" defer
+  integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+<script>
+  function getScrollTop() {
+    var scrollTop = 0,
+      bodyScrollTop = 0,
+      documentScrollTop = 0;
+    if (document.body) {
+      bodyScrollTop = document.body.scrollTop;
+    }
+    if (document.documentElement) {
+      documentScrollTop = document.documentElement.scrollTop;
+    }
+    scrollTop = (bodyScrollTop - documentScrollTop > 0) ? bodyScrollTop : documentScrollTop;
+    return scrollTop;
+  };
+
+  function getScrollHeight() {
+    var scrollHeight = 0,
+      bodyScrollHeight = 0,
+      documentScrollHeight = 0;
+    if (document.body) {
+      bSH = document.body.scrollHeight;
+    }
+    if (document.documentElement) {
+      dSH = document.documentElement.scrollHeight;
+    }
+    scrollHeight = (bSH - dSH > 0) ? bSH : dSH;
+    return scrollHeight;
+  };
+
+  function getWindowHeight() {
+    var windowHeight = 0;
+    if (document.compatMode == "CSS1Compat") {
+      windowHeight = document.documentElement.clientHeight;
+    } else {
+      windowHeight = document.body.clientHeight;
+    }
+    return windowHeight;
+  };
+
+  $(document).ready((function (_this) {
+    return function () {
+      var bt;
+      bt = $('#back_to_top');
+      if ($(document).width() > 480) {
+        $(window).scroll(function () {
+          var st;
+          st = $(window).scrollTop();
+          if (st > 30) {
+            return bt.css('display', 'block');
+          } else {
+            return bt.css('display', 'none');
+          }
+        });
+        return bt.click(function () {
+          $('body,html').animate({
+            scrollTop: 0
+          }, 800);
+          return false;
+        });
+      }
+    };
+  })(this));
+
+  $(document).ready((function (_this) {
+    return function () {
+      var bt;
+      bt = $('#down_to_bottom');
+      if ($(document).width() > 480) {
+        $(window).scroll(function () {
+          var st;
+          st = $(window).scrollTop();
+          if (getScrollTop() + getWindowHeight() == getScrollHeight()) {
+            return bt.css('display', 'none');
+          } else {
+            return bt.css('display', 'block');
+          }
+        });
+        return bt.click(function () {
+          $('body,html').animate({
+            scrollTop: $('body,html')[0].scrollHeight
+          }, 800);
+          return false;
+        });
+      }
+    };
+  })(this));
+</script>
 </body>
-<input hidden id="copy" />
-<script>
-  //拿来主义(真香)^_^，Clipboard 实现摘自掘金 https://juejin.im/post/5aefeb6e6fb9a07aa43c20af
-  window.Clipboard = (function (window, document, navigator) {
-    var textArea,
-      copy;
-
-    // 判断是不是ios端
-    function isOS() {
-      return navigator.userAgent.match(/ipad|iphone/i);
-    }
-    //创建文本元素
-    function createTextArea(text) {
-      textArea = document.createElement('textArea');
-      textArea.value = text;
-      textArea.style.width = 0;
-      textArea.style.height = 0;
-      textArea.clientHeight = 0;
-      textArea.clientWidth = 0;
-      document.body.appendChild(textArea);
-    }
-    //选择内容
-    function selectText() {
-      var range,
-        selection;
-
-      if (isOS()) {
-        range = document.createRange();
-        range.selectNodeContents(textArea);
-        selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
-        textArea.setSelectionRange(0, 999999);
-      } else {
-        textArea.select();
-      }
-    }
-
-    //复制到剪贴板
-    function copyToClipboard() {
-      try {
-        document.execCommand("Copy")
-      } catch (err) {
-        alert("复制错误！请手动复制！")
-      }
-      document.body.removeChild(textArea);
-    }
-
-    copy = function (text) {
-      createTextArea(text);
-      selectText();
-      copyToClipboard();
-    };
-
-    return {
-      copy: copy
-    };
-  })(window, document, navigator);
-
-  function copyCode(e) {
-    if (e.srcElement.tagName === 'SPAN' && e.srcElement.classList.contains('copy-code')) {
-      let code = e.currentTarget.querySelector('code');
-      var text = code.innerText;
-      if (e.srcElement.textContent === '复制成功') {
-        console.log('复制操作频率过高');
-        return;
-      }
-      e.srcElement.textContent = '复制成功';
-      (function (elem) {
-        setTimeout(() => {
-          if (elem.textContent === '复制成功') {
-            elem.textContent = '复制代码'
-          }
-        }, 1000);
-      })(e.srcElement)
-      Clipboard.copy(text);
-    }
-  }
-
-  let pres = document.querySelectorAll('pre');
-  pres.forEach(pre => {
-    let code = pre.querySelector('code');
-    let copyElem = document.createElement('span');
-    copyElem.classList.add('copy-code');
-    copyElem.textContent = '复制代码';
-    pre.appendChild(copyElem);
-    pre.onclick = copyCode
-  })
-</script>
-<script src="https://cdn.jsdelivr.net/gh/angleHan/angleHan.github.io@16.0//media/js/motion.js"></script>
-
-<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-<script>
-  var scroll = new SmoothScroll('a[href*="#"]', {
-    speed: 200
-  });
-</script>
-
-<div class="search-mask" id="search_mask" style="display: none;">
-  <div class="search-box">
-    <div class="search-title">
-      <i class="fa fa-search"></i>
-      <div class="input-box">
-        <input id="search" type="text" placeholder="搜索">
-      </div>
-      <i id="close" class="fa fa-times-circle"></i>
-    </div>
-    <div class="stat-box">
-      <span id="stat_count">0</span>条相关条目，使用了<span id="stat_times">0</span>毫秒
-      <hr>
-    </div>
-    <div class="result" id="result">
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://angleHan.github.io/post/qi-yi-zhi-fen-jie-yu-te-zheng-zhi-fen-jie-de-li-jie/"" data-c="
-          &lt;h1 id=&#34;奇异值&#34;&gt;奇异值&lt;/h1&gt;
-&lt;h2 id=&#34;奇异值分解的类比&#34;&gt;奇异值分解的类比&lt;/h2&gt;
-&lt;p&gt;奇异值分解，就是把矩阵分成多个“分力”。&lt;/p&gt;
-&lt;!-- more --&gt;
-&lt;p&gt;让我们通过翻绳来形象地理解。&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1587430571233.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-我们可认为，这个造型是由两个方向的力合成的。&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1587430618176.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-容易想象，如果其中一个力比较小的话，那么绳子的形状基本由另一个力来决定。&lt;/p&gt;
-&lt;h2 id=&#34;奇异值分解的数学表达&#34;&gt;奇异值分解的数学表达&lt;/h2&gt;
-&lt;p&gt;对于一个矩阵A，我们总能找到一个正交矩阵U和一个正交矩阵V&lt;br&gt;
-，以及一个对角矩阵Σ，使得&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;U&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;Σ&lt;/mi&gt;&lt;msup&gt;&lt;mi&gt;V&lt;/mi&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;X = UΣV^T&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.68333em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.07847em;&#34;&gt;X&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.8413309999999999em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.10903em;&#34;&gt;U&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;Σ&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.22222em;&#34;&gt;V&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.8413309999999999em;&#34;&gt;&lt;span style=&#34;top:-3.063em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34; style=&#34;margin-right:0.13889em;&#34;&gt;T&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;。（其中U被称为X的左奇异向量，V被称为X的右奇异向量，而对角矩阵Σ的主对角线上的值称为矩阵X的奇异值，并按照从大到小降序排列。）&lt;/p&gt;
-&lt;h2 id=&#34;奇异值分解的几何解释&#34;&gt;奇异值分解的几何解释&lt;/h2&gt;
-&lt;p&gt;考虑矩阵A=&lt;img src=&#34;https://angleHan.github.io/post-images/1587431045621.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-我们将通过单位圆这个载体来观察矩阵A对应的变换。&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1587431116770.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-把单位圆上的每一点都通过A进行变换，得到一个椭圆。&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1587431160892.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-对A进行奇异值分解：&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1587431313418.svg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-将A表示成2个分力相加的形式：&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1587431355412.svg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-第一个分力&lt;img src=&#34;https://angleHan.github.io/post-images/1587431436533.svg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;作用在单位圆上的效果：&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1587431483021.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-同理，第二个分力&lt;img src=&#34;https://angleHan.github.io/post-images/1587431496207.svg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;作用在单位圆上的效果：&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1587431516125.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-因此，当这两个分力一起作用的时候，单位圆就转换成了上边所展示的椭圆。（可以想象，如果两个分力相差很大，单位圆将被映射成一条直线）&lt;/p&gt;
-&lt;p&gt;细心的小伙伴应该发现，上面的例子好像并没有体现奇异值分解里的正交性。&lt;br&gt;
-其实奇异值分解就是将矩阵行空间的一个标准正交基转换为该矩阵列空间的标准正交基，它包括了旋转、缩放等变换。&lt;/p&gt;
-&lt;h2 id=&#34;奇异值分解的物理解释&#34;&gt;奇异值分解的物理解释&lt;/h2&gt;
-&lt;p&gt;观察下面两幅图片，&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1587795522120.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-第一幅图为随机生成的一幅256x256的图像，值都是在0-255之间。第二幅图为SVD分解之后的奇异值矩阵，颜色越亮，代表了值越大，也就是能量越大。因此SVD的过程就是通过变换，将原空间的能量重新聚集分配，在新的空间集中的过程，这就是SVD的物理意义。通过这个物理意义，我们可以做许多的应用，例如数据的压缩，图像的滤波，以及推荐算法等。&lt;/p&gt;
-&lt;h2 id=&#34;奇异值的一种计算方法&#34;&gt;奇异值的一种计算方法&lt;/h2&gt;
-&lt;p&gt;对于奇异值的定义式&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;U&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;Σ&lt;/mi&gt;&lt;msup&gt;&lt;mi&gt;V&lt;/mi&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;X = UΣV^T&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.68333em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.07847em;&#34;&gt;X&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.8413309999999999em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.10903em;&#34;&gt;U&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;Σ&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.22222em;&#34;&gt;V&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.8413309999999999em;&#34;&gt;&lt;span style=&#34;top:-3.063em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34; style=&#34;margin-right:0.13889em;&#34;&gt;T&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;，我们分别左乘和右乘X矩阵的转置，发现得到了两个对角矩阵，其特征值即为原式对角矩阵中对角线上各值的平方，两个对角矩阵的特征向量即为所求的U和V，具体可以自己推导，比较简单。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;我是从MIT的OpenCourse的一节课学的，在网易公开课可以找到相应视频。&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&#34;奇异值与特征值的区别与联系&#34;&gt;奇异值与特征值的区别与联系&lt;/h1&gt;
-&lt;p&gt;特征值分解和奇异值分解都是给定一个线性变换，找一组特殊的基，特征值分解所对应的基即为特征向量，它只适用于对称正定矩阵，而奇异值对矩阵没有限制。（目前觉得自己的理解还停留在表面，没有更深层次的挖掘）&lt;/p&gt;
-&lt;p&gt;奇异值分解和特征值分解的应用先不说了，因为我还在本科，只是先对这一部分的知识有一个大体了解，以后具体用到哪部分再看。&lt;/p&gt;
-&lt;p&gt;本文结束，感谢阅读~~&lt;/p&gt;
-">奇异值分解与特征值分解的理解</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://angleHan.github.io/post/ju-zhen-de-ji-chu-zhi-shi/"" data-c="
-          &lt;p&gt;由于大一学习的线性代数现在已经忘记得差不多了😥，因此在这里记录一下矩阵的常用知识，为以后更复杂的数学运算打下基础。&lt;/p&gt;
-&lt;!-- more --&gt;
-&lt;h2 id=&#34;hermitian矩阵与矩阵的二次型&#34;&gt;Hermitian矩阵与矩阵的二次型&lt;/h2&gt;
-&lt;p&gt;Hermitian矩阵就是我们常说的复共轭对称矩阵，它是满足&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mi&gt;H&lt;/mi&gt;&lt;/msup&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;A^H=A&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.8413309999999999em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.8413309999999999em;&#34;&gt;&lt;span style=&#34;top:-3.063em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34; style=&#34;margin-right:0.08125em;&#34;&gt;H&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.68333em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;A&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;的正方复矩阵。&lt;/p&gt;
-&lt;p&gt;任意一个正方对称矩阵A的二次型定义为&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mi&gt;H&lt;/mi&gt;&lt;/msup&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;x^HAx&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.8413309999999999em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.8413309999999999em;&#34;&gt;&lt;span style=&#34;top:-3.063em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34; style=&#34;margin-right:0.08125em;&#34;&gt;H&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;x&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;，其中x可以是任意的非零复向量。（&lt;strong&gt;需注意，这里A必须为实对称矩阵或复共轭对称矩阵，，为了保证定义的唯一性&lt;/strong&gt;）&lt;br&gt;
-从这里又延申出了以下定义：&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1587376562191.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;一句话小结，矩阵的二次型刻画矩阵的正定性&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;行列式&#34;&gt;行列式&lt;/h2&gt;
-&lt;p&gt;一个n*n正方矩阵A的行列式记作&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;det(A)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;，A去掉第i行和第j列的剩余行列式记作&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mrow&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;j&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;A_{ij}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.969438em;vertical-align:-0.286108em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.311664em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mord mathdefault mtight&#34; style=&#34;margin-right:0.05724em;&#34;&gt;j&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.286108em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;，称为元素&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mrow&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;j&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;a_{ij}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.716668em;vertical-align:-0.286108em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.311664em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mord mathdefault mtight&#34; style=&#34;margin-right:0.05724em;&#34;&gt;j&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.286108em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;的余子式，从这里我们引出了行列式的计算公式：&lt;br&gt;
-&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mrow&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;msub&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mrow&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;.&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;.&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;.&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;.&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;.&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;.&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mrow&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;msub&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mrow&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msubsup&gt;&lt;mo&gt;∑&lt;/mo&gt;&lt;mrow&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/msubsup&gt;&lt;msub&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mrow&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;j&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;msup&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;mrow&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mi&gt;j&lt;/mi&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mrow&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;j&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;det(A) = a_{i1}A_{i1}+......+a_{in}A_{in} = \sum_{i=1}^{n}a_{ij}(-1)^{i+j}det(A_{ij})&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.83333em;vertical-align:-0.15em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.31166399999999994em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mord mtight&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.15em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.31166399999999994em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mord mtight&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.15em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.66666em;vertical-align:-0.08333em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.83333em;vertical-align:-0.15em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.31166399999999994em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mord mathdefault mtight&#34;&gt;n&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.15em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.31166399999999994em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mord mathdefault mtight&#34;&gt;n&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.15em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1.124374em;vertical-align:-0.29971000000000003em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mop&#34;&gt;&lt;span class=&#34;mop op-symbol small-op&#34; style=&#34;position:relative;top:-0.0000050000000000050004em;&#34;&gt;∑&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.804292em;&#34;&gt;&lt;span style=&#34;top:-2.40029em;margin-left:0em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mrel mtight&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mord mtight&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;top:-3.2029em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34;&gt;n&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.29971000000000003em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.311664em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mord mathdefault mtight&#34; style=&#34;margin-right:0.05724em;&#34;&gt;j&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.286108em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;−&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.824664em;&#34;&gt;&lt;span style=&#34;top:-3.063em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mbin mtight&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mord mathdefault mtight&#34; style=&#34;margin-right:0.05724em;&#34;&gt;j&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.311664em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mord mathdefault mtight&#34; style=&#34;margin-right:0.05724em;&#34;&gt;j&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.286108em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;(即通过递推的方法计算)&lt;br&gt;
-关于行列式有以下几点说明：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;行列式不等于0的矩阵称为非奇异矩阵。&lt;/li&gt;
-&lt;li&gt;单位矩阵的行列式等于1.&lt;/li&gt;
-&lt;li&gt;任何一个正方矩阵A和它的转置矩阵具有相同的行列式。&lt;/li&gt;
-&lt;li&gt;两个矩阵乘积的行列式等于它们的行列式的乘积。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;一句话小结，矩阵的行列式主要刻画矩阵的奇异性。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;矩阵的特征值&#34;&gt;矩阵的特征值&lt;/h2&gt;
-&lt;p&gt;A为n*n的方阵，若线性代数方程： Au = &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;λ&lt;/mi&gt;&lt;mo&gt;∗&lt;/mo&gt;&lt;mi&gt;u&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\lambda*u&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.69444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;λ&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;∗&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.43056em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;u&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;具有n*1非零向量解u，则标量&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;λ&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\lambda&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.69444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;λ&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;称为矩阵A的一个特征值，u称为A对应于&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;λ&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\lambda&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.69444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;λ&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;的特征向量。&lt;/p&gt;
-&lt;p&gt;这里特征值可以这样理解，英文叫做eigenvalue，词头Eigen有本征、固有的意思，因此eigenvalue表示矩阵A在不改变某些向量固有方向的基础上，对向量只进行长度&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;λ&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\lambda&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.69444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;λ&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;倍的变换，因此&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;λ&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\lambda&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.69444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;λ&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;就是矩阵A能将这些向量进行保留“本征”变换的倍数值。&lt;/p&gt;
-&lt;p&gt;通过特征值的定义，我们也可以将它和矩阵的奇异性、正定性和对角线元素结构联系起来，反映了矩阵的一些重要特征。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;一句话小结，矩阵的特征值既刻画原矩阵的奇异性，又反映原矩阵所有对角元素的结构，还刻画矩阵的正定性。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;矩阵的迹&#34;&gt;矩阵的迹&lt;/h2&gt;
-&lt;p&gt;n*n矩阵A的对角元素之和称为A的迹，记作&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;tr(A)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;。（非正方矩阵无迹的定义）&lt;/p&gt;
-&lt;p&gt;这里有如下重要结论：&lt;br&gt;
-&lt;strong&gt;矩阵的迹等于该矩阵所有特征值之和。&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;一句话小结，矩阵的迹反映矩阵所有特征值之和。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;矩阵的秩&#34;&gt;矩阵的秩&lt;/h2&gt;
-&lt;p&gt;矩阵&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mrow&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;mo&gt;∗&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;A_{m*n}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.83333em;vertical-align:-0.15em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.175696em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;mbin mtight&#34;&gt;∗&lt;/span&gt;&lt;span class=&#34;mord mathdefault mtight&#34;&gt;n&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.15em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;的秩定义为该矩阵中线性无关的行或列的数目，记作&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;rank(A)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.03148em;&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;一句话小结，矩阵的秩刻画矩阵行与行之间或者列与列之间的线性无关性，从而反映矩阵的满秩性或秩亏缺性。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;本文结束，感谢阅读~~&lt;/p&gt;
-">矩阵的基础知识</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://angleHan.github.io/post/sui-ji-xin-hao-chu-li-xue-xi-bi-ji-burg-suan-fa/"" data-c="
-          &lt;p&gt;虽然Levinson-Durbin递推算法解决了矩阵计算比较复杂的问题，但仍需要对信号的自相关函数进行估计，造成了一定的误差。由此引出了Burg算法，它不需要对自相关函数进行估计，可以直接由观测数据求解反射系数。&lt;/p&gt;
-&lt;!-- more --&gt;
-&lt;h2 id=&#34;burg算法&#34;&gt;Burg算法&lt;/h2&gt;
-&lt;p&gt;Burg算法是一种与预测误差格型滤波器密切相关的算法，它需要求解信号的前向预测误差和后向预测误差，其递推公式如下：&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1587191925460.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-反射系数Km的计算公式如下：&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1587192021016.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-（这里特别要注意求和的上下界）&lt;br&gt;
-AR模型中剩余的系数仍通过Levinson-Durbin递推算法中的递推公式来计算：&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1587192186025.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Burg算法改进之处是递推过程建立在数据序列基础上，避免了序列的自相关函数的估计，它能够较为精确地分辨出频率非常接近的正弦信号，而且Burg算法保证预测误差滤波器总是最小相位的。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;burg算法的matlab实现&#34;&gt;Burg算法的Matlab实现&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;首先确定采样点数和AR模型阶数，写出待估计信号。&lt;/li&gt;
-&lt;li&gt;按照上述Km的计算公式循环实现，其中各阶用到的预测误差用其递推公式实现，其余参数仍用Levinson-Durbin递推公式实现。&lt;/li&gt;
-&lt;li&gt;各阶的预测误差功率可以通过Levinson-Durbin递推公式计算，但也可以默认为1，只是差一个幅度的关系。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;本文结束，感谢阅读🤠&lt;/p&gt;
-">随机信号处理学习笔记（AR模型的Burg算法）</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://angleHan.github.io/post/sui-ji-xin-hao-chu-li-xue-xi-bi-ji/"" data-c="
-          &lt;p&gt;从Yule_Work直接解AR模型虽然直观，但存在不少问题。一是随着AR模型阶数的提高，矩阵运算量较大的问题；还有一个是信号的自相关函数估计不准确仍然导致结果误差较大的问题。&lt;/p&gt;
-&lt;!-- more --&gt;  
-&lt;h2 id=&#34;levinson-durbin递推解法&#34;&gt;Levinson-Durbin递推解法&lt;/h2&gt;
-&lt;p&gt;通过给定阶数，找出Yule_Work方程的规律，推导出递推公式。&lt;br&gt;
-1阶AR模型Yule_Work方程如下：&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1586078318323.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
-&lt;p&gt;m阶AR模型Yule_Work方程如下：&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1586078390261.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-其中km为反射系数，即m阶AR模型的第m个系数。&lt;/p&gt;
-&lt;h2 id=&#34;levinson-durbin递推解法的matlab实现&#34;&gt;Levinson-Durbin递推解法的Matlab实现&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;前几步跟直接解Yule_Work方程完全一样，只是各参数的计算方法变了。&lt;/li&gt;
-&lt;li&gt;在求完信号的自相关函数后，我们就可以根据递推公式来求解AR模型的各个参数了。&lt;/li&gt;
-&lt;li&gt;后续步骤也类似，求出系统函数后利用相关卷积定理来估计输出信号的功率谱。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;有些同学在看到递推公式时仿佛无从下手的感觉，可以试试这个方法。先进行程序的初始化，然后明确当前已知量和要求解的量，根据算法里描述的一步一步来，相信你最终可以独立写出正确的代码。😎&lt;/p&gt;
-&lt;p&gt;本文已结束，感谢阅读~~&lt;/p&gt;
-">随机信号处理学习笔记（AR模型的Levinson-Durbin递推解法）</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://angleHan.github.io/post/sui-ji-xin-hao-chu-li-xue-xi-bi-ji-yule_walker-fang-cheng/"" data-c="
-          &lt;p&gt;在随机信号处理中，我们不可避免地要估计信号的功率谱。但使用DFT的经典谱估计法有时误差较大，而且有旁瓣的干扰等现象，因此前人们研究出来了现代谱估计方法。&lt;/p&gt;
-&lt;!-- more --&gt;
-&lt;h2 id=&#34;ar模型&#34;&gt;AR模型&lt;/h2&gt;
-&lt;p&gt;AR模型的系统函数可以表示为：&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1586075443268.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-我们的目的是想从AR过程中求出参数a和G，从而用相关卷积定理估计出输出信号的功率谱。&lt;/p&gt;
-&lt;h2 id=&#34;yule_work方程&#34;&gt;Yule_Work方程&lt;/h2&gt;
-&lt;p&gt;推导出Yule_Work方程的思路有很多，其中一种是利用最小均方误差准则。&lt;br&gt;
-Yule_Work方程的矩阵形式：&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1586076677289.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-也可以写做：&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1586076741249.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;yule_work方程的matlab实现&#34;&gt;Yule_Work方程的Matlab实现&lt;/h2&gt;
-&lt;p&gt;观察上述方程，我们基本上就可以得出程序实现的基本思路。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;确定采样点数和AR模型阶数，写出待估计信号。&lt;/li&gt;
-&lt;li&gt;写出信号的自相关函数。&lt;/li&gt;
-&lt;li&gt;根据Yule_Work方程写出方程的增广矩阵，即方程两边的系数矩阵。&lt;/li&gt;
-&lt;li&gt;根据方程写出G^2，求出AR方程的系统函数。&lt;/li&gt;
-&lt;li&gt;利用相关卷积定理，写出信号的功率谱估计。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;代码由于课程原因暂不放上去，请大家理解😉，后续会更新。&lt;/p&gt;
-&lt;p&gt;本文已结束，感谢阅读⛳️&lt;/p&gt;
-">随机信号处理学习笔记（AR模型的Yule_Walker方程）</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://angleHan.github.io/post/dspf2812-de-li-lun-xue-xi-shi-jian-guan-li-qi-ev/"" data-c="
-          &lt;p&gt;接上篇文章 &lt;a href=&#34;https://dreamfixer.top/post/dspf2812-de-li-lun-xue-xi/&#34;&gt;DSPF2812的理论学习(CPU、时钟与中断) | 靳路晗~中国&lt;/a&gt;&lt;/p&gt;
-&lt;!-- more --&gt;
-&lt;h2 id=&#34;事件管理器ev&#34;&gt;事件管理器EV&lt;/h2&gt;
-&lt;p&gt;使用DSP进行开发，事件管理器通常是要用到的，DSPF2812共有2个事件管理器EVA和EVB，它为用户提供了众多的功能，使其在电机控制、变频器、逆变器等应用场合中显得特别有用。EV模块包含通用定时器、比较单元、捕获单元、正交编码电路，下面将一 一介绍。&lt;/p&gt;
-&lt;h3 id=&#34;通用定时器&#34;&gt;通用定时器&lt;/h3&gt;
-&lt;p&gt;事件管理器EVA有通用定时器T1和T2，EVB有通用定时器T3和T4。通用定时器的作用主要有三：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;计时。&lt;/li&gt;
-&lt;li&gt;使用定时器的比较功能产生PWM波。&lt;/li&gt;
-&lt;li&gt;也可以给事件管理器的其它模块提供基准时钟。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;下面以T1为例，详细介绍通用定时器的工作原理。&lt;br&gt;
-首先来看通用定时器的结构：&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1585445904556.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-从这张图中我们能得出以下信息：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;和定时器T1相关的常用寄存器有：16位的T1周期寄存器T1PR；16位的T1比较寄存器T1CMPR；16位的T1计数寄存器T1CNT；16位的T1控制寄存器T1CON；16位的通用定时器控制寄存器GPTCONA。&lt;/li&gt;
-&lt;li&gt;定时器T1的输入信号：来自于CPU的内部时钟HSPCLK；外部时钟输入TCLKINA，最大频率不能超过37.5MHz；定时器计数方向输入TDIRA，用于定时器工作于定向增/减计数模式；复位信号。&lt;/li&gt;
-&lt;li&gt;定时器T1的输出信号：定时器的比较输出T1PWM_T1CMP，可输出PWM波；送给ADC模块的AD转换启动信号；下溢、上溢、比较和周期匹配信号，用于提供自身比较逻辑。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;了解了这些，我们可以开始学习定时器的计数模式了。&lt;br&gt;
-T1共支持4种模式，由T1控制寄存器的第12位TMODE1和第11位TMODE0来选择。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;当TMODE的值为0时，定时器T1工作于停止/保持模式。在这种模式下，T1停止计数并保持当前的状态。&lt;/li&gt;
-&lt;li&gt;当TMODE的值为1时，定时器T1工作于连续增/减计数模式。在这种模式下，T1计数器寄存器T1CNT先从初始值开始递增至周期寄存器的值，再递减至0，再递增，再递减，这样不断循环下去。&lt;/li&gt;
-&lt;li&gt;当TMODE的值为2时，定时器T1工作于连续递增计数模式。在这种模式下，T1计数器寄存器先从初始值开始递增至周期寄存器的值，然后突变为0，再从0开始递增至周期寄存器的值，不断重复循环下去。&lt;/li&gt;
-&lt;li&gt;当TMODE的值为3时，T1工作于定向增/减计数模式，这时候T1计数器寄存器进行递增或者递减计数取决于引脚TDIRA的电平（高电平递增，低电平递减）。如果在T1定时器计数寄存器计数过程中，引脚TDIRA的电平发生了变化，那么必须在完成当前计数周期后的下一个定时器时钟周期时，T1CNT的计数方向发生变化。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;在以上四种模式中，我们用得最多的是连续增/减计数模式和连续递增计数模式，大家可以重点关注这两种。接下来我们将讨论PWM波的产生。&lt;br&gt;
-当T1计数器寄存器T1CNT和比较寄存器T1CMPR的值相等时，如果定时器的比较功能和比较输出使能，则T1PWM_T1CMP引脚就会输出PWM波形。定时器T1能够产生两种类型的PWM，不对称的和对称的。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;当T1CNT工作于连续递增计数模式时，输出不对称的PWM波形&lt;/strong&gt;。此时PWM波中各参数计算如下：&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1585454589751.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;当T1CNT工作于连续增/减计数模式时，输出对称的PWM波形&lt;/strong&gt;。 此时PWM中各参数计算如下：&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1585454605652.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;大家可以根据上述公式快速计算PWM的参数。&lt;/p&gt;
-&lt;h3 id=&#34;比较单元与pwm电路&#34;&gt;比较单元与PWM电路&lt;/h3&gt;
-&lt;p&gt;事件管理器EVA模块具有3个全比较单元，比较单元1、比较单元2、比较单元3。EVA的比较单元时钟信号由通用定时器T1来提供，每个比较单元都能够输出2路互补的PWM波形（在这里PWM波形的原理和定时器产生PWM的原理基本相同），也可以通过相应的寄存器来设置死区时间，因此它有能力去驱动一个三相全桥电路。&lt;br&gt;
-注意这里引入了一个死区概念，我通过下面的图来解释。&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1585467072814.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-由图可以看出，输入开关管的PWM信号必须都是互补的。在理想情况下，PHa1是高电平时，PHa2是低电平。但是二者从高电平转换到低电平或从低电平转换为高电平时都需要一段时间，在这段时间内，二者会同时导通，否则将会被击穿。因此，我们要保证上下两管的上升沿和下降沿互相要隔开一段时间，这段时间就称为死区。&lt;/p&gt;
-&lt;h3 id=&#34;捕获单元与正交脉冲编码电路&#34;&gt;捕获单元与正交脉冲编码电路&lt;/h3&gt;
-&lt;p&gt;捕获单元用于捕获输入引脚上的信号跳变。EV有6个捕获单元，其中EVA对应CAP1、CAP2、CAP3，EVB对应CAP4、CAP5、CAP6。每个捕获单元都有相应的捕获输入引脚，此外，正交脉冲编码电路与捕获输入单元共用芯片外部引脚。&lt;br&gt;
-F2812事件管理器的每个捕获单元都有一个专用的2级深度的FIFO堆栈，捕获单元被使能后，当输入引脚CAPx上有1一个跳变（由CAPCONA/B指定是检测上升沿还是下降沿），就将所选通用定时器的当前计数值载入到相应的FIFO栈中。同时相应的中断标志被置位，如果该中断未被屏蔽，就产生了一个外部中断请求，即发生了捕获事件。&lt;/p&gt;
-&lt;p&gt;每个事件管理器有一个正交脉冲编码电路QEP，EVA的QEP电路有输入引脚CAP1_QEP1、CAP2_QEP2，EVB的QEP电路有输入引脚CAP4_QEP3、CAP5_QEP4，光电码盘输出的两路正交编码信号正好从上述的两个输入引脚输入到DSP的QEP电路，然后再通过QEP的译码器对正交编码信号进行译码，最后就可以得到电机转子的转速、旋转方向、旋转位置等信息了。&lt;br&gt;
-QEP电路工作时，引脚CAP1_QEP1和引脚CAP2_QEP2输入两路正交编码脉冲，QEP电路对这两路正交编码脉冲的上升沿和下降沿都进行计数，因此QEP电路为定时器T2所提供的时钟频率是每个输入序列的4倍。&lt;/p&gt;
-&lt;h2 id=&#34;模数转换器adc&#34;&gt;模/数转换器ADC&lt;/h2&gt;
-&lt;p&gt;F2812的ADC模块一共具有16个采样通道，分成两组：一组为ADCINA0-ADCINA7，另一组为ADCINB0-ADCINB7。具体结构见下图：&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1585562677675.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-可以看出，虽然ADC模块具有多个输入通道，但内部只有一个转换器，因此同一时刻只能对一路输入信号进行转换。若某一时刻输入了多个信号，则ADC内部具有自动序列发生器，用户可以通过编程为序列发生器指定需要转换的通道顺序。&lt;br&gt;
-ADC的转换特性一般通过下面公式求得：&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1585637947039.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-ADC模块的时钟通过下式计算：&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1585638227914.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-ADC模块的通道采样时间如下：&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1585638380426.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-（其中ACQ_PS是ADC控制寄存器中的位）&lt;/p&gt;
-&lt;p&gt;下面开始说ADC的工作模式。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;双序列发生器模式下顺序采样，假设对ADCINA0-ADCINA7、ADCINB0-ADCINB7这16路通道进行采样，此时将会用到序列发生器SEQ1和SEQ2。由于是顺序采样，必须对16个通道每一个通道进行排序。因此SEQ1将用到通道选择控制寄存器ADCCHSELSEQ1、ADCCHSELSEQ2，SEQ2将用到通道选择控制寄存器ADCCHSELSEQ3、ADCCHSELSEQ4。&lt;/li&gt;
-&lt;li&gt;双序列发生器模式下并发采样，仍然遵循上述假设，以下同。（并发采样是一对通道一对通道地采样）因此同样用到两个序列发生器，但此时只需要对一对通道中的任何一个通道进行排序即可，因此通道选择控制器使用的数量是顺序采样的一半。&lt;/li&gt;
-&lt;li&gt;级联模式下的顺序采样，由于ADC工作于级联模式，此时序列发生器SEQ1和SEQ2级联成了一个16状态的序列发生器SEQ。其它与双序列发生器模式下顺序采样类似。&lt;/li&gt;
-&lt;li&gt;级联模式下的并发采样，即级联模式与并发采样的组合。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;以上就是DSPF2812中ADC的基础知识，实际想编程的话光看上边是做不了的，你还需要结合相应的寄存器去搞清楚每一位是干什么的，根据你的要求进行配置。&lt;/p&gt;
-&lt;h2 id=&#34;cmd命令文件&#34;&gt;CMD命令文件&lt;/h2&gt;
-&lt;p&gt;这里首先要介绍通用目标文件格式COFF，详细的COFF文件格式包括断头、可执行代码、初始化数据、可重定位信息、行号入口、符号表等等，但从应用的角度来看，我们只需要掌握两点：一是通过伪指令定义段，二是给段分配空间。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;编译器处理段的过程：1. 把每个源文件都编译成独立的目标文件。&lt;br&gt;
-2. 链接器把目标文件中相同段名的部分链接在一起，生成最终的可执行文件。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;首先来看下面一个CMD文件：&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1586504027836.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-MEMORY伪指令可以让用户选择目标存储器的起始地址和长度，其中PAGE0为程序空间，PAGE1为数据空间。&lt;br&gt;
-再来看下面的CMD文件：&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1586504261261.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-其中，SECTIONS伪指令具体规定了在存储器内何处放置输出段，如果用户没有指定SECTIONS伪指令，链接器则用默认的算法组合并定位段。&lt;/p&gt;
-&lt;p&gt;对于CMD文件，我们主要是理解其对代码的分配，起到更好的管理存储空间的作用。如果代码量小且没有特殊要求的话，你也可以用默认的段分配方法。&lt;/p&gt;
-&lt;p&gt;本文结束，感谢阅读😘&lt;/p&gt;
-">DSPF2812的理论学习（事件管理器EV、ADC和CMD命令文件）</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://angleHan.github.io/post/dspf2812-de-li-lun-xue-xi/"" data-c="
-          &lt;p&gt;随着大规模集成电路、数字计算机等技术的飞速发展，DSP系统逐渐流行起来，而我由于课程原因也接触到了DSP系统，因此在这里记录了DSPF2812的理论知识，为后续的编程打下基础。&lt;/p&gt;
-&lt;!-- more --&gt;
-&lt;h2 id=&#34;dsp芯片的特点&#34;&gt;DSP芯片的特点&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;哈佛结构：不同于传统的冯诺依曼结构，将程序和数据存储在不同的存储空间当中，因此取指和执行能完全重叠运行。&lt;/li&gt;
-&lt;li&gt;流水线操作：可以并行处理多条指令，减少了指令执行的时间。&lt;/li&gt;
-&lt;li&gt;专用的硬件乘法器：大大提高运算速度。&lt;/li&gt;
-&lt;li&gt;特殊的DSPs指令：可以执行许多复杂功能。&lt;/li&gt;
-&lt;li&gt;快速的指令周期：满足高实时性场合的需求。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;这里DSPF2812的各引脚功能不再阐述，有兴趣的读者可参考TI公司的中文数据手册。&lt;br&gt;
-至于DSP应如何学习，我的老师把DSP的知识点抽象为建筑物的结构，我觉得很形象，大家可以参考一下。&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1584664042841.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;cpu的内部结构和时钟&#34;&gt;CPU的内部结构和时钟&lt;/h2&gt;
-&lt;h3 id=&#34;cpu&#34;&gt;CPU&lt;/h3&gt;
-&lt;p&gt;这里，我们首先要对CPU 有一个整体上的认识，见下图：&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1584696135675.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-然后我们对CPU进行拆解，对CPU内部的结构有一个总览：&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1584696334949.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-对于CPU，我觉得了解了以上知识就足够了，以后在编程中如果需要用到的话，再回来查找即可。&lt;/p&gt;
-&lt;h3 id=&#34;时钟综述&#34;&gt;时钟综述&lt;/h3&gt;
-&lt;p&gt;接着，我们需要学习微机中最重要的部分——时钟系统，而F2812需要处理大量的复杂运算，因此对定时的要求更加严格。而配置相应的时钟是通过修改对应的寄存器来完成的，主要有：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;外设时钟控制寄存器（PCLKCR），控制片上各种时钟的工作状态，使能或禁止相关外设时钟。&lt;/li&gt;
-&lt;li&gt;系统控制和状态寄存器（SCSR），包含看门狗溢出位和看门狗中断使能/屏蔽位，和看门狗的控制有关。&lt;/li&gt;
-&lt;li&gt;高低速外设时钟设置寄存器（HISPCP/LOSPCP) ，用于设置不同速度的外设。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;晶体振荡器和锁相环&#34;&gt;晶体振荡器和锁相环&lt;/h3&gt;
-&lt;p&gt;F2812片上有基于PLL的时钟模块，为器件及各种外设提供时钟信号。&lt;br&gt;
-其中，系统的时钟源由外部&lt;strong&gt;XPLLDIS&lt;/strong&gt;引脚确定，当该引脚为低电平时，系统直接采用晶振作为系统时钟；当该引脚为高电平时，外部时钟经过PLL倍频后，为系统提供时钟。&lt;br&gt;
-若要改变锁相环的工作模式及倍频的系数，可以通过锁相环控制寄存器来修改。&lt;/p&gt;
-&lt;h3 id=&#34;cpu定时器&#34;&gt;CPU定时器&lt;/h3&gt;
-&lt;p&gt;F2812共有3个32位CPU定时器(TIMER0/1/2)，其中后两个预留给实时操作系统使用，用户只可以使用定时器0。其中三个定时器的中断信号分别为TINT0, TINT1, TINT2，分别对应于中断向量INT1，INT13，INT14。&lt;br&gt;
-接下来将CPU定时器的具体原理，请读者仔细阅读。&lt;br&gt;
-简单来说，定时器就像闹钟，定时器工作前一般要经历以下几个步骤：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;首先给周期寄存器PRDH:PRD赋值（这里是用2个16位寄存器来表示一个32位寄存器），当启动定时器开始计数时，周期寄存器的值装载进定时器计数寄存器TIMH:TIM中。&lt;/li&gt;
-&lt;li&gt;好比闹钟每隔1s走动一下一样，计数器寄存器里面的值每隔一个TIMCLK就减1，直到计数到0，定时器完成一个周期的计数，这时将产生一个中断信号。&lt;/li&gt;
-&lt;li&gt;TIMCLK的值又从何而来呢，它由定时器分频器TDDRH:TDDR和定时器预定标器PSCH:PSC来控制。先给定时器分频器赋值，然后装载入定时器预定标器，这样每隔一个SYSCLKOUT脉冲，预定标器中的值就减1.直到减为0时，就输出一个TIMCLK。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;经过以上的分析，我们容易得出定时器周期的计算公式。&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1584777196711.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;看门狗电路&#34;&gt;看门狗电路&lt;/h3&gt;
-&lt;p&gt;在由MCU构成的微型计算机系统中，由于单片机的工作常常会受到外界电磁场的干扰，造成程序跑飞而陷入死循环，会造成整个系统陷入停滞状态，因此有了看门狗电路的产生。&lt;br&gt;
-我们可以这样来理解F2812的看门狗电路原理F2812的看门狗电路有一个8位看门狗加法计数器WDCNTR，无论什么时候，如果该计算器达到最大值，看门狗模块就会产生一个输出脉冲使系统复位。为了防止WDCNTR溢出，通常采用2种方法。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;禁止看门狗。&lt;/li&gt;
-&lt;li&gt;定期“喂狗”，即通过软件向负责复位看门狗计数器的看门狗密钥寄存器周期性地写入0x55+0xAA。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;（这里需要注意的是逻辑校验位是看门狗的另一个安全机制，所有访问看门狗控制寄存器WDCR的写操作中，相应的校验位必须是101，否则将会拒绝访问并立即触发系统复位。）&lt;/p&gt;
-&lt;h2 id=&#34;存储器与通用io口&#34;&gt;存储器与通用I/O口&lt;/h2&gt;
-&lt;p&gt;F2812存储器的映射见下图：&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1584871160488.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-其中，相信大家对各种片内存储器的优点都有了解，在这里我们仅对外部扩展接口进行介绍。&lt;/p&gt;
-&lt;h3 id=&#34;外部扩展接口xintf&#34;&gt;外部扩展接口XINTF&lt;/h3&gt;
-&lt;p&gt;F2812的外部接口XINTF映射到5个独立的区域，见下图：&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1584871599349.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-当访问相应的存储区域时，会产生一个片选信号。此外，从图上可以看出，有的区域共用一个片选信号。&lt;br&gt;
-这一部分我觉得跟后续的编程不太相关，所以我的学习方法是大概浏览几遍，用到再去查。&lt;/p&gt;
-&lt;h3 id=&#34;gpio多路复用器&#34;&gt;GPIO多路复用器&lt;/h3&gt;
-&lt;p&gt;在F2812处理器当中，相当一部分引脚是外设和数字I/O引脚公用的。它们通过 GPxMUX 寄存器来配置选择具体的引脚功能(作为外设或数字 I/O 引脚)。当引脚作为数字I/O时，可以通过方向控制寄存器GPxDIR控制I/O的方向，是作为输入还是输出，并可以通过量化寄存器GPxQUAL量化输入信号，消除外部噪声信号。&lt;br&gt;
-同上边一样，我不会深入设计具体寄存器每一位的功能，因为这些是不用记的，知道如何操作就行。&lt;/p&gt;
-&lt;h2 id=&#34;中断管理&#34;&gt;中断管理&lt;/h2&gt;
-&lt;p&gt;这里讲下中断的作用，通过软件或硬件激发的中断请求信号，可以使CPU暂停目前执行的主程序，转而去执行中断服务程序，以便CPU实现数据的传送或接收。&lt;br&gt;
-F2812的中断主要有两种方式触发：一种是在软件中写指令；另一种是硬件方式触发。无论是软件中断还是硬件中断，都可归结为可屏蔽中断和不可屏蔽中断。 以下我们将重点讨论可屏蔽中断和PIE中断，暂时不考虑不可屏蔽中断。&lt;/p&gt;
-&lt;h3 id=&#34;中断向量和优先级&#34;&gt;中断向量和优先级&lt;/h3&gt;
-&lt;p&gt;F2812一共可以支持32个CPU中断，其中每一个中断都是一个32位的中断向量，但里面存储的是22位的中断服务程序的入口地址，CPU将优先处理优先级高的中断 。&lt;/p&gt;
-&lt;h3 id=&#34;可屏蔽中断&#34;&gt;可屏蔽中断&lt;/h3&gt;
-&lt;p&gt;可屏蔽中断有3个专用寄存器的支持，中断标志寄存器IFR，中断使能寄存器IER和调试中断使能寄存器DBGIER。IFR中包含的相应标志位表面对应中断在等待CPU的响应，IER和DBGIER则控制使能或屏蔽某一可屏蔽中断，其中后一寄存器用于实时仿真。&lt;br&gt;
-可屏蔽中断的响应过程是：首先当某个可屏蔽中断提出请求时，IFR中的中断标志位自动置位。接着CPU将检查IER中相应位的值和是否使能了全局中断。若以上都没有问题，则CPU将会响应该中断，暂停主程序并转向执行相应的中断服务子程序。&lt;/p&gt;
-&lt;h3 id=&#34;外设中断扩展模块pie&#34;&gt;外设中断扩展模块PIE&lt;/h3&gt;
-&lt;p&gt;PIE是为了使F2812CPU能够管理更多的中断而设计的，PIE中多个中断源复用一个CPU中断，这些中断被分为12组，每个组有8个中断，每个组都被反馈到CPU内核的12条中断信号线的一条上，因此PIE共可支持96个中断，具体管理的中断源见下图：&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1585126449716.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-对于PIE中断，内部具体是如何复用的，硬件电路是如何连接的，我们不必关心，最重要的是看懂外设中断在PIE中是如何分布的：&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1585127073065.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-这里同组内，排在前边的中断优先级比排在后面中断优先级的高，而不同组之间，排在前面组的任何一个中断优先级要比排在后面组内的任何一个中断的优先级高。&lt;br&gt;
-可屏蔽CPU中断可以通过中断使能寄存器和中断标志寄存器来进行编程控制，同样，PIE的每个组都有3个相关的寄存器，分别是PIE中断使能寄存器PIEIERx，PIE中断标志寄存器PIEIFRx和PIE中断应答寄存器PIEACKx，其中x代表组号。&lt;/p&gt;
-&lt;h3 id=&#34;中断的编程&#34;&gt;中断的编程&lt;/h3&gt;
-&lt;p&gt;这里我们以中断为例，介绍实际编程中的步骤。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;首先在外设初始化函数中使能外设中断。&lt;/li&gt;
-&lt;li&gt;主函数里初始化外设、使能PIE和CPU中断等。&lt;/li&gt;
-&lt;li&gt;在DSP28_DefaultIsr.c里编写你的中断处理函数，这里需要注意应该手动清除外设中断的标志位和复位PIE应答寄存器PIEACK相关的位，使得CPU能够响应PIE控制器同组内的其它中断。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;本文结束，感谢阅读~😁&lt;/p&gt;
-">DSPF2812的理论学习(CPU、时钟与中断)</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://angleHan.github.io/post/jie-jue-pip-an-zhuang-python-ku-shi-readtimeouterror/"" data-c="
-          &lt;p&gt;近来Python不知怎的就被墙了，据说是有一个非法网站跟Python的网站很像，本来想禁那个非法网站的，结果~~😢😢😢&lt;/p&gt;
-&lt;!-- more --&gt;
-&lt;p&gt;所以我们如果再用pip安装Python的某些库时，就会出现连接不上的问题。&lt;/p&gt;
-&lt;h2 id=&#34;解决办法&#34;&gt;解决办法&lt;/h2&gt;
-&lt;p&gt;指定国内的下载源来进行下载，把原来的安装命令替换为：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt; pip install -i https://pypi.douban.com/simple 需要安装的Python库
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;试了试，速度还挺快的。😁&lt;/p&gt;
-&lt;p&gt;本文已结束，感谢阅读~~&lt;/p&gt;
-">解决pip安装Python库时：ReadTimeoutError</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://angleHan.github.io/post/shu-mei-pai-shang-csi-she-xiang-tou-de-shi-yong-geng-xin-zhong/"" data-c="
-          &lt;p&gt;由于工程设计要用到树莓派的摄像头进行识别操作，本文将使用Python+OpenCV+Raspi 3B+ 来完成树莓派CSI摄像头的配置使用，以及后续的扩展操作（树莓派照相机）。&lt;/p&gt;
-&lt;!-- more --&gt;
-&lt;h2 id=&#34;csi摄像头的连接&#34;&gt;CSI摄像头的连接&lt;/h2&gt;
-&lt;p&gt;将排线的接口查在树莓派上的对应位置即可，如下图。&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1584070771286.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;在树莓派上使能摄像头功能&#34;&gt;在树莓派上使能摄像头功能&lt;/h2&gt;
-&lt;p&gt;一般有两种方法，在这里我们采用一种博主认为比较方便的方法。&lt;/p&gt;
-&lt;p&gt;在命令行中输入：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bush&#34;&gt;$ sudo raspi-config
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;然后在【Enable Camera】一栏里，设置为TRUE即可，此时树莓派要重启哦。&lt;/p&gt;
-&lt;h2 id=&#34;摄像头的调试&#34;&gt;摄像头的调试&lt;/h2&gt;
-&lt;p&gt;测试摄像头是否能够正常使用，这时候我们可以利用Raspberry Pi给我们的raspistill来验证是否能够使用。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bush&#34;&gt;$ raspistill -o test.jpg
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;在/home/目录下会生成test.jpg文件，同时会出现摄像头的画面。&lt;/p&gt;
-&lt;h2 id=&#34;利用python库操作摄像头&#34;&gt;利用Python库操作摄像头&lt;/h2&gt;
-&lt;p&gt;这里，如果你想直接用OpenCV来 操作摄像头，需进行如下设置（因为树莓派中的camera module是放在/boot/目录中以固件形式加载的，不是一个标准的V4L2的摄像头驱动）：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bush&#34;&gt;sudo nano /etc/modules  
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;添加一行：bcm2835-v4l2&lt;br&gt;
-保存退出，重启树莓派，这时就可直接用OpenCV来直接操作摄像头啦（未测试是否有bug），这里默认读者在此前已经接触过OpenCV了🤗。&lt;/p&gt;
-&lt;p&gt;如果你不想进行上述设置，可以采用下边的方法。在命令行输入：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;$ pip install picamera
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;安装成功后，我们可以新建一个Python文件，输入以下代码测试（用摄像头拍摄一张照片）：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;  from picamera.array import PiRGBArray
-  from picamera import PiCamera
-  import time
-  import cv2
-  ​
-  camera = PiCamera()
-  rawCapture = PiRGBArray(camera)
-  time.sleep(0.1)
-  camera.capture(rawCapture, format=&amp;quot;bgr&amp;quot;)
-  image = rawCapture.array
-
-  cv2.imshow(&amp;quot;Image&amp;quot;, image)
-  cv2.waitKey(0)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;获取视频流的代码：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;  from picamera.array import PiRGBArray
-  from picamera import PiCamera
-  import time
-  import cv2
-   
-  camera = PiCamera()
-  camera.resolution = (640, 480)
-  camera.framerate = 32
-  rawCapture = PiRGBArray(camera)
-   
-  time.sleep(0.1)
-   
-  # 获取图片
-  for frame in camera.capture_continuous(rawCapture, format=&amp;quot;bgr&amp;quot;, use_video_port=True):
-      image = frame.array
-   
-      # 显示
-      cv2.imshow(&amp;quot;Frame&amp;quot;, image)
-      key = cv2.waitKey(1) &amp;amp; 0xFF
-   
-      # 清空缓存
-      rawCapture.truncate(0)
-   
-      # 如果按到键盘字母&#39;q&#39;就退出循环
-      if key == ord(&amp;quot;q&amp;quot;):
-          break
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;以上就是CSI摄像头的基本操作哦，如果你想通过触摸屏来做一个基于树莓派的照相机，给大家提供一个基本思路，用QTDesigner结合Python的PYQT5库来设计~~&lt;/p&gt;
-&lt;p&gt;本文结束，感谢阅读~~&lt;/p&gt;
-">树莓派上CSI摄像头的使用</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://angleHan.github.io/post/2019-quan-guo-da-xue-sheng-dian-sai-zong-jie/"" data-c="
-          &lt;p&gt;本文记录了参加2019年全国大学生电子竞赛的一些体会。&lt;/p&gt;
-&lt;!-- more --&gt;
-&lt;h2 id=&#34;准备过程&#34;&gt;准备过程😬&lt;/h2&gt;
-&lt;p&gt;暑假期间，我和我们组的两个人一起在学校集中进行全国大学生电子竞赛的培训，虽然整个过程很苦，但是能取得省级二等奖的成绩（去测试的时候失误了~~在学校打得挺准的），也算是有一点回报吧。&lt;/p&gt;
-&lt;p&gt;我是负责视觉设计的，也帮写程序的同学想想控制算法，最后会附上我们的视觉程序供大家来学习。&lt;/p&gt;
-&lt;h2 id=&#34;一些体会&#34;&gt;一些体会👇&lt;/h2&gt;
-&lt;p&gt;比赛过程中，三个人一定要配合好，各自把自己的任务干好，还有就是坚决不要放弃，我们就是比赛的最后一天才把电磁炮做出来，然后赶紧测试，晚上8点之前交作品还是绰绰有余的。&lt;/p&gt;
-&lt;p&gt;电赛找到一个好的指导老师非常关键，无论是在知识上还是精神上，都能够给你提供帮助。我们的指导老师就很好，整个过程陪着我们，帮我们想方案，帮我们找问题，看到他就觉得安心。&lt;/p&gt;
-&lt;p&gt;下边是我们的视觉代码，有兴趣的可以参考一下。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import  sensor, image, time, pyb
-from pyb import UART
-from struct import pack
-import math
-​
-sensor.reset()
-sensor.set_pixformat(sensor.RGB565)
-sensor.set_framesize(sensor.QVGA)
-sensor.set_brightness(0)
-#sensor.skip_frames(10)
-sensor.set_auto_whitebal(False)
-clock = time.clock() # 追踪帧率
-​
-​
-uart = UART(3, 115200)
-​
-fx = 279.4808 #.4808
-fy = 279.4204 #.4204
-cx = 133.6368
-cy = 123.6917
-​
-K = 5120
-buf_d = [0,0,0,0,0]
-​
-​
-BLACK = (0, 43, -12, 4, -10, 9)
-BALL = (23, 97, 48, 127, -37, 62)
-​
-img = sensor.snapshot()
-black_blobs = img.find_blobs([BLACK], pixels_threshold=9000)
-board_roi = (1,1,500,500)
-ball_blobs = img.find_blobs([BALL], roi=board_roi, pixels_threshold=100, merge=True, margin=1)
-​
-if ball_blobs:
-    for ball_blob in ball_blobs:
-        img.draw_rectangle(ball_blob[0:4])
-        img.draw_cross(ball_blob[5], ball_blob[6], size=50)
-if black_blobs:
-    for black_blob in black_blobs:
-        img.draw_rectangle(board_roi[0:4])
-​
-def find_max(blobs):
-    max_size=0
-    for blob in blobs:
-        if blob.pixels() &amp;gt; max_size:
-            max_blob=blob
-            max_size = blob.pixels()
-    return max_blob
-​
-​
-while(True):
-    frame_fps =clock.fps()
-​
-    img = sensor.snapshot()
-    ball_blobs = img.find_blobs([BALL], roi=board_roi, pixels_threshold=100, merge=True, margin=1)
-​
-    if ball_blobs:
-        max_blob = find_max(ball_blobs)
-        target_x = 135
-        target_y = 120
-​
-        img.draw_rectangle(max_blob.rect()) # rect
-        img.draw_cross(max_blob.cx(), max_blob.cy()) # cx, cy
-        #print(max_blob.cx(),max_blob.cy())
-​
-        yaw = math.atan((max_blob.cx() - cx) / fx) - math.atan((target_x - cx) / fx)
-        pitch = math.atan((max_blob.cy() - cy) / fy) - math.atan((target_y - cy) / fy)
-        #print(math.atan((last_x - cx) / fx))
-        #print(&amp;quot;yaw: &amp;quot;, yaw)
-        #print(&amp;quot;pitch: &amp;quot;, pitch)
-        yaw*=180/3.141592
-        pitch*=180/3.141592
-​
-        buf_d[0] = K / ((max_blob.w()+max_blob.h())/2)
-        buf_d[4]=buf_d[3];buf_d[3]=buf_d[2];buf_d[2]=buf_d[1];buf_d[1]=buf_d[0];
-        D_buf=sorted(buf_d)
-        D = D_buf[2]
-​
-        print(&amp;quot;yaw: &amp;quot;, yaw)
-        print(&amp;quot;pitch: &amp;quot;, pitch)
-        print(&amp;quot;Dis:&amp;quot;, D)
-        D = K/max_blob.w()
-        #K = max_blob.w()*128
-        #print(K)
-        #print(D)
-        datap = pack(&#39;bbbbfffbb&#39;,0x35,0x46,0x57,0x24, float(yaw), float(pitch), float(D), 0xBB, 0xAA)
-        print(&#39;you send:&#39;,datap)
-        uart.write(datap)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;基本的思路非常简单，找到最大的红色块，然后通过小孔成像原理算出来舵机需要变换的角度。&lt;/p&gt;
-&lt;h2 id=&#34;写在最后&#34;&gt;写在最后🎃&lt;/h2&gt;
-&lt;p&gt;虽然没能取得好的成绩，但是整个过程我觉得自己提升不少，希望自己能再接再厉，争取下一次取得更好的成绩！&lt;/p&gt;
-&lt;p&gt;对了，补充一点，去测试的过程心态一定要放平，还有就是最后一刻一定不要动结构！！！我们就是吃了这个的亏~~&lt;/p&gt;
-&lt;p&gt;本文结束，感谢阅读！&lt;/p&gt;
-">2019全国大学生电赛总结（附视觉代码）</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://angleHan.github.io/post/bhuman-kuang-jia-de-ji-ben-pei-zhi-ji-jian-dan-shi-yong/"" data-c="
-          &lt;p&gt;BHuman框架是当今Robocup标准平台组比赛的主流框架，本文介绍了BHuman框架的一些最基本的操作。&lt;/p&gt;
-&lt;!-- more --&gt;
-&lt;h2 id=&#34;镜像以及各种包的安装&#34;&gt;镜像以及各种包的安装&lt;/h2&gt;
-&lt;p&gt;依次运行以下代码：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bush&#34;&gt;sudo ./installAlcommon naoqi-sdk-2.1.4.13-linux32.tar.gz的位置  //注意需要先到网盘里下载naoqi-sdk，位置在share/Nao  
-sudo apt install clang qtbase5-dev libqt5svg5-dev libglew-dev libxml2-dev graphviz xterm
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;进行编译&#34;&gt;进行编译&lt;/h2&gt;
-&lt;p&gt;从根目录进入 Make/Linux，打开终端，输入命令make即可（若提示权限不够，输入sudo make)。&lt;/p&gt;
-&lt;h2 id=&#34;为nao创建机器人配置文件&#34;&gt;为Nao创建机器人配置文件&lt;/h2&gt;
-&lt;p&gt;进入Install目录，依次输入以下命令:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bush&#34;&gt;./ createRobot -t 队伍编号 -r 机器人编号 机器人名字 //举例 ./ createRobot -t 71 -r 1 ZZU-ONE  
-./ addRobotIds - ip 169.254.54.28 刚才创建的机器人名字 //注意此时需改变有线网络下的IPV4配置，依次点击ipv4-手动，输入IP地址为Nao机器人报的IP地址，网关统一为255.255.0.0  
-./ installRobot 机器人的IP  //注意这一步需要到Make/Linux目录操作
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;接下来，我们需再次更改IPV4那里的ip地址，为192.168.71.254，保持网关不变，然后输入命令:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bush&#34;&gt;./ copyfiles Develop 刚才更改的IP地址 -t 71 -c blue -p 机器人编号 -b
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;到此步，机器人的配置基本完成&lt;/strong&gt;,可以打开Bush进行验证，位置如下图:&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1583993951087.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;代码结构&#34;&gt;代码结构&lt;/h2&gt;
-&lt;p&gt;BHuman的代码框架还是挺大的，但我们重点关注的是Config和Src这两个文件夹，Config里边是基本的参数文件配置，在Src里边我们主要编写5个机器人的策略和上场的策略，如果有能力的话，可以试着修改一下底层文件，加入我们自己的特色。（注意每次编写完代码后都需要进入Make/Linux重新编译）&lt;/p&gt;
-&lt;h2 id=&#34;如何仿真&#34;&gt;如何仿真&lt;/h2&gt;
-&lt;p&gt;仿真程序的位置如下：&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1583994017951.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
-&lt;p&gt;打开之后，我们需要选择一个场景文件，选择之后，点击Robocup会出现比赛的仿真界面，这时我们打开console，输入gc playing可以控制比赛的开始，还有很多其它命令，可参考CodeRelease2017的SimRobot那一章，机器人选项那里是机器人的各种参数的信息，在那里我们可以调节机器人的视觉参数以改善机器人的定位，效果如下：&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1583994034376.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-注：（我认为调节守门员时球门前边的十字线非常重要，对于前锋来说，中圈的识别非常重要，这是他们定位的主要依据）&lt;/p&gt;
-&lt;p&gt;🤗本文结束，谢谢阅读！&lt;/p&gt;
-">BHuman框架的基本配置及简单使用</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://angleHan.github.io/post/huffman-bian-ma-python-shi-xian/"" data-c="
-          &lt;h2 id=&#34;huffman编码简介&#34;&gt;Huffman编码简介&lt;/h2&gt;
-&lt;p&gt;1952年，哈夫曼提出了一种构造最佳码的方法称为哈夫曼码（也有说霍夫曼码，看你怎么翻译了）。它充分利用了信源概率分布的特性进行编码，是无失真信源编码方法的一种。&lt;/p&gt;
-&lt;!-- more --&gt;
-&lt;p&gt;具体编码方法，看下面的演示即可。&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1583992747066.gif&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;python实现&#34;&gt;Python实现&lt;/h2&gt;
-&lt;p&gt;根据Python面向对象编程的特点，我们可以先构思出2个大类，一个为节点类，另一个为哈夫曼树类，利用节点来完成哈夫曼树的建立。&lt;br&gt;
-😬节点类代码如下：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;#节点类
-class Node(object):
-    def __init__(self,name=None,value=None):
-        self._name=name
-        self._value=value
-        self._left=None
-        self._right=None
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;🤒接着，我们用哈夫曼树的编码思想，利用节点反向建立哈夫曼树。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;#哈夫曼树类
-class HuffmanTree(object):
-
-    #根据Huffman树的思想：以节点为基础，反向建立Huffman树
-    def __init__(self,char_weights):
-        self.Leav=[Node(part[0],part[1]) for part in char_weights]  #根据输入的字符及其频数生成节点
-        while len(self.Leav)!=1:    
-            self.Leav.sort(key=lambda node:node._value,reverse=True)
-            c=Node(value=(self.Leav[-1]._value+self.Leav[-2]._value))
-            c._left=self.Leav.pop(-1)
-            c._right=self.Leav.pop(-1)
-            self.Leav.append(c)
-        self.root=self.Leav[0]
-        self.Buffer=list(range(10))
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;🤐建立完哈夫曼树后，我们遍历整个树，将左边的节点给0，右边的节点给1，这里采用递归的思想。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt; #用递归的思想生成编码
-    def pre(self,tree,length):
-        node=tree
-        if (not node):
-            return
-        elif node._name:
-            print (node._name + &#39;    encoding:&#39;,end=&#39;&#39;),
-            for i in range(length):
-                print (self.Buffer[i],end=&#39;&#39;)
-            print (&#39;\n&#39;)
-            return
-        self.Buffer[length]=0
-        self.pre(node._left,length+1)
-        self.Buffer[length]=1
-        self.pre(node._right,length+1)
-     #生成哈夫曼编码   
-    def get_code(self):
-        self.pre(self.root,0)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;结果&#34;&gt;结果&lt;/h2&gt;
-&lt;p&gt;😷测试代码如下：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;if __name__==&#39;__main__&#39;:
-    #输入的是字符及其频数
-    char_weights=[(&#39;a&#39;,6),(&#39;b&#39;,4),(&#39;c&#39;,10),(&#39;d&#39;,8),(&#39;f&#39;,12),(&#39;g&#39;,2)]
-    tree=HuffmanTree(char_weights)
-    tree.get_code(）
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;结果图:&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1583993116870.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
-&lt;p&gt;🤡本文结束，感谢阅读！&lt;/p&gt;
-">Huffman编码——Python实现</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://angleHan.github.io/post/about/"" data-c="
-          &lt;blockquote&gt;
-&lt;p&gt;欢迎来到我的小站呀，很高兴遇见你！🤝&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;关于本站&#34;&gt;🏠 关于本站&lt;/h2&gt;
-&lt;p&gt;😁本站主要创作一些博主学习过程中的一些心得和比赛的总结，会定期更新，欢迎大家收藏！&lt;/p&gt;
-&lt;!-- more --&gt;
-&lt;h2 id=&#34;博主是谁&#34;&gt;👨‍💻 博主是谁&lt;/h2&gt;
-&lt;p&gt;😎大家好，我是郑州大学通信工程专业的一名在读本科生，是郑州大学双足实验室NAO组的队员，也是ZZU-DROID 2019年参赛队员，负责视觉与定位方向。&lt;br&gt;
-&lt;img src=&#34;https://angleHan.github.io/post-images/1583991413301.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;兴趣爱好&#34;&gt;⛹ 兴趣爱好&lt;/h2&gt;
-&lt;p&gt;😀喜欢打篮球，喜欢数学&lt;/p&gt;
-&lt;h2 id=&#34;联系我呀&#34;&gt;📬 联系我呀&lt;/h2&gt;
-&lt;p&gt;🤓  Email：LuHanJin.Study@outlook.com&lt;br&gt;
-Github: https://github.com/angleHan&lt;br&gt;
-知乎：https://www.zhihu.com/people/meng-xiang-75-23-61&lt;/p&gt;
-">关于</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://angleHan.github.io/post/hello-gridea/"" data-c="
-          &lt;p&gt;👏  欢迎使用 &lt;strong&gt;Gridea&lt;/strong&gt; ！&lt;br&gt;
-✍️  &lt;strong&gt;Gridea&lt;/strong&gt; 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...&lt;/p&gt;
-&lt;!-- more --&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/getgridea/gridea&#34;&gt;Github&lt;/a&gt;&lt;br&gt;
-&lt;a href=&#34;https://gridea.dev/&#34;&gt;Gridea 主页&lt;/a&gt;&lt;br&gt;
-&lt;a href=&#34;http://fehey.com/&#34;&gt;示例网站&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;特性&#34;&gt;特性👇&lt;/h2&gt;
-&lt;p&gt;📝  你可以使用最酷的 &lt;strong&gt;Markdown&lt;/strong&gt; 语法，进行快速创作&lt;/p&gt;
-&lt;p&gt;🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片&lt;/p&gt;
-&lt;p&gt;🏷️  你可以对文章进行标签分组&lt;/p&gt;
-&lt;p&gt;📋  你可以自定义菜单，甚至可以创建外部链接菜单&lt;/p&gt;
-&lt;p&gt;💻  你可以在 &lt;strong&gt;Windows&lt;/strong&gt;，&lt;strong&gt;MacOS&lt;/strong&gt; 或 &lt;strong&gt;Linux&lt;/strong&gt; 设备上使用此客户端&lt;/p&gt;
-&lt;p&gt;🌎  你可以使用 &lt;strong&gt;𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌&lt;/strong&gt; 或 &lt;strong&gt;Coding Pages&lt;/strong&gt; 向世界展示，未来将支持更多平台&lt;/p&gt;
-&lt;p&gt;💬  你可以进行简单的配置，接入 &lt;a href=&#34;https://github.com/gitalk/gitalk&#34;&gt;Gitalk&lt;/a&gt; 或 &lt;a href=&#34;https://github.com/SukkaW/DisqusJS&#34;&gt;DisqusJS&lt;/a&gt; 评论系统&lt;/p&gt;
-&lt;p&gt;🇬🇧  你可以使用&lt;strong&gt;中文简体&lt;/strong&gt;或&lt;strong&gt;英语&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力&lt;/p&gt;
-&lt;p&gt;🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步&lt;/p&gt;
-&lt;p&gt;🌱 当然 &lt;strong&gt;Gridea&lt;/strong&gt; 还很年轻，有很多不足，但请相信，它会不停向前 🏃&lt;/p&gt;
-&lt;p&gt;未来，它一定会成为你离不开的伙伴&lt;/p&gt;
-&lt;p&gt;尽情发挥你的才华吧！&lt;/p&gt;
-&lt;p&gt;😘 Enjoy~&lt;/p&gt;
-">Hello Gridea</a>
-      </div>
-      
-    </div>
-    <div class="page">
-      <div id="page_ul"></div>
-    </div>
-  </div>
-</div>
-<script>
-  !function () {
-    let searchMask = document.querySelector('#search_mask');
-    let result = document.querySelector('#result');
-    let items = document.querySelectorAll('.item');
-    let searchBox = document.querySelector('#search');
-    let statCount = document.querySelector('#stat_count');
-    let statTimes = document.querySelector('#stat_times');
-    let pageUl = document.querySelector('#page_ul');
-    let close = document.querySelector('#close');
-    
-    close.addEventListener('click', function() {
-      searchMask.style = 'display: none;'
-    })
-
-    let finds = [];
-    let contents = [];
-    let pageSize = 10;
-    items.forEach(item => {
-      let a = item.querySelector('a');
-      contents.push({
-        title: a.innerText,
-        details: a.dataset.c,
-        link: a.href
-      })
-      item.remove();
-    })
-
-    function insertStr(soure, start, count) {
-      let newStr = soure.substr(start, count);
-      return soure.slice(0, start) + '<em>' + newStr + '</em>' + soure.slice(start + count);
-    }
-
-    pageUl.addEventListener('click', function(event) {
-      let target = event.target;
-      if (target.__proto__ === HTMLSpanElement.prototype) {
-        appendResults(parseInt(target.dataset.i));
-      }
-    })
-
-    function appendResults(index) {
-      let htmlResult = '';
-      let start = index || 0;
-      let end = Math.min(start + pageSize, finds.length);
-      for (let i = start; i < end; i++) {
-        const current = finds[i];
-        let html = current.title;
-        let sum = 0;
-        let positions = current.positions;
-        positions.forEach(position => {
-          html = insertStr(html, position.start + sum, position.count);
-          sum += 9;
-        })
-        htmlResult += `<div class="item"><a class="result-title" href="${current.link}">${html}</a></div>`;
-      }
-      result.innerHTML = htmlResult;
-      pageUl.innerHTML = '';
-      let count = finds.length / pageSize;
-      let lis = '';
-      if (start !== 0) {
-        lis += `<span class="fa fa-angle-left" data-i='${start - 1}'></span>`;
-      }
-      for (let i = 0; i < count; i++) {
-        lis += `<span class='${i === start?'current':''}' data-i='${i}'>${i+1}</span>`;     
-      }
-      if (start+1 < count) {
-        lis += `<span class="fa fa-angle-right" data-i='${start+1}'></span>`;  
-      }
-      pageUl.innerHTML = lis;
-    }
-
-    function search(delay) {
-      let timer = null
-      return function () {
-        clearTimeout(timer)
-        timer = setTimeout(() => {
-          let start = Date.now();
-          let segments = searchBox.value.split(' ').filter(c => c != '');
-          if (segments.length <= 0) {
-            return;
-          }
-          finds = [];
-          let htmlResult = '';
-          contents.forEach(content => {
-            let title = content.title;
-            let positions = [];
-            let find = false;
-            segments.forEach((segment) => {
-              if (content.title.includes(segment)) {
-                find = true;
-                positions.push({
-                  start: content.title.indexOf(segment),
-                  count: segment.length
-                })
-              } else if (content.details.includes(segment)) {
-                find = true;
-              }
-            });
-            if (find) {
-              finds.push({
-                title: content.title,
-                link: content.link,
-                positions
-              });
-            }
-          })
-          appendResults(0);
-          statCount.textContent = finds.length;
-          statTimes.textContent = Date.now() - start;
-        }, delay)
-      }
-    }
-    searchBox.addEventListener('input', search(200));
-  }()
-</script>
-
-
 
 </html>
