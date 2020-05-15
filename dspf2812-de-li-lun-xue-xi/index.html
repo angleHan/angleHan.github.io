@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<link rel="apple-touch-icon"
+  href="https://cdn.jsdelivr.net/gh/chiperman/Blog-photos/./img/iocn/aojep-i6dt9.49j3g5o9xbg.png">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+<meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+<meta HTTP-EQUIV="expires" CONTENT="0">
+<meta name="apple-mobile-web-app-title" content="XiaoX 博客">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+<title>DSPF2812的理论学习(CPU、时钟与中断) | 靳路晗~中国</title>
+
+<link rel="stylesheet" href="https://angleHan.github.io/styles/main.css">
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Noto+Sans+SC:300|Montserrat&display=swap"
+  rel="stylesheet">
+<link href="https://at.alicdn.com/t/font_1306644_jwtuc2zzbrd.css" rel="stylesheet" />
+<!-- 下面是我自己的iconfont -->
+<link href="https://at.alicdn.com/t/font_1651848_9ur7s2zwgll.css" rel="stylesheet" />
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<script type='text/javascript' src='https://angleHan.github.io/media/scripts/script.js'></script>
+<link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet" />
+<script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.8/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+<script>
+  wow = new WOW({
+    boxClass: 'wow',
+    animateClass: 'animated',
+    offset: 0,
+    mobile: true,
+    live: true
+  });
+  wow.init();
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160433894-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'UA-160433894-1');
+</script>
+
+</head>
+
+<body class="post-template-default single single-post postid-70 single-format-standard">
+	<div id="wrapper">
+				<header id="header" class="site-header" >
+			<div class="site-branding">
+				<h1 class="site-title">
+					<div class="post-title-name">
+						<a href="https://angleHan.github.io" rel="home">DSPF2812的理论学习(CPU、时钟与中断)</a>
+					</div>
+				</h1>
+				<h2 class="site-description">芝兰生于深林，不以无人而不芳。</h2>
+			</div>
+			<nav id="nav-wrapper">
+				<div class="container">
+					<div class="nav-toggle">
+						<div class="bars">
+							<div class="bar"></div>
+							<div class="bar"></div>
+							<div class="bar"></div>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<ul id="" class="dove">
+						
+
+						<li>
+
+							<a href="/"> 首页</a></li>
+
+						
+
+						<li>
+
+							<a href="/archives"> 归档</a></li>
+
+						
+
+						<li>
+
+							<a href="/post/about"> 关于</a></li>
+
+						
+
+						<li>
+
+							<a href="https://angleHan.github.io/post/kai-yuan-xiang-mu-zhi-neng-shou-na-xi-tong"> 致敬开源</a></li>
+
+						
+
+					</ul>
+					</li>
+
+					</ul>
+				</div>
+			</nav>
+
+			<div class="jingge">
+				
+				
+				
+				
+				
+				
+				<a href="https://github.com/angleHan" target="_blank"><i class="iconfont icon-github"></i></a>
+				
+				
+				
+				<a href="https://www.zhihu.com/people/meng-xiang-75-23-61" target="_blank"><i class="iconfont icon-zhihu"></i></a>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				<a href="844417048" target="_blank"><i class="iconfont icon-qq"></i></a>
+				
+				
+				
+				
+				
+				
+			</div>
+			<form id="gridea-search-form" data-update="1589520415062" action="/search/index.html">
+				<div class="search-box">
+					<input class="search-txt" name="q" placeholder="Type to search" />
+					<a class="search-btn">
+						<i class="iconfont icon-search1" action="/search/index.html"></i>
+					</a>
+				</div>
+			</form>
+		</header>
+		<div id="content" class="container">
+			<div class="row">
+				<div class="col-md-8 site-main">
+					<article id="post-70"
+						class="post-70 post type-post status-publish format-standard hentry category-5 tag-10 tag-9 tag-11">
+						<div class="entry-content">
+							<div class="entry-meta">
+								<div class="entry-info">
+									<time>
+										2020-03-20
+									</time>
+									<span>
+										9 min read
+									</span>
+									<!-- id 将作为查询条件 -->
+									<span id="/dspf2812-de-li-lun-xue-xi/" class="leancloud_visitors"  data-flag-title="DSPF2812的理论学习(CPU、时钟与中断)">
+										<span class="leancloud-visitors-count"></span>次阅读
+									</span>
+									<span class="isTop">
+										<script type="text/javascript">
+											var isTop;
+											isTop = false;
+											if (isTop == true) {
+												// document.write("<i class="iconfont icon-icon-test"></i>")
+												document.write("<span>⭐ Top</span>");
+											}
+										  </script>
+									</span>
+								</div>
+							</div>
+							<div class="wow zoomIn entry-summary song">
+								<p>随着大规模集成电路、数字计算机等技术的飞速发展，DSP系统逐渐流行起来，而我由于课程原因也接触到了DSP系统，因此在这里记录了DSPF2812的理论知识，为后续的编程打下基础。</p>
+<!-- more -->
+<h2 id="dsp芯片的特点">DSP芯片的特点</h2>
+<ul>
+<li>哈佛结构：不同于传统的冯诺依曼结构，将程序和数据存储在不同的存储空间当中，因此取指和执行能完全重叠运行。</li>
+<li>流水线操作：可以并行处理多条指令，减少了指令执行的时间。</li>
+<li>专用的硬件乘法器：大大提高运算速度。</li>
+<li>特殊的DSPs指令：可以执行许多复杂功能。</li>
+<li>快速的指令周期：满足高实时性场合的需求。</li>
+</ul>
+<p>这里DSPF2812的各引脚功能不再阐述，有兴趣的读者可参考TI公司的中文数据手册。<br>
+至于DSP应如何学习，我的老师把DSP的知识点抽象为建筑物的结构，我觉得很形象，大家可以参考一下。<br>
+<img src="https://angleHan.github.io/post-images/1584664042841.png" alt="" loading="lazy"></p>
+<h2 id="cpu的内部结构和时钟">CPU的内部结构和时钟</h2>
+<h3 id="cpu">CPU</h3>
+<p>这里，我们首先要对CPU 有一个整体上的认识，见下图：<br>
+<img src="https://angleHan.github.io/post-images/1584696135675.png" alt="" loading="lazy"><br>
+然后我们对CPU进行拆解，对CPU内部的结构有一个总览：<br>
+<img src="https://angleHan.github.io/post-images/1584696334949.png" alt="" loading="lazy"><br>
+对于CPU，我觉得了解了以上知识就足够了，以后在编程中如果需要用到的话，再回来查找即可。</p>
+<h3 id="时钟综述">时钟综述</h3>
+<p>接着，我们需要学习微机中最重要的部分——时钟系统，而F2812需要处理大量的复杂运算，因此对定时的要求更加严格。而配置相应的时钟是通过修改对应的寄存器来完成的，主要有：</p>
+<ul>
+<li>外设时钟控制寄存器（PCLKCR），控制片上各种时钟的工作状态，使能或禁止相关外设时钟。</li>
+<li>系统控制和状态寄存器（SCSR），包含看门狗溢出位和看门狗中断使能/屏蔽位，和看门狗的控制有关。</li>
+<li>高低速外设时钟设置寄存器（HISPCP/LOSPCP) ，用于设置不同速度的外设。</li>
+</ul>
+<h3 id="晶体振荡器和锁相环">晶体振荡器和锁相环</h3>
+<p>F2812片上有基于PLL的时钟模块，为器件及各种外设提供时钟信号。<br>
+其中，系统的时钟源由外部<strong>XPLLDIS</strong>引脚确定，当该引脚为低电平时，系统直接采用晶振作为系统时钟；当该引脚为高电平时，外部时钟经过PLL倍频后，为系统提供时钟。<br>
+若要改变锁相环的工作模式及倍频的系数，可以通过锁相环控制寄存器来修改。</p>
+<h3 id="cpu定时器">CPU定时器</h3>
+<p>F2812共有3个32位CPU定时器(TIMER0/1/2)，其中后两个预留给实时操作系统使用，用户只可以使用定时器0。其中三个定时器的中断信号分别为TINT0, TINT1, TINT2，分别对应于中断向量INT1，INT13，INT14。<br>
+接下来将CPU定时器的具体原理，请读者仔细阅读。<br>
+简单来说，定时器就像闹钟，定时器工作前一般要经历以下几个步骤：</p>
+<ul>
+<li>首先给周期寄存器PRDH:PRD赋值（这里是用2个16位寄存器来表示一个32位寄存器），当启动定时器开始计数时，周期寄存器的值装载进定时器计数寄存器TIMH:TIM中。</li>
+<li>好比闹钟每隔1s走动一下一样，计数器寄存器里面的值每隔一个TIMCLK就减1，直到计数到0，定时器完成一个周期的计数，这时将产生一个中断信号。</li>
+<li>TIMCLK的值又从何而来呢，它由定时器分频器TDDRH:TDDR和定时器预定标器PSCH:PSC来控制。先给定时器分频器赋值，然后装载入定时器预定标器，这样每隔一个SYSCLKOUT脉冲，预定标器中的值就减1.直到减为0时，就输出一个TIMCLK。</li>
+</ul>
+<p>经过以上的分析，我们容易得出定时器周期的计算公式。<br>
+<img src="https://angleHan.github.io/post-images/1584777196711.png" alt="" loading="lazy"></p>
+<h3 id="看门狗电路">看门狗电路</h3>
+<p>在由MCU构成的微型计算机系统中，由于单片机的工作常常会受到外界电磁场的干扰，造成程序跑飞而陷入死循环，会造成整个系统陷入停滞状态，因此有了看门狗电路的产生。<br>
+我们可以这样来理解F2812的看门狗电路原理F2812的看门狗电路有一个8位看门狗加法计数器WDCNTR，无论什么时候，如果该计算器达到最大值，看门狗模块就会产生一个输出脉冲使系统复位。为了防止WDCNTR溢出，通常采用2种方法。</p>
+<ul>
+<li>禁止看门狗。</li>
+<li>定期“喂狗”，即通过软件向负责复位看门狗计数器的看门狗密钥寄存器周期性地写入0x55+0xAA。</li>
+</ul>
+<p>（这里需要注意的是逻辑校验位是看门狗的另一个安全机制，所有访问看门狗控制寄存器WDCR的写操作中，相应的校验位必须是101，否则将会拒绝访问并立即触发系统复位。）</p>
+<h2 id="存储器与通用io口">存储器与通用I/O口</h2>
+<p>F2812存储器的映射见下图：<br>
+<img src="https://angleHan.github.io/post-images/1584871160488.png" alt="" loading="lazy"><br>
+其中，相信大家对各种片内存储器的优点都有了解，在这里我们仅对外部扩展接口进行介绍。</p>
+<h3 id="外部扩展接口xintf">外部扩展接口XINTF</h3>
+<p>F2812的外部接口XINTF映射到5个独立的区域，见下图：<br>
+<img src="https://angleHan.github.io/post-images/1584871599349.png" alt="" loading="lazy"><br>
+当访问相应的存储区域时，会产生一个片选信号。此外，从图上可以看出，有的区域共用一个片选信号。<br>
+这一部分我觉得跟后续的编程不太相关，所以我的学习方法是大概浏览几遍，用到再去查。</p>
+<h3 id="gpio多路复用器">GPIO多路复用器</h3>
+<p>在F2812处理器当中，相当一部分引脚是外设和数字I/O引脚公用的。它们通过 GPxMUX 寄存器来配置选择具体的引脚功能(作为外设或数字 I/O 引脚)。当引脚作为数字I/O时，可以通过方向控制寄存器GPxDIR控制I/O的方向，是作为输入还是输出，并可以通过量化寄存器GPxQUAL量化输入信号，消除外部噪声信号。<br>
+同上边一样，我不会深入设计具体寄存器每一位的功能，因为这些是不用记的，知道如何操作就行。</p>
+<h2 id="中断管理">中断管理</h2>
+<p>这里讲下中断的作用，通过软件或硬件激发的中断请求信号，可以使CPU暂停目前执行的主程序，转而去执行中断服务程序，以便CPU实现数据的传送或接收。<br>
+F2812的中断主要有两种方式触发：一种是在软件中写指令；另一种是硬件方式触发。无论是软件中断还是硬件中断，都可归结为可屏蔽中断和不可屏蔽中断。 以下我们将重点讨论可屏蔽中断和PIE中断，暂时不考虑不可屏蔽中断。</p>
+<h3 id="中断向量和优先级">中断向量和优先级</h3>
+<p>F2812一共可以支持32个CPU中断，其中每一个中断都是一个32位的中断向量，但里面存储的是22位的中断服务程序的入口地址，CPU将优先处理优先级高的中断 。</p>
+<h3 id="可屏蔽中断">可屏蔽中断</h3>
+<p>可屏蔽中断有3个专用寄存器的支持，中断标志寄存器IFR，中断使能寄存器IER和调试中断使能寄存器DBGIER。IFR中包含的相应标志位表面对应中断在等待CPU的响应，IER和DBGIER则控制使能或屏蔽某一可屏蔽中断，其中后一寄存器用于实时仿真。<br>
+可屏蔽中断的响应过程是：首先当某个可屏蔽中断提出请求时，IFR中的中断标志位自动置位。接着CPU将检查IER中相应位的值和是否使能了全局中断。若以上都没有问题，则CPU将会响应该中断，暂停主程序并转向执行相应的中断服务子程序。</p>
+<h3 id="外设中断扩展模块pie">外设中断扩展模块PIE</h3>
+<p>PIE是为了使F2812CPU能够管理更多的中断而设计的，PIE中多个中断源复用一个CPU中断，这些中断被分为12组，每个组有8个中断，每个组都被反馈到CPU内核的12条中断信号线的一条上，因此PIE共可支持96个中断，具体管理的中断源见下图：<br>
+<img src="https://angleHan.github.io/post-images/1585126449716.png" alt="" loading="lazy"><br>
+对于PIE中断，内部具体是如何复用的，硬件电路是如何连接的，我们不必关心，最重要的是看懂外设中断在PIE中是如何分布的：<br>
+<img src="https://angleHan.github.io/post-images/1585127073065.png" alt="" loading="lazy"><br>
+这里同组内，排在前边的中断优先级比排在后面中断优先级的高，而不同组之间，排在前面组的任何一个中断优先级要比排在后面组内的任何一个中断的优先级高。<br>
+可屏蔽CPU中断可以通过中断使能寄存器和中断标志寄存器来进行编程控制，同样，PIE的每个组都有3个相关的寄存器，分别是PIE中断使能寄存器PIEIERx，PIE中断标志寄存器PIEIFRx和PIE中断应答寄存器PIEACKx，其中x代表组号。</p>
+<h3 id="中断的编程">中断的编程</h3>
+<p>这里我们以中断为例，介绍实际编程中的步骤。</p>
+<ul>
+<li>首先在外设初始化函数中使能外设中断。</li>
+<li>主函数里初始化外设、使能PIE和CPU中断等。</li>
+<li>在DSP28_DefaultIsr.c里编写你的中断处理函数，这里需要注意应该手动清除外设中断的标志位和复位PIE应答寄存器PIEACK相关的位，使得CPU能够响应PIE控制器同组内的其它中断。</li>
+</ul>
+<p>本文结束，感谢阅读~😁</p>
+
+							</div>
+							<div class="wow zoomIn vt-post-tags">
+								
+								<a href="https://angleHan.github.io/tag/xPIZqL5cM/" rel="tag">DSP</a>
+								
+							</div>
+							<nav class="navigation3 post-navigation3" role="navigation">
+
+								<div class="nav-links3">
+									
+									<div class="wow zoomIn nav-previous3"><a href="https://angleHan.github.io/dspf2812-de-li-lun-xue-xi-shi-jian-guan-li-qi-ev/"
+											rel="prev"> DSPF2812的理论学习（事件管理器EV、ADC和CMD命令文件）</a></div>
+									
+									
+									<div class="wow zoomIn nav-next3"><a href="https://angleHan.github.io/jie-jue-pip-an-zhuang-python-ku-shi-readtimeouterror/"
+											rel="next"> 解决pip安装Python库时：ReadTimeoutError</a></div>
+									
+								</div>
+							</nav>
+							<div class="wow zoomIn author-info" style="visibility: visible; animation-name: zoomIn;">
+								<div class="author-avatar pull-left"><img
+										src="https://angleHan.github.io/images/avatar.png"></div>
+								
+								<div class="author-description">
+									<div class="author-title">
+										<div class="author-link" rel="author">靳路晗 | 中国</div>
+									</div>
+									
+									
+									<p class="author-bio">Time waits for no one！</p>
+								</div>
+							</div>
+							
+						</div>
+					</article>
+					<div id="marlin_lite_about_widget-2" class="wow zoomIn widget marlin_lite_about_widget"
+						data-wow-delay="0.1s">
+
+						
+						<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='https://angleHan.github.io/media/scripts/Valine.min.js'></script>
+<!-- <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script> -->
+
+
+
+<div class="comment"></div>
+<script>
+        new Valine({
+            // AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
+            av: AV, 
+            el: '.comment',
+            lang: 'zh-cn',
+            visitor: true,
+            
+            admin_email:'844417048@qq.com',
+            
+            
+            emoticon_list: ["吐.png","喷血.png","狂汗.png","不说话.png","汗.png","坐等.png","献花.png","不高兴.png","中刀.png","害羞.png","皱眉.png","小眼睛.png","中指.png","尴尬.png","瞅你.png","想一想.png","中枪.png","得意.png","肿包.png","扇耳光.png","亲亲.png","惊喜.png","脸红.png","无所谓.png","便便.png","愤怒.png","蜡烛.png","献黄瓜.png","内伤.png","投降.png","观察.png","看不见.png","击掌.png","抠鼻.png","邪恶.png","看热闹.png","口水.png","抽烟.png","锁眉.png","装大款.png","吐舌.png","无奈.png","长草.png","赞一个.png","呲牙.png","无语.png","阴暗.png","不出所料.png","咽气.png","期待.png","高兴.png","吐血倒地.png","哭泣.png","欢呼.png","黑线.png","喜极而泣.png","喷水.png","深思.png","鼓掌.png","暗地观察.png"],
+            
+                app_id: 'wLaNOXIdCI4hP9dCMseugra2-gzGzoHsz',
+                 	
+            
+                app_key: 'JamugEOpWn9iP82qtFM1OUJh',
+            	
+            
+                placeholder: '留下你的足迹吧！！'
+            
+        });
+    </script> 
+
+
+					</div>
+				</div>
+				<div class="tocc col l3 hide-on-med-and-down">
+
+    <div class="toc-widget">
+
+        <div class="toc-title"></div>
+
+        <div id="toc-content">
+
+
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.5.0/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '.entry-summary',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('.entry-summary').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+    });
+
+    $(function () {
+        var bt;
+        bt = $('.toc-widget');
+        if ($(document).width() > 480) {
+            $(window).scroll(function () {
+                var st;
+                st = $(window).scrollTop();
+                if (st > 450) {
+                    return bt.css('display', 'block');
+                } else {
+                    return bt.css('display', 'none');
+                }
+            })
+        }
+    });
+</script>
+			</div>
+		</div>
+		<footer id="colophon" class="site-footer">
+	<div class="container">
+		<div class="copyright">
+			2020 Jixon  Powered by Github 豫ICP备19008809号-1
+
+<a href='https://clustrmaps.com/site/1b7wt'  title='Visit tracker'><img src='//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=tt&d=v9Ufrzl1sq1pCBVdAe6tQ0mYus7YV2nqQDEZp5LD9gM'/></a>
+
+
+
+			<b>Crafted with 💔 by <a href="https://chiperman.github.io/about/" target="_blank">chiperman</a></b>
+			<br>
+			<b>Eleven forever.</b>
+			<br>
+			<span class="runtime">
+				「我」已经运行了<script type="text/javascript">
+					var urodz = new Date("01/25/2020");
+					var now = new Date();
+					var ile = now.getTime() - urodz.getTime();
+					var dni = Math.floor(ile / (1000 * 60 * 60 * 24));
+					document.write(+dni)
+				</script>天
+				<br>
+			</span>
+			<b>Theme: </b>
+			<a href="https://github.com/chiperman/gridea-theme-xiaox" target="_blank" title="Pan">
+				<span><b>Pan - XiaoX</b></span>
+			</a>
+			<b>. Powered by </b>
+			<a href="https://gridea.dev/" target="_blank" title="Gridea">
+				<span><b>Gridea</b></span>
+			</a>
+		</div>
+	</div><!-- .container -->
+</footer><!-- #colophon -->
+	</div>
+
+	<script src="https://cdn.bootcss.com/fitvids/1.2.0/jquery.fitvids.min.js"></script>
+
+<script
+  src="https://cdn.jsdelivr.net/gh/angleHan/angleHan.github.io/media/scripts/marlin-scripts.js">
+</script>
+
+<script src="//tokinx.github.io/lately/lately.min.js"></script>
+<script>
+  jQuery(document).ready(function () {
+    $.lately({
+      'target': '.lately-a,.lately-b,.lately-c'
+    })
+  });
+</script>
+<style type="text/css">
+  /* 一键到顶部 */
+  a.back_to_top {
+    text-decoration: none;
+    position: fixed;
+    bottom: 65px;
+    right: 30px;
+    background: #f0f0f0;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    line-height: 36px;
+    font-size: 18px;
+    text-align: center;
+    transition-duration: .5s;
+    transition-propety: background-color;
+    display: none;
+  }
+
+  a.back_to_top span {
+    color: #888;
+  }
+
+  a.back_to_top:hover {
+    cursor: pointer;
+    background: #dfdfdf;
+  }
+
+  a.back_to_top:hover span {
+    color: #555;
+  }
+
+  @media print,
+  screen and (max-width: 580px) {
+    .back_to_top {
+      display: none !important;
+    }
+  }
+
+  /* 一键到底部 */
+
+  a.down_to_bottom {
+    text-decoration: none;
+    position: fixed;
+    bottom: 15px;
+    right: 30px;
+    background: #f0f0f0;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    line-height: 36px;
+    font-size: 18px;
+    text-align: center;
+    transition-duration: .5s;
+    transition-propety: background-color;
+    display: none;
+  }
+
+  a.down_to_bottom span {
+    color: #888;
+  }
+
+  a.down_to_bottom:hover {
+    cursor: pointer;
+    background: #dfdfdf;
+  }
+
+  a.down_to_bottom:hover span {
+    color: #555;
+  }
+
+  @media print,
+  screen and (max-width: 580px) {
+    .down_to_bottom {
+      display: none !important;
+    }
+  }
+</style>
+
+
+<a id="back_to_top" href="#" class="back_to_top"><span><i class="iconfont icon-xiangshang"></i></span>
+</a>
+
+<a id="down_to_bottom" href="#" class="down_to_bottom"><span><i class="iconfont icon-xiangxia"></i></span>
+</a>
+
+<script src="//instant.page/3.0.0" type="module" defer
+  integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+<script>
+  function getScrollTop() {
+    var scrollTop = 0,
+      bodyScrollTop = 0,
+      documentScrollTop = 0;
+    if (document.body) {
+      bodyScrollTop = document.body.scrollTop;
+    }
+    if (document.documentElement) {
+      documentScrollTop = document.documentElement.scrollTop;
+    }
+    scrollTop = (bodyScrollTop - documentScrollTop > 0) ? bodyScrollTop : documentScrollTop;
+    return scrollTop;
+  };
+
+  function getScrollHeight() {
+    var scrollHeight = 0,
+      bodyScrollHeight = 0,
+      documentScrollHeight = 0;
+    if (document.body) {
+      bSH = document.body.scrollHeight;
+    }
+    if (document.documentElement) {
+      dSH = document.documentElement.scrollHeight;
+    }
+    scrollHeight = (bSH - dSH > 0) ? bSH : dSH;
+    return scrollHeight;
+  };
+
+  function getWindowHeight() {
+    var windowHeight = 0;
+    if (document.compatMode == "CSS1Compat") {
+      windowHeight = document.documentElement.clientHeight;
+    } else {
+      windowHeight = document.body.clientHeight;
+    }
+    return windowHeight;
+  };
+
+  $(document).ready((function (_this) {
+    return function () {
+      var bt;
+      bt = $('#back_to_top');
+      if ($(document).width() > 480) {
+        $(window).scroll(function () {
+          var st;
+          st = $(window).scrollTop();
+          if (st > 30) {
+            return bt.css('display', 'block');
+          } else {
+            return bt.css('display', 'none');
+          }
+        });
+        return bt.click(function () {
+          $('body,html').animate({
+            scrollTop: 0
+          }, 800);
+          return false;
+        });
+      }
+    };
+  })(this));
+
+  $(document).ready((function (_this) {
+    return function () {
+      var bt;
+      bt = $('#down_to_bottom');
+      if ($(document).width() > 480) {
+        $(window).scroll(function () {
+          var st;
+          st = $(window).scrollTop();
+          if (getScrollTop() + getWindowHeight() == getScrollHeight()) {
+            return bt.css('display', 'none');
+          } else {
+            return bt.css('display', 'block');
+          }
+        });
+        return bt.click(function () {
+          $('body,html').animate({
+            scrollTop: $('body,html')[0].scrollHeight
+          }, 800);
+          return false;
+        });
+      }
+    };
+  })(this));
+</script>
+	<script data-no-instant>
+		(function ($) {
+			$.extend({
+				adamsOverload: function () {
+					$('.navigation:eq(0)').remove();
+					$("").attr("rel", "external");
+					$("a[rel='external'],a[rel='external nofollow']").attr("target", "_blank");
+					$("a.vi").attr("rel", "");
+					$.viewImage({
+						'target': 'img',
+						'exclude': '.vsmile-icons img,.gallery img',
+						'delay': 300
+					});
+					$.lately({
+						'target': '.commentmetadata a,.infos time,.post-list time'
+					});
+					prettyPrint();
+
+					$('ul.links li a').each(function () {
+						if ($(this).parent().find('.bg').length == 0) {
+							$(this).parent().append(
+								'<!---<div class="bg" style="background-image:url(https://c3.glgoo.top/s2/favicons?domain=' +
+								$(this).attr("href") + ')"></div>--->')
+						}
+					});
+				}
+			});
+		})(jQuery);
+		jQuery.adamsOverload();
+	</script>
+
+</body>
+
+</html>
