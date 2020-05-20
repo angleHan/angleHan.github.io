@@ -14,7 +14,7 @@
 
 <title>DSPF2812的理论学习(CPU、时钟与中断) | 靳路晗~中国</title>
 
-<link rel="stylesheet" href="https://angleHan.github.io/styles/main.css">
+<link rel="stylesheet" href="https://dreamfixer.top/styles/main.css">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Noto+Sans+SC:300|Montserrat&display=swap"
   rel="stylesheet">
 <link href="https://at.alicdn.com/t/font_1306644_jwtuc2zzbrd.css" rel="stylesheet" />
@@ -22,7 +22,7 @@
 <link href="https://at.alicdn.com/t/font_1651848_9ur7s2zwgll.css" rel="stylesheet" />
 <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-<script type='text/javascript' src='https://angleHan.github.io/media/scripts/script.js'></script>
+<script type='text/javascript' src='https://dreamfixer.top/media/scripts/script.js'></script>
 <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet" />
 <script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.15.8/highlight.min.js"></script>
@@ -59,7 +59,7 @@
 			<div class="site-branding">
 				<h1 class="site-title">
 					<div class="post-title-name">
-						<a href="https://angleHan.github.io" rel="home">DSPF2812的理论学习(CPU、时钟与中断)</a>
+						<a href="https://dreamfixer.top" rel="home">DSPF2812的理论学习(CPU、时钟与中断)</a>
 					</div>
 				</h1>
 				<h2 class="site-description">芝兰生于深林，不以无人而不芳。</h2>
@@ -141,7 +141,7 @@
 				
 				
 			</div>
-			<form id="gridea-search-form" data-update="1589939511604" action="/search/index.html">
+			<form id="gridea-search-form" data-update="1589944468226" action="/search/index.html">
 				<div class="search-box">
 					<input class="search-txt" name="q" placeholder="Type to search" />
 					<a class="search-btn">
@@ -193,13 +193,13 @@
 </ul>
 <p>这里DSPF2812的各引脚功能不再阐述，有兴趣的读者可参考TI公司的中文数据手册。<br>
 至于DSP应如何学习，我的老师把DSP的知识点抽象为建筑物的结构，我觉得很形象，大家可以参考一下。<br>
-<img src="https://angleHan.github.io/post-images/1584664042841.png" alt="" loading="lazy"></p>
+<img src="https://dreamfixer.top/post-images/1584664042841.png" alt="" loading="lazy"></p>
 <h2 id="cpu的内部结构和时钟">CPU的内部结构和时钟</h2>
 <h3 id="cpu">CPU</h3>
 <p>这里，我们首先要对CPU 有一个整体上的认识，见下图：<br>
-<img src="https://angleHan.github.io/post-images/1584696135675.png" alt="" loading="lazy"><br>
+<img src="https://dreamfixer.top/post-images/1584696135675.png" alt="" loading="lazy"><br>
 然后我们对CPU进行拆解，对CPU内部的结构有一个总览：<br>
-<img src="https://angleHan.github.io/post-images/1584696334949.png" alt="" loading="lazy"><br>
+<img src="https://dreamfixer.top/post-images/1584696334949.png" alt="" loading="lazy"><br>
 对于CPU，我觉得了解了以上知识就足够了，以后在编程中如果需要用到的话，再回来查找即可。</p>
 <h3 id="时钟综述">时钟综述</h3>
 <p>接着，我们需要学习微机中最重要的部分——时钟系统，而F2812需要处理大量的复杂运算，因此对定时的要求更加严格。而配置相应的时钟是通过修改对应的寄存器来完成的，主要有：</p>
@@ -222,7 +222,7 @@
 <li>TIMCLK的值又从何而来呢，它由定时器分频器TDDRH:TDDR和定时器预定标器PSCH:PSC来控制。先给定时器分频器赋值，然后装载入定时器预定标器，这样每隔一个SYSCLKOUT脉冲，预定标器中的值就减1.直到减为0时，就输出一个TIMCLK。</li>
 </ul>
 <p>经过以上的分析，我们容易得出定时器周期的计算公式。<br>
-<img src="https://angleHan.github.io/post-images/1584777196711.png" alt="" loading="lazy"></p>
+<img src="https://dreamfixer.top/post-images/1584777196711.png" alt="" loading="lazy"></p>
 <h3 id="看门狗电路">看门狗电路</h3>
 <p>在由MCU构成的微型计算机系统中，由于单片机的工作常常会受到外界电磁场的干扰，造成程序跑飞而陷入死循环，会造成整个系统陷入停滞状态，因此有了看门狗电路的产生。<br>
 我们可以这样来理解F2812的看门狗电路原理F2812的看门狗电路有一个8位看门狗加法计数器WDCNTR，无论什么时候，如果该计算器达到最大值，看门狗模块就会产生一个输出脉冲使系统复位。为了防止WDCNTR溢出，通常采用2种方法。</p>
@@ -233,11 +233,11 @@
 <p>（这里需要注意的是逻辑校验位是看门狗的另一个安全机制，所有访问看门狗控制寄存器WDCR的写操作中，相应的校验位必须是101，否则将会拒绝访问并立即触发系统复位。）</p>
 <h2 id="存储器与通用io口">存储器与通用I/O口</h2>
 <p>F2812存储器的映射见下图：<br>
-<img src="https://angleHan.github.io/post-images/1584871160488.png" alt="" loading="lazy"><br>
+<img src="https://dreamfixer.top/post-images/1584871160488.png" alt="" loading="lazy"><br>
 其中，相信大家对各种片内存储器的优点都有了解，在这里我们仅对外部扩展接口进行介绍。</p>
 <h3 id="外部扩展接口xintf">外部扩展接口XINTF</h3>
 <p>F2812的外部接口XINTF映射到5个独立的区域，见下图：<br>
-<img src="https://angleHan.github.io/post-images/1584871599349.png" alt="" loading="lazy"><br>
+<img src="https://dreamfixer.top/post-images/1584871599349.png" alt="" loading="lazy"><br>
 当访问相应的存储区域时，会产生一个片选信号。此外，从图上可以看出，有的区域共用一个片选信号。<br>
 这一部分我觉得跟后续的编程不太相关，所以我的学习方法是大概浏览几遍，用到再去查。</p>
 <h3 id="gpio多路复用器">GPIO多路复用器</h3>
@@ -253,9 +253,9 @@ F2812的中断主要有两种方式触发：一种是在软件中写指令；另
 可屏蔽中断的响应过程是：首先当某个可屏蔽中断提出请求时，IFR中的中断标志位自动置位。接着CPU将检查IER中相应位的值和是否使能了全局中断。若以上都没有问题，则CPU将会响应该中断，暂停主程序并转向执行相应的中断服务子程序。</p>
 <h3 id="外设中断扩展模块pie">外设中断扩展模块PIE</h3>
 <p>PIE是为了使F2812CPU能够管理更多的中断而设计的，PIE中多个中断源复用一个CPU中断，这些中断被分为12组，每个组有8个中断，每个组都被反馈到CPU内核的12条中断信号线的一条上，因此PIE共可支持96个中断，具体管理的中断源见下图：<br>
-<img src="https://angleHan.github.io/post-images/1585126449716.png" alt="" loading="lazy"><br>
+<img src="https://dreamfixer.top/post-images/1585126449716.png" alt="" loading="lazy"><br>
 对于PIE中断，内部具体是如何复用的，硬件电路是如何连接的，我们不必关心，最重要的是看懂外设中断在PIE中是如何分布的：<br>
-<img src="https://angleHan.github.io/post-images/1585127073065.png" alt="" loading="lazy"><br>
+<img src="https://dreamfixer.top/post-images/1585127073065.png" alt="" loading="lazy"><br>
 这里同组内，排在前边的中断优先级比排在后面中断优先级的高，而不同组之间，排在前面组的任何一个中断优先级要比排在后面组内的任何一个中断的优先级高。<br>
 可屏蔽CPU中断可以通过中断使能寄存器和中断标志寄存器来进行编程控制，同样，PIE的每个组都有3个相关的寄存器，分别是PIE中断使能寄存器PIEIERx，PIE中断标志寄存器PIEIFRx和PIE中断应答寄存器PIEACKx，其中x代表组号。</p>
 <h3 id="中断的编程">中断的编程</h3>
@@ -270,25 +270,25 @@ F2812的中断主要有两种方式触发：一种是在软件中写指令；另
 							</div>
 							<div class="wow zoomIn vt-post-tags">
 								
-								<a href="https://angleHan.github.io/tag/xPIZqL5cM/" rel="tag">DSP</a>
+								<a href="https://dreamfixer.top/tag/xPIZqL5cM/" rel="tag">DSP</a>
 								
 							</div>
 							<nav class="navigation3 post-navigation3" role="navigation">
 
 								<div class="nav-links3">
 									
-									<div class="wow zoomIn nav-previous3"><a href="https://angleHan.github.io/dspf2812-de-li-lun-xue-xi-shi-jian-guan-li-qi-ev/"
+									<div class="wow zoomIn nav-previous3"><a href="https://dreamfixer.top/dspf2812-de-li-lun-xue-xi-shi-jian-guan-li-qi-ev/"
 											rel="prev"> DSPF2812的理论学习（事件管理器EV、ADC和CMD命令文件）</a></div>
 									
 									
-									<div class="wow zoomIn nav-next3"><a href="https://angleHan.github.io/jie-jue-pip-an-zhuang-python-ku-shi-readtimeouterror/"
+									<div class="wow zoomIn nav-next3"><a href="https://dreamfixer.top/jie-jue-pip-an-zhuang-python-ku-shi-readtimeouterror/"
 											rel="next"> 解决pip安装Python库时：ReadTimeoutError</a></div>
 									
 								</div>
 							</nav>
 							<div class="wow zoomIn author-info" style="visibility: visible; animation-name: zoomIn;">
 								<div class="author-avatar pull-left"><img
-										src="https://angleHan.github.io/images/avatar.png"></div>
+										src="https://dreamfixer.top/images/avatar.png"></div>
 								
 								<div class="author-description">
 									<div class="author-title">
@@ -307,7 +307,7 @@ F2812的中断主要有两种方式触发：一种是在软件中写指令；另
 
 						
 						<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src='https://angleHan.github.io/media/scripts/Valine.min.js'></script>
+<script src='https://dreamfixer.top/media/scripts/Valine.min.js'></script>
 <!-- <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script> -->
 
 

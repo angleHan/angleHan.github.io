@@ -14,7 +14,7 @@
 
 <title>DSPF2812的理论学习（事件管理器EV、ADC和CMD命令文件） | 靳路晗~中国</title>
 
-<link rel="stylesheet" href="https://angleHan.github.io/styles/main.css">
+<link rel="stylesheet" href="https://dreamfixer.top/styles/main.css">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Noto+Sans+SC:300|Montserrat&display=swap"
   rel="stylesheet">
 <link href="https://at.alicdn.com/t/font_1306644_jwtuc2zzbrd.css" rel="stylesheet" />
@@ -22,7 +22,7 @@
 <link href="https://at.alicdn.com/t/font_1651848_9ur7s2zwgll.css" rel="stylesheet" />
 <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-<script type='text/javascript' src='https://angleHan.github.io/media/scripts/script.js'></script>
+<script type='text/javascript' src='https://dreamfixer.top/media/scripts/script.js'></script>
 <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet" />
 <script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.15.8/highlight.min.js"></script>
@@ -59,7 +59,7 @@
 			<div class="site-branding">
 				<h1 class="site-title">
 					<div class="post-title-name">
-						<a href="https://angleHan.github.io" rel="home">DSPF2812的理论学习（事件管理器EV、ADC和CMD命令文件）</a>
+						<a href="https://dreamfixer.top" rel="home">DSPF2812的理论学习（事件管理器EV、ADC和CMD命令文件）</a>
 					</div>
 				</h1>
 				<h2 class="site-description">芝兰生于深林，不以无人而不芳。</h2>
@@ -141,7 +141,7 @@
 				
 				
 			</div>
-			<form id="gridea-search-form" data-update="1589939511604" action="/search/index.html">
+			<form id="gridea-search-form" data-update="1589944468226" action="/search/index.html">
 				<div class="search-box">
 					<input class="search-txt" name="q" placeholder="Type to search" />
 					<a class="search-btn">
@@ -194,7 +194,7 @@
 </ol>
 <p>下面以T1为例，详细介绍通用定时器的工作原理。<br>
 首先来看通用定时器的结构：<br>
-<img src="https://angleHan.github.io/post-images/1585445904556.png" alt="" loading="lazy"><br>
+<img src="https://dreamfixer.top/post-images/1585445904556.png" alt="" loading="lazy"><br>
 从这张图中我们能得出以下信息：</p>
 <ul>
 <li>和定时器T1相关的常用寄存器有：16位的T1周期寄存器T1PR；16位的T1比较寄存器T1CMPR；16位的T1计数寄存器T1CNT；16位的T1控制寄存器T1CON；16位的通用定时器控制寄存器GPTCONA。</li>
@@ -213,15 +213,15 @@ T1共支持4种模式，由T1控制寄存器的第12位TMODE1和第11位TMODE0�
 当T1计数器寄存器T1CNT和比较寄存器T1CMPR的值相等时，如果定时器的比较功能和比较输出使能，则T1PWM_T1CMP引脚就会输出PWM波形。定时器T1能够产生两种类型的PWM，不对称的和对称的。</p>
 <ul>
 <li><strong>当T1CNT工作于连续递增计数模式时，输出不对称的PWM波形</strong>。此时PWM波中各参数计算如下：<br>
-<img src="https://angleHan.github.io/post-images/1585454589751.png" alt="" loading="lazy"></li>
+<img src="https://dreamfixer.top/post-images/1585454589751.png" alt="" loading="lazy"></li>
 <li><strong>当T1CNT工作于连续增/减计数模式时，输出对称的PWM波形</strong>。 此时PWM中各参数计算如下：<br>
-<img src="https://angleHan.github.io/post-images/1585454605652.png" alt="" loading="lazy"></li>
+<img src="https://dreamfixer.top/post-images/1585454605652.png" alt="" loading="lazy"></li>
 </ul>
 <p>大家可以根据上述公式快速计算PWM的参数。</p>
 <h3 id="比较单元与pwm电路">比较单元与PWM电路</h3>
 <p>事件管理器EVA模块具有3个全比较单元，比较单元1、比较单元2、比较单元3。EVA的比较单元时钟信号由通用定时器T1来提供，每个比较单元都能够输出2路互补的PWM波形（在这里PWM波形的原理和定时器产生PWM的原理基本相同），也可以通过相应的寄存器来设置死区时间，因此它有能力去驱动一个三相全桥电路。<br>
 注意这里引入了一个死区概念，我通过下面的图来解释。<br>
-<img src="https://angleHan.github.io/post-images/1585467072814.png" alt="" loading="lazy"><br>
+<img src="https://dreamfixer.top/post-images/1585467072814.png" alt="" loading="lazy"><br>
 由图可以看出，输入开关管的PWM信号必须都是互补的。在理想情况下，PHa1是高电平时，PHa2是低电平。但是二者从高电平转换到低电平或从低电平转换为高电平时都需要一段时间，在这段时间内，二者会同时导通，否则将会被击穿。因此，我们要保证上下两管的上升沿和下降沿互相要隔开一段时间，这段时间就称为死区。</p>
 <h3 id="捕获单元与正交脉冲编码电路">捕获单元与正交脉冲编码电路</h3>
 <p>捕获单元用于捕获输入引脚上的信号跳变。EV有6个捕获单元，其中EVA对应CAP1、CAP2、CAP3，EVB对应CAP4、CAP5、CAP6。每个捕获单元都有相应的捕获输入引脚，此外，正交脉冲编码电路与捕获输入单元共用芯片外部引脚。<br>
@@ -230,14 +230,14 @@ F2812事件管理器的每个捕获单元都有一个专用的2级深度的FIFO�
 QEP电路工作时，引脚CAP1_QEP1和引脚CAP2_QEP2输入两路正交编码脉冲，QEP电路对这两路正交编码脉冲的上升沿和下降沿都进行计数，因此QEP电路为定时器T2所提供的时钟频率是每个输入序列的4倍。</p>
 <h2 id="模数转换器adc">模/数转换器ADC</h2>
 <p>F2812的ADC模块一共具有16个采样通道，分成两组：一组为ADCINA0-ADCINA7，另一组为ADCINB0-ADCINB7。具体结构见下图：<br>
-<img src="https://angleHan.github.io/post-images/1585562677675.png" alt="" loading="lazy"><br>
+<img src="https://dreamfixer.top/post-images/1585562677675.png" alt="" loading="lazy"><br>
 可以看出，虽然ADC模块具有多个输入通道，但内部只有一个转换器，因此同一时刻只能对一路输入信号进行转换。若某一时刻输入了多个信号，则ADC内部具有自动序列发生器，用户可以通过编程为序列发生器指定需要转换的通道顺序。<br>
 ADC的转换特性一般通过下面公式求得：<br>
-<img src="https://angleHan.github.io/post-images/1585637947039.png" alt="" loading="lazy"><br>
+<img src="https://dreamfixer.top/post-images/1585637947039.png" alt="" loading="lazy"><br>
 ADC模块的时钟通过下式计算：<br>
-<img src="https://angleHan.github.io/post-images/1585638227914.png" alt="" loading="lazy"><br>
+<img src="https://dreamfixer.top/post-images/1585638227914.png" alt="" loading="lazy"><br>
 ADC模块的通道采样时间如下：<br>
-<img src="https://angleHan.github.io/post-images/1585638380426.png" alt="" loading="lazy"><br>
+<img src="https://dreamfixer.top/post-images/1585638380426.png" alt="" loading="lazy"><br>
 （其中ACQ_PS是ADC控制寄存器中的位）</p>
 <p>下面开始说ADC的工作模式。</p>
 <ul>
@@ -254,10 +254,10 @@ ADC模块的通道采样时间如下：<br>
 2. 链接器把目标文件中相同段名的部分链接在一起，生成最终的可执行文件。</p>
 </blockquote>
 <p>首先来看下面一个CMD文件：<br>
-<img src="https://angleHan.github.io/post-images/1586504027836.png" alt="" loading="lazy"><br>
+<img src="https://dreamfixer.top/post-images/1586504027836.png" alt="" loading="lazy"><br>
 MEMORY伪指令可以让用户选择目标存储器的起始地址和长度，其中PAGE0为程序空间，PAGE1为数据空间。<br>
 再来看下面的CMD文件：<br>
-<img src="https://angleHan.github.io/post-images/1586504261261.png" alt="" loading="lazy"><br>
+<img src="https://dreamfixer.top/post-images/1586504261261.png" alt="" loading="lazy"><br>
 其中，SECTIONS伪指令具体规定了在存储器内何处放置输出段，如果用户没有指定SECTIONS伪指令，链接器则用默认的算法组合并定位段。</p>
 <p>对于CMD文件，我们主要是理解其对代码的分配，起到更好的管理存储空间的作用。如果代码量小且没有特殊要求的话，你也可以用默认的段分配方法。</p>
 <p>本文结束，感谢阅读😘</p>
@@ -265,25 +265,25 @@ MEMORY伪指令可以让用户选择目标存储器的起始地址和长度，�
 							</div>
 							<div class="wow zoomIn vt-post-tags">
 								
-								<a href="https://angleHan.github.io/tag/xPIZqL5cM/" rel="tag">DSP</a>
+								<a href="https://dreamfixer.top/tag/xPIZqL5cM/" rel="tag">DSP</a>
 								
 							</div>
 							<nav class="navigation3 post-navigation3" role="navigation">
 
 								<div class="nav-links3">
 									
-									<div class="wow zoomIn nav-previous3"><a href="https://angleHan.github.io/sui-ji-xin-hao-chu-li-xue-xi-bi-ji-yule_walker-fang-cheng/"
+									<div class="wow zoomIn nav-previous3"><a href="https://dreamfixer.top/sui-ji-xin-hao-chu-li-xue-xi-bi-ji-yule_walker-fang-cheng/"
 											rel="prev"> 随机信号处理学习笔记（AR模型的Yule_Walker方程）</a></div>
 									
 									
-									<div class="wow zoomIn nav-next3"><a href="https://angleHan.github.io/dspf2812-de-li-lun-xue-xi/"
+									<div class="wow zoomIn nav-next3"><a href="https://dreamfixer.top/dspf2812-de-li-lun-xue-xi/"
 											rel="next"> DSPF2812的理论学习(CPU、时钟与中断)</a></div>
 									
 								</div>
 							</nav>
 							<div class="wow zoomIn author-info" style="visibility: visible; animation-name: zoomIn;">
 								<div class="author-avatar pull-left"><img
-										src="https://angleHan.github.io/images/avatar.png"></div>
+										src="https://dreamfixer.top/images/avatar.png"></div>
 								
 								<div class="author-description">
 									<div class="author-title">
@@ -302,7 +302,7 @@ MEMORY伪指令可以让用户选择目标存储器的起始地址和长度，�
 
 						
 						<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src='https://angleHan.github.io/media/scripts/Valine.min.js'></script>
+<script src='https://dreamfixer.top/media/scripts/Valine.min.js'></script>
 <!-- <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script> -->
 
 
